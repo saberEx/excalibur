@@ -1,0 +1,51 @@
+@import '../../base/css/globalStyle';
+.numBox{
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: 120px;
+    height: 35px;
+    vertical-align: top;
+    vertical-align: middle;
+    border: solid 1px #bbb;
+    border-radius: 3px;
+    background-color: #efeff4;
+    [class*=numbox-btn],[class*=btn-numbox] {
+        display: inline-block;
+        font-size: 18px;
+        font-weight: normal;
+        line-height: 100%;
+        overflow: hidden;
+        width: 35%; //40px;
+        height: 100%;
+        padding: 0;
+        color: #555;
+        border: none;
+        border-radius: 0;
+        background-color: #f9f9f9;
+    }
+    .numbox-btn-minus{
+        border-right: solid 1px #ccc;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+    .numbox-btn-plus{
+        border-left: solid 1px #ccc;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+
+    .numbox-input {
+        display: inline-block;
+        overflow: hidden;
+        width: 30%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        text-overflow: ellipsis;
+        word-break: normal;
+        border: none;
+        border-radius: 0;
+    }
+}

@@ -1,0 +1,67 @@
+.cityPicker{
+	.picker-backdrop{
+		position: fixed;
+		z-index: 998;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: rgba(0, 0, 0, .3);
+	}
+	.picker-body{
+		position: fixed;
+		left: 0px;
+		width: 100%;
+		z-index: 999;
+		background-color: #fff;
+		border-top: solid 1px #ccc;
+		box-shadow: 0px -5px 7px 0px rgba(0, 0, 0, 0.1);
+		-webkit-transition: .3s;
+		bottom: 0px;
+		.picker-container .picker-column .picker-item.picker-item-selected{
+			color: green;
+		}
+	}
+	.picker-header{
+		padding: 6px;
+		font-size: 12px;
+		color: #888;
+		border-bottom: solid 1px #ddd;
+		background-color: #eee;
+		.picker-btn-cancel,.picker-btn-ok{
+			font-size: 12px;
+			padding: 5px 10px;
+			float: left;
+			font-weight: 400;
+			line-height: 1.42;
+			position: relative;
+			display: inline-block;
+			cursor: pointer;
+			-webkit-transition: all;
+			transition: all;
+			-webkit-transition-timing-function: linear;
+			transition-timing-function: linear;
+			-webkit-transition-duration: .2s;
+			transition-duration: .2s;
+			text-align: center;
+			vertical-align: top;
+			white-space: nowrap;
+			color: #333;
+			border-radius: 3px;
+			background-color: #fff;
+			background-clip: padding-box;
+		}
+		.picker-btn-ok{
+			float: right;
+			background: #e16830;
+			color: #fff;
+		}
+		.picker-clear{
+			clear: both;
+			height: 0px;
+			line-height: 0px;
+			font-size: 0px;
+			overflow: hidden;
+		}
+	}
+}
