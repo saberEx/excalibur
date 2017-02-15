@@ -1,0 +1,489 @@
+/* @import "noData.wxss"; */
+
+page {
+    height: 100%;
+}
+
+.detail_box {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.detail_box .scroll-container {
+    flex: 1;
+    overflow-y: scroll;
+}
+
+.detail_box .slide-image {
+    width: 100%;
+}
+
+.detail_box .goodsWrap {
+    padding: 10px;
+    background: #fff;
+}
+
+.detail_box .goodsWrap .spreadCon {
+    opacity: 1;
+    transform: translate(0px, 0px);
+    transition: all 0.35s;
+    height: 100%;
+}
+
+.detail_box .goodsWrap .spreadCon.spread-hide {
+    opacity: 0;
+    height: 0;
+    transform: translate(0px, -100%);
+}
+
+
+/*商品信息*/
+
+.detail_box .goods_tit {
+    line-height: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.detail_box .goods_price {
+    font-size: 10px;
+    color: #E0682E;
+}
+
+.detail_box .goods_price .goods_m {
+    margin-left: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.detail_box .goods_oldPrice {
+    font-size: 10px;
+    color: #999;
+}
+
+.detail_box .goods_oldPrice .g_del {
+    text-decoration: line-through;
+}
+
+
+/*商品属性*/
+
+.detail_box .argument {
+    padding: 5px 0;
+    font-size: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.detail_box .argument .aName {
+    min-width: 60px;
+    float: left;
+    color: #999;
+}
+
+.detail_box .storeInfo .mediaItem-img {
+    width: 15px;
+    height: 15px;
+}
+
+.detail_box .argument .aParameter {
+    margin-left: 65px;
+    color: #333;
+}
+
+.storeApprove {
+    width: 100%;
+    padding: 5px 10px;
+    background: #fff;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.storeApprove view {
+    width: 33.333%;
+    padding: 10px 0;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: #333;
+}
+
+.storeApprove view image {
+    margin-right: 10px;
+    width: 14px;
+    height: 14px;
+}
+
+
+/*购买按钮*/
+
+.footerBuy {
+    width: 100%;
+    height: 44px;
+    display: table;
+    background: #fff;
+    /*position: fixed;
+    left: 0;
+    bottom: 0;*/
+}
+
+.footerBuy .footerItem {
+    display: table-cell;
+    line-height: 10px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.footerBuy .footerItem.w16 {
+    width: 16%;
+}
+
+.footerBuy .footerItem.w18 {
+    width: 18%;
+}
+
+.footerBuy .footerItem.w25 {
+    width: 25%;
+}
+
+.footerBuy .footerItem.btn {
+    font-size: 14px;
+    color: #fff;
+}
+
+.footerBuy .footerItem.shopCar {
+    background: #F19724;
+}
+
+.footerBuy .footerItem .shopCartNum {
+    position: absolute;
+    right: 20%;
+    top: 3px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    background: url('shopNum.png') no-repeat;
+    background-size: 100%;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 10px;
+}
+
+.footerBuy .footerItem.nowBuy {
+    background: #E2682D;
+}
+
+.footerBuy .footerItem text {
+    font-size: 11px;
+    color: #333;
+}
+
+.footerBuy .footerItem .itemIco {
+    width: 100%;
+    height: 16px;
+}
+
+.footerBuy .footerItem .itemIco image {
+    width: 16px;
+    height: 16px;
+}
+
+
+/*商品详情*/
+
+.g_detail {
+    background: #fff;
+}
+
+.g_detail text {
+    padding: 0 10px;
+    display: block;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.g_detail image {
+    width: 100%;
+}
+
+
+/*购买记录*/
+
+.goodsMarket {
+    background: #fff;
+}
+
+.goodsMarket .mark_nav,
+.goodsMarket .mark_log {
+    width: 100%;
+    display: table;
+}
+
+.goodsMarket .mark_nav text,
+.goodsMarket .mark_log text {
+    padding: 10px 0;
+    width: 42%;
+    display: table-cell;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+}
+
+.goodsMarket .mark_nav text {
+    color: #333;
+}
+
+.goodsMarket .mark_nav text.mark_num,
+.goodsMarket .mark_log text.mark_num {
+    width: 16%;
+}
+
+
+/*累计评价*/
+
+.goodsEva {}
+
+.goodsEva .evaGroup {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.goodsEva .evaGroup view {
+    width: 25%;
+    display: inline-block;
+    text-align: center;
+}
+
+.goodsEva .evaGroup text {
+    padding: 5px 10px;
+    background: #fff;
+    border-radius: 15px;
+    display: inline-block;
+    font-size: 12px;
+    color: #333;
+    transition: all .2s;
+}
+
+.goodsEva .evaGroup text.active {
+    background: #E2682D;
+    color: #fff;
+}
+
+.goodsEva .eva_list {
+    background: #fff;
+}
+
+.goodsEva .eva_list view {
+    padding: 8px 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.goodsEva .eva_buyer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.goodsEva .eva_buyer text,
+.goodsEva .eva_seller {
+    font-size: 12px;
+    color: #999;
+}
+
+.goodsEva .eva_detail,
+.goodsEva .eva_rep {
+    font-size: 12px;
+    color: #999;
+}
+
+.goodsEva .eva_seller {
+    color: #E2682D;
+}
+
+.goodsEva .eva_rep {
+    color: #E2682D;
+}
+
+
+/*加入购物车*/
+
+.goodType {
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    -webkit-transform: translate(0, 100%);
+    transform: translate(0, 100%);
+    opacity: 0;
+}
+
+.goodType.show {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: all 0.35s;
+    -webkit-transition: all 0.35s;
+}
+
+.goodType.hide {
+    -webkit-transform: translate(0, 100%);
+    transform: translate(0, 100%);
+    opacity: 0;
+    transition: all 0.35s;
+    -webkit-transition: all 0.35s;
+}
+
+.goodType .typeHead,
+.goodType .typeNorms,
+.goodType .typeNum {
+    padding: 10px;
+    font-size: 12px;
+}
+
+.goodType .typeTit {
+    padding: 5px 0;
+    font-size: 12px;
+}
+
+.goodType .typeTit .goods_limit {
+    color: #999;
+    font-size: 10px;
+}
+
+.goodType .typeHead {
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+
+.goodType .typeHead .carImg {
+    padding: 5px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    position: absolute;
+    left: 10px;
+    top: -40px;
+}
+
+.goodType .typeHead .carImg image {
+    width: 80px;
+    height: 80px;
+    display: block;
+}
+
+.goodType .carInfo {
+    margin-left: 100px;
+}
+
+.goodType .carInfo .carTit {
+    font-size: 14px;
+    color: #333;
+}
+
+.goodType .carInfo .carPrice {
+    margin-top: 10px;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*height: 25px;
+    line-height: 25px; */
+    color: #E0682E;
+}
+
+.goodType .carInfo .carPrice text.base-bold {
+    font-size: 14px;
+}
+
+.goodType .carInfo .carPrice .goods_stock {
+    font-size: 10px;
+    color: #999;
+}
+
+.goodType .carInfo .carPrice text.sm_pIcon {
+    font-size: 10px;
+}
+
+.goodType .carClose {
+    position: absolute;
+    right: 20px;
+    top: -50px;
+}
+
+.goodType .carClose .closeBtn {
+    position: relative;
+}
+
+.goodType .carClose .closeBtn::after {
+    content: "";
+    width: 1px;
+    height: 20px;
+    background: #fff;
+    position: absolute;
+    right: 13px;
+    top: 27px;
+}
+
+.goodType .carClose image {
+    width: 25px;
+    height: 25px;
+}
+
+.goodType .normsList {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px 0 0;
+}
+
+.goodType .normsList text {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    display: inline-block;
+    border: 1px solid #333;
+    border-radius: 3px;
+    color: #333;
+}
+
+.goodType .normsList text.active {
+    border: 1px solid #E0682E;
+    color: #E0682E;
+}
+
+.goodType .normsList text.noStorage {
+    border: 1px solid #eee;
+    color: #999;
+}
+
+.goodType .typeNum {
+    border-top: 1px solid #eee;
+}
+
+.goodType .typeNum .numBtnGroup {
+    margin-top: 5px;
+}
+
+.goodType .buyWrap .goCart,
+.goodType .buyWrap .nowBuy {
+    border: 0;
+    border-radius: 0;
+    color: #fff;
+}
+
+.goodType .buyWrap .goCart::after,
+.goodType .buyWrap .nowBuy::after {
+    border: 0;
+}
+
+.goodType .buyWrap .goCart {
+    background-color: #F19724;
+}
+
+.goodType .buyWrap .nowBuy {
+    background-color: #E2682D;
+}

@@ -1,0 +1,440 @@
+/**
+* 基础样式
+**/
+
+.container {
+    background: #fff;
+    font-size: 12px;
+}
+
+.base-mT10 {
+    margin-top: 10px;
+}
+
+.base-mB10 {
+    margin-bottom: 10px;
+}
+
+.base-positionRel {
+    position: relative;
+}
+
+//箭头
+.base-iconRight::after {
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border: 1px solid #777;
+    border-left: 0;
+    border-bottom: 0;
+    -webkit-transform: rotate(45deg) translateY(-50%);
+    transform: rotate(45deg) translateY(-50%);
+}
+
+.base-iconDown::after {
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border: 1px solid #777;
+    border-left: 0;
+    border-bottom: 0;
+    -webkit-transform: rotate(135deg) translateY(-50%);
+    transform: rotate(135deg) translateY(-50%);
+}
+
+.base-iconUp::after {
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border: 1px solid #777;
+    border-left: 0;
+    border-bottom: 0;
+    -webkit-transform: rotate(-45deg) translateY(-50%);
+    transform: rotate(-45deg) translateY(-50%);
+}
+
+//线
+.base-line-left::after,
+.base-line-left::before {
+    left: 0 !important;
+}
+
+.base-after-line::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 10px;
+    height: 1px;
+    content: '';
+    background-color: #eee;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+}
+
+.base-before-line::before {
+    position: absolute;
+    top: -1px;
+    right: 0;
+    left: 10px;
+    height: 1px;
+    content: '';
+    background-color: #eee;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+}
+
+//横向、纵向居中
+.base-transY {
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+.base-transX {
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+
+.base-trans {
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+//文本对齐方式
+.base-tl {
+    text-align: left;
+}
+
+.base-tc {
+    text-align: center;
+}
+
+.base-tr {
+    text-align: right;
+}
+
+//浮动
+.base-fl {
+    float: left;
+}
+
+.base-fr {
+    float: right;
+}
+
+.base-hide {
+    display: none !important;
+}
+
+.base-ovh {
+    overflow: hidden;
+}
+
+.base-ellipsis {
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: keep-all;
+    word-wrap: normal;
+}
+
+.base-ellipsis2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.base-nowrap {
+    white-space: nowrap;
+    word-break: keep-all;
+}
+
+.base-wrap {
+    white-space: normal;
+    word-break: break-all;
+}
+
+.base-bold {
+    font-weight: bold;
+}
+
+//蒙版
+.base-mask {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .4);
+    z-index: 100;
+}
+
+.base-mask.anim {
+    left: -100%;
+    transition: all 0s;
+}
+
+
+/**
+* 基础组件
+**/
+
+//图文item
+.mediaItem {
+    background: #fff;
+    padding: 11px 10px;
+    position: relative;
+    .mediaItem-img {
+        width: 20px;
+        height: 20px;
+    }
+    .mediaItem-label {
+        display: flex;
+        align-items: center;
+        color: #999;
+        font-size: 12px;
+    }
+    .mediaItem-wrap {
+        width: 100%;
+        line-height: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+        &.r_icon {
+            padding-right: 10px;
+        }
+        .l_width {
+            margin-left: 5px;
+            min-width: 60px;
+            font-size: 12px;
+            color: #333;
+        }
+        .r_width {
+            min-width: 120px;
+            font-size: 12px;
+        }
+    }
+}
+
+
+/*输入Item*/
+
+.labelItem {
+    background: #fff;
+    padding: 11px 10px;
+    position: relative;
+    .labelItem-img {
+        width: 24px;
+        height: 24px;
+    }
+    .labelItem-label {
+        display: flex;
+        align-items: center;
+        color: #999;
+        font-size: 12px;
+    }
+    .labelItem-wrap {
+        width: 100%;
+        line-height: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+        &.r_icon { 
+            input,picker {
+                right: 20px;
+            }
+        }
+        .l_width {
+            margin-left: 5px;
+            min-width: 60px;
+            font-size: 12px;
+            color: #333;
+        }
+        .r_width {
+            min-width: 120px;
+            font-size: 12px;
+        }
+        input,
+        picker {
+            width: 150px;
+            font-size: 12px;
+            text-align: right;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+        }
+    }
+}
+
+//tab按钮组
+.tabBtnGroup {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    padding-bottom: 2px;
+    .tabBtnItem {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        align-items: center;
+        position: relative;
+        transition: color .1s linear;
+        padding: 10px 0;
+        font-size: 12px;
+        &.active {
+            color: #f00;
+        }
+    }
+    .tab-line {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        background: #f00;
+        transition: transform 0.5s;
+    }
+}
+
+//数量选择器
+.numBox {
+    display: inline-block;
+    height: 29px;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    overflow: hidden;
+    button {
+        padding-left: 14px;
+        padding-right: 14px;
+        border-radius: 0;
+        &::after {
+            border: none;
+            border-radius: 0;
+        }
+    }
+    input {
+        width: 30px;
+        display: inline-block;
+        text-align: center;
+        font-size: 12px;
+    }
+}
+
+//底部浮动左右按钮
+.apposeFixedBtn {
+    width: 100%;
+    height: 44px;
+    // display: table;
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    .fixedItem {
+        // width: 50%;
+        // display: table-cell;
+        flex: 1;
+        line-height: 44px;
+        height: 44px;
+        background: #E0682E;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 12px;
+        color: #fff;
+        &.one {
+            background: #fff;
+            color: #999;
+        }
+    }
+}
+
+//底部块级浮动按钮
+.fixedBlockBtn {
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: #E0682E;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+}
+
+//sheet
+.actionsheet {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    -webkit-transform: translate(0, 100%);
+    transform: translate(0, 100%);
+    opacity: 0;
+    &.show {
+        transform: translate(0px, 0px);
+        opacity: 1;
+        transition: all 0.35s;
+        -webkit-transition: all 0.35s;
+    }
+    &.hide {
+        -webkit-transform: translate(0, 100%);
+        transform: translate(0, 100%);
+        opacity: 0;
+        transition: all 0.35s;
+        -webkit-transition: all 0.35s;
+    }
+    .sheetItem {
+        margin-top: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: space-between;
+        box-sizing: border-box;
+        align-items: center;
+        background: #fff;
+        border-radius: 5px;
+        image {
+            margin-right: 10px;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+        }
+        .itemInfo {
+            font-size: 11px;
+            color: #999;
+            .payName {
+                font-size: 12px;
+                color: #333;
+            }
+        }
+    }
+}
+
+//滚动容器
+.scroll-container {
+    flex: 1;
+    overflow-y: scroll;
+    height: 100%;
+}

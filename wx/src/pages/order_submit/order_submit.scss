@@ -1,0 +1,32 @@
+/*订单详情*/
+
+
+/* @import "order_detail.wxss"; */
+
+
+/* @import "fixedBtn_submit.wxss"; */
+
+
+/* @import "goodsItem.wxss"; */
+
+.store_delivery {
+    border-bottom: 1px solid rgba(238, 238, 238, .8);
+    background: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .labelTit {
+        width: 25%;
+        border-right: 1px solid rgba(238, 238, 238, .8);
+        text-align: center;
+        font-size: 12px;
+    }
+}
+
+.order_sub {
+    margin-bottom: 10px;
+    .order_addr {
+        margin-bottom: 0;
+        border-bottom: 1px solid rgba(238, 238, 238, .8);
+    }
+}

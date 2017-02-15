@@ -1,0 +1,8 @@
+<import src="base.wxml"/>
+<import src="noData.wxml"/>
+<view class="container">
+    <!--<scroll-view class="scroll-container" style="height: 690rpx;" scroll-y="true" bindscrolltolower="scrollBottom_handler">-->
+        <include src="goodsList.wxml"/>
+        <template wx:if="{{goodsList.length === 0}}" is="noData"/>
+    <!--</scroll-view>-->
+</view>

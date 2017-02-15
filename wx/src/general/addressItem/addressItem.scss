@@ -1,0 +1,30 @@
+/*订单收货地址*/
+
+.addressItem {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #fff;
+    position: relative;
+    .addrIcon {
+        image {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    .addrInfo {
+        width: 310px;
+        margin-left: 10px;
+        font-size: 12px;
+        .addr_user {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+    }
+}

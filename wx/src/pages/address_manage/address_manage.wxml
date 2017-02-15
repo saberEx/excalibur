@@ -1,0 +1,30 @@
+<import src="base.wxml"/>
+<import src="noData.wxml"/>
+<view class='address_list'>   
+	<block wx:for="{{address_list}}" wx:key="address_id">
+		<view class="{{item.is_default == 1 ? 'address_manage default' : 'address_manage'}}">
+			<radio-group class="radio-group base-transY" bindchange="setDefaultHandler" data-index="{{index}}">
+				<label class="radio" >
+					<radio checked="{{item.is_default == 1?'checked':''}}"/>
+				</label>
+			</radio-group> 
+			<view class="address_info">
+				<view class="user_info">
+					<text>{{item.true_name}}</text>
+					<text>{{item.mob_phone}}</text>
+				</view>
+				<view class="user_add">{{item.area_info+item.address}}</view>
+				<view class="user_type">
+					<view bindtap="editHandler" data-item="{{item}}">
+						<image src="compile_on.png"></image>编辑
+					</view>
+					<view bindtap="delHandler" data-item="{{item}}">
+						<image src="delete_on.png"></image>删除
+					</view>
+				</view>
+			</view>
+		</view>
+	</block>
+	<template wx:if="{{address_list.length === 0}}" is="noData" data="{{s_label:'您需要设置收货地址哦'}}"/>
+	<template is="fixedBlockBtn" data="{{params:'address_edit',s_label:'新增地址'}}"/>
+</view>

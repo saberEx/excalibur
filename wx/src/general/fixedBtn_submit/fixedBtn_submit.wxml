@@ -1,0 +1,26 @@
+<!--块级浮动按钮_提交适用-->
+<!--参数 
+l_label: 左侧文案
+r_label: 右侧文案
+-->
+<template name="fixedBtn_submit">
+    <view class="fixedBtn_submit totalBar">
+        <view class="shopCart" wx:if="{{b_isShopCart}}">
+            <view class="l_cart">
+                <radio-group class="radio-group ">
+                    <label class="radio" bindtap="f_radioAllChange">
+                        <radio value="1" checked="{{b_allChecked}}"/>{{s_radio?s_radio:"全选"}}
+                    </label>
+                </radio-group> 
+            </view>
+            <view class="r_cart" wx:if="{{!b_notShowPrice}}">
+                <view class="cart_count">总计：<text class="price_icon">￥</text><text class="cart_price">{{sum}}</text></view>
+                <view class="cart_tips">不含运费</view>
+            </view>
+        </view>
+        <view class="totalInfo" wx:else><text wx:if="{{b_hasNum}}">共<text>{{num}}</text>件，</text>总金额：<text class="price_icon">￥</text><text>{{sum}}</text></view>
+        <view class="fixedItem {{disabled?'one':''}}" bindtap="f_l_labelOnClick"> 
+            {{l_label}}
+        </view>
+    </view>
+</template>

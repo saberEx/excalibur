@@ -1,0 +1,77 @@
+<!--全部商品列表-->
+<!--参数
+g_img: 图标
+g_tit: 商品标题
+g_type: 库存规格
+g_price: 价格 
+isGA: 1(添加购物车) 0(更改数量)
+-->
+<template name="goodsItem">
+    <view class="base-after-line goodsItem">
+        <image class="goods_img" src="{{g_img}}"></image>
+        <view class="goodsInfo">
+            <view class="base-ellipsis good_tit">{{g_tit}}</view>
+            <view class="base-ellipsis good_type">库存：{{g_type}} </view>
+            <view class="g_price">￥<text class="good_pir">{{g_price}}</text></view>
+            <view wx:if="{{isGA == 1}}">
+                <view class="add_shopCar">
+                    <image class="show" src="addGoods.png"></image> 
+                </view>
+            </view>
+            <view wx:if="{{isGA == 0}}">
+                <view class="add_shopCar">  
+                    <template is="numBtnGroup" s_val="{{inputValue}}" minus_dis="{{minus_dis}}" plus_dis="{{plus_dis}}" />
+                </view>
+            </view> 
+        </view>
+    </view>
+</template>
+
+
+<!--购物车商品列表-->
+<!--参数
+g_img: 图标
+g_tit: 商品标题 
+g_price: 价格 
+g_num: 数量
+-->
+<template name="shopCart">
+    <view class=" goodsItem shopCart">
+        <radio-group class="radio-group base-transY" bindchange="radioChange">
+            <label class="radio" >
+                <radio value="1" checked=""/>
+            </label>
+        </radio-group> 
+        <image class="goods_img" src="{{g_img}}"></image>
+        <view class="goodsInfo">
+            <view class="base-ellipsis good_tit" wx:if="{{edit == 1}}" >{{g_tit}}</view> 
+            <view class="buy_num"  wx:else>
+                <template is="numBtnGroup" />
+            </view>
+            <view class="g_count">
+                <view class="g_price">￥<text class="good_pir">{{g_price}}</text></view> 
+                <view class="g_num">x {{g_num}}</view>
+            </view>
+        </view> 
+    </view>
+</template>
+
+<!--订单商品列表-->
+<!--参数
+g_img: 图标
+g_tit: 商品标题 
+g_price: 价格 
+g_num: 数量
+-->
+<template name="orderGoodsItem">
+    <view class=" goodsItem orderGoodsItem">
+        <image class="goods_img" src="{{g_img}}"></image>
+        <view class="goodsInfo">
+            <view class="base-ellipsis good_tit">{{g_tit}}</view> 
+            <view class="g_count base-transY">
+                <view class="g_price">￥<text class="good_pir">{{g_price}}</text></view> 
+                <view class="g_num">x {{g_num}}</view>
+            </view>
+        </view>
+    </view>
+</template>

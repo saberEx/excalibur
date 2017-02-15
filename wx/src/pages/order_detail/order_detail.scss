@@ -1,0 +1,134 @@
+/*订单详情*/
+
+
+/* @import "addressItem.wxss"; */
+
+
+/* @import "goodsItem.wxss"; */
+
+.order_detail {
+    padding-bottom: 54px;
+    .detail_addressCon {
+        .addressItem.base-iconRight::after {
+            display: none;
+        }
+    }
+    .order_since {
+        padding: 11px 10px;
+        line-height: 24px;
+        background: #fff;
+        border-bottom: 1px solid rgba(238, 238, 238, .8);
+        font-size: 12px;
+        text {
+            font-weight: bold;
+            color: #E0682E;
+        }
+        .singe_img {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+        }
+    }
+    // .addressItem.base-iconRight::after {
+    //     display: none;
+    // }
+    .order_infoWrap,
+    .addr_user,
+    .order_send {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+    }
+    .order_infoWrap,
+    .order_send {
+        padding: 15px 10px;
+        background: #E0682E;
+        .order_info {
+            color: #fff;
+            .order_state {
+                font-size: 14px;
+            }
+            .order_close_time {
+                margin-top: 10px;
+                font-size: 12px;
+            }
+        }
+        .order_img {
+            image {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    }
+    .order_send {
+        padding: 10px 10px;
+        background: #fff;
+        border-bottom: 1px solid rgba(238, 238, 238, .8);
+        .order_info {
+            color: #333;
+            .order_state,
+            .order_close_time {
+                font-size: 12px;
+            }
+        }
+        .order_img {
+            image {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+    .orderItem {
+        .total {
+            padding: 11px 10px;
+            background: #fff;
+            text-align: right;
+            font-size: 12px;
+            line-height: 24px;
+            text {
+                font-size: 10px;
+                &.total_num {
+                    font-size: 12px;
+                    font-weight: bold;
+                    color: #E0682E;
+                }
+            }
+        }
+        .mediaItem {
+            .r_width {
+                color: #999;
+            }
+        }
+    }
+    .order_wrap {
+        .mediaItem {
+            &::after {
+                left: 0;
+            }
+        }
+    }
+    .order_call {
+        width: 100%;
+        padding: 10px 0;
+        background: #fff;
+        display: table;
+        view {
+            line-height: 24px;
+            display: table-cell;
+            align-items: center;
+            text-align: center;
+            font-size: 12px;
+            &:first-of-type {
+                border-right: 1px solid rgba(238, 238, 238, .8);
+            }
+            image {
+                margin-right: 10px;
+                width: 20px;
+                height: 20px;
+                vertical-align: middle;
+            }
+        }
+    }
+}

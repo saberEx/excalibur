@@ -1,0 +1,40 @@
+.goods_lose{ 
+	background: #fff; 
+	display: flex; 
+	.lose_code,.lose_goods{
+		padding: 40px 25px;
+		width: 50%;
+		box-sizing: border-box;
+	}
+	.lose_code{
+		padding-right: 0;
+		image{
+			width: 100%;
+		}
+	}
+	.lose_goods{
+		color: #999;
+		.lose_subTit,.lose_wx,.lose_wxCode{ 
+			margin-bottom: 8px;
+			font-size: 12px;
+		}
+		.lose_tit{	 
+			margin-bottom: 10px;		
+			color: #333;
+			font-weight: bold;
+			font-size: 14px;
+		}
+		button{ 
+			line-height: 2;
+			border-radius: 1px;
+			background-color: #E0682E;
+		}
+	}
+}
+.lose_spend{
+	display: flex;
+	align-items: flex-start;
+	image{
+		width: 100%;
+	}
+}

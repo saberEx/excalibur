@@ -1,0 +1,8 @@
+Thumbs.db
+.wing
+typings/
+.idea/*
+libs/
+node_modules/
+release/
+npm-debug.log

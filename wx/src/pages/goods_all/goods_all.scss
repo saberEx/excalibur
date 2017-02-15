@@ -1,0 +1,231 @@
+ /* @import "noData.wxss"; */
+ /*测试样式*/
+ 
+ .scroll-view-item {
+     height: 200px;
+ }
+ /*测试样式*/
+ 
+ .bc_green {
+     background-color: #09BB07;
+ }
+ 
+ .bc_red {
+     background-color: #F76260;
+ }
+ 
+ .bc_blue {
+     background-color: #10AEFF;
+ }
+ 
+ .bc_yellow {
+     background-color: #FFBE00;
+ }
+ 
+ .bc_gray {
+     background-color: #C9C9C9;
+ }
+ 
+ .goodsAll_box {
+     width: 100%;
+     height: 100%;
+     position: fixed;
+     left: 0;
+     top: 0;
+ }
+ 
+ .goodsAll_box .shopCarBtn {
+     position: fixed;
+     right: 20px;
+     bottom: 20px;
+ }
+ 
+ .goodsAll_box .shopCarBtn image {
+     width: 50px;
+     height: 50px;
+ }
+ 
+ .goodsAll_box .shopCarBtn .carNum {
+     width: 15px;
+     height: 15px;
+     line-height: 15px;
+     display: inline-block;
+     border-radius: 50%;
+     background: #fff;
+     text-align: center;
+     font-size: 10px;
+     color: #333;
+     position: absolute;
+     top: 10px;
+     right: 10px;
+ }
+ 
+ .category {
+     height: 100%;
+     display: -webkit-flex;
+     display: flex;
+     justify-content: space-between;
+ }
+ 
+ .category .left_menu,
+ .category .right_cont,
+ .category .right_cont scroll-view,
+ .category .left_menu scroll-view {
+     height: 100%;
+ }
+ 
+ .category .left_menu {
+     width: 80px;
+     background: #fff;
+ }
+ 
+ .category .right_cont {
+     width: 77%;
+ }
+ 
+ .category .left_menu .classItem {
+     padding: 10px 0;
+     border-bottom: 1px solid #eee;
+     text-align: center;
+     position: relative;
+     font-size: 12px;
+     color: #999;
+ }
+ 
+ .category .left_menu .classItem.active {
+     color: #E64324;
+ }
+ 
+ .category .left_menu .classItem.active::before {
+     content: "";
+     width: 3px;
+     height: 100%;
+     display: inline-block;
+     background: #E64324;
+     position: absolute;
+     left: 0;
+     top: 0;
+ }
+ 
+ .category .right_cont .goods_class {
+     padding: 10px 0;
+     font-size: 12px;
+     color: #333;
+ }
+ /*商品列表-简*/
+ 
+ .goodsItem {
+     padding: 10px 10px 10px 90px;
+     background: #fff;
+     position: relative;
+     &::after {
+         left: 0;
+     }
+     .goods_img {
+         width: 70px;
+         height: 70px;
+         position: absolute;
+         left: 10px;
+         top: 10px;
+     }
+     .goodsInfo {
+         height: 70px;
+         color: #333;
+         .good_tit {
+             height: 30px;
+             line-height: 30px;
+             font-size: 14px;
+         }
+         .good_type {
+             line-height: 20px;
+             font-size: 12px;
+             color: #999;
+         }
+         .g_price {
+             line-height: 20px;
+             color: #E0682E;
+             font-size: 10px;
+             .good_pir {
+                 font-size: 12px;
+             }
+         }
+         .g_num {
+             font-size: 10px;
+             color: #333;
+         }
+         /*全部商品-购物车按钮*/
+         .add_shopCar {
+             position: absolute;
+             right: 10px;
+             bottom: 5px;
+             image {
+                 width: 30px;
+                 height: 30px;
+             }
+             &.show {
+                 display: block;
+             }
+             &.hide {
+                 display: none;
+             }
+         }
+         /*覆盖num组件样式*/
+         .numBtnGroup {
+             border: 0;
+             border-radius: 0;
+             button {
+                 background-color: transparent;
+                 /*font-weight: bold;*/
+             }
+         }
+     }
+     &.orderGoodsItem {
+         background: #f5f5f5;
+         .g_count {
+             text-align: right;
+             position: absolute;
+             right: 10px;
+             top: 50%;
+         }
+         .g_price {
+             color: #333;
+         }
+     }
+     &.shopCart {
+         padding: 10px 10px 10px 120px;
+         border-bottom: 1px solid rgba(238, 238, 238, .8);
+         .radio-group {
+             position: absolute;
+             left: 10px;
+             top: 50%;
+             // radio{
+             //     width: 20px;
+             //     height: 20px;
+             // }
+         }
+         .goods_img {
+             left: 40px;
+         }
+         .goodsInfo {
+             .buy_num {
+                 text-align: center;
+                 .numBtnGroup {
+                     button,
+                     input {
+                         float: left;
+                         font-size: 16px;
+                     }
+                     input {
+                         margin-top: 5px;
+                     }
+                 }
+             }
+         }
+         .g_count {
+             margin-top: 20px;
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+         }
+     }
+ }

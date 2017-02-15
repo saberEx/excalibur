@@ -1,0 +1,20 @@
+{
+  "name": "wx.smt.c",
+  "version": "1.0.0",
+  "description": "小程序",
+  "devDependencies": {
+    "node-sass": "^3.4.2",
+    "watch": "^1.0.1"
+  },
+  "scripts": {
+    "dev": "set NODE_ENV=dev&node ./bin/copyFiles.js",
+    "release": "set NODE_ENV=release&node ./bin/copyFiles.js",
+    "watch": "set NODE_ENV=watch&node ./bin/copyFiles.js&node ./bin/myWatch.js"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [],
+  "author": "499731645@qq.com",
+  "license": "ISC"  
+}

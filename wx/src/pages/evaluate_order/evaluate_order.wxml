@@ -1,0 +1,39 @@
+<!--index.wxml-->
+<import src="base.wxml"/>
+<import src="fixedBtn_submit.wxml"/>
+<view class="evaluate_order" wx:if="{{b_onLoad}}">
+    <view class="eva_part">
+        <view class="l_eva">
+            <text>对商品的评价：</text>
+        </view>
+    </view>
+    <view class="eva_goods" wx:for="{{evaluation}}" wx:key="{{index}}">
+        <image class='eva_img' src="{{item[1]}}" mode="scaleToFill"></image>
+        <view class="r_eva">
+            <view class="eva_good_statCon">
+                评分：<template is="star" data="{{forName:'goods_'+index+'_'+item[0],a_star:a_goods_star[index]}}"/>
+            </view>
+            <textarea bindinput="textarea_handler" data-index="{{index}}" class="eva_text" placeholder="与小伙伴分享你的感受，是对他人最大的帮助哦！" />
+        </view>
+    </view>
+    <template is="mediaItem" data="{{b_line:true,l_label:'对本次服务打分'}}"/>
+    <view class="eva_part base-after-line">
+        <view class="l_eva">商品与描述相符：</view>
+        <view class="r_eva">
+            <template is="star" data="{{forName:'des',a_star:a_star_des}}"/>
+        </view>
+    </view>
+    <view class="eva_part base-after-line">
+        <view class="l_eva">卖家的服务态度：</view>
+        <view class="r_eva">
+            <template is="star" data="{{forName:'service',a_star:a_star_service}}"/>
+        </view>
+    </view>
+    <view class="eva_part">
+        <view class="l_eva">卖家的发货速度：</view>
+        <view class="r_eva">
+            <template is="star" data="{{forName:'shipments',a_star:a_star_ship}}"/>
+        </view>
+    </view>
+    <template is="fixedBtn_submit" data="{{b_isShopCart:true,b_notShowPrice:true,l_label:'提交',s_radio:'匿名评价',b_allChecked:b_allChecked}}"/> 
+</view>

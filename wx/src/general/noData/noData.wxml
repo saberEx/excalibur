@@ -1,0 +1,15 @@
+<!--无数据-->
+<!--参数  
+    s_img:default.png //显示图片
+    s_label: 暂无数据 //提示语
+    b_tit: 按钮内容
+-->
+<template name="noData">
+    <view class="noData"> 
+        <view>
+            <image class='no_tipsImg' src='{{s_img?s_img:"noData.png"}}'></image>
+            <view class='no_tit'>{{s_label?s_label:"暂无数据"}}</view>
+            <button size="mini" wx:if="{{b_hasBtn}}">{{b_tit}}</button>
+        </view>       
+    </view> 
+</template>

@@ -1,0 +1,202 @@
+<import src="base.wxml"/>
+<import src="noData.wxml"/>
+<template name="evaluate">
+	<block wx:if="{{list.length==0}}">
+		<template is="noData"/>
+	</block>
+	<block wx:for="{{list}}" wx:key="{{index}}">
+		<view class="eva_list">
+			<view class="eva_buyer">
+				<text>{{item.s_geval_frommembername}}</text>
+				<text>{{item.s_geval_addtime}}</text>
+			</view>
+			<view class="eva_detail">
+				{{item.geval_content}}
+			</view>
+			<block wx:if="{{item.geval_explain}}">
+				<view class="eva_seller">
+					店主回复：<text>@{{item.s_geval_frommembername}}</text>
+				</view>
+				<view class="eva_rep">
+					{{item.geval_explain}}
+				</view>
+			</block>
+		</view>
+	</block>
+</template>
+<view class="detail_box">
+	<template is="tabBtnGroup" data="{{i_index:i_tabIndex,a_controlItems:['商品详情','商品信息','销售记录','累计评价']}}"/>
+	<scroll-view class="scroll-container {{i_tabIndex===0?'':'base-hide'}}" scroll-y="{{true}}">
+		<swiper autoplay="{{true}}" interval="{{interval}}" duration="{{duration}}">
+		<block wx:for="{{data.goods_image_mobile}}" wx:key="{{index}}">
+			<swiper-item>
+			<image src="{{item}}" mode="widthFix" class="slide-image" />
+			</swiper-item>
+		</block>
+		</swiper>
+		<view class="goodsWrap base-mB10">
+			<text class="goods_tit base-ellipsis2">{{data.goods_info.goods_name}}</text>
+			<view class="goods_price">￥<text class="goods_m">{{data.goods_info.goods_price}}</text></view>
+			<view class="goods_oldPrice" wx:if="{{data.goods_info.goods_marketprice}}">专柜价：<text class="g_del">{{data.goods_info.goods_marketprice}}</text>
+			<text class="base-fr">销量：{{data.goods_info.goods_salenum}}</text></view>
+		</view>
+		<block wx:if="{{shop_id<=0 && a_com_spec_list.length>0}}">
+			<view class="goodsWrap base-mB10" wx:for="{{a_com_spec_list}}" wx:key="{{index}}">
+				<view class="argument">
+					<text class="aName">{{item.name}}：</text>
+					<view class="aParameter">
+						<text wx:for="{{item.value}}" wx:for-index="key" wx:for-item="itemName"  wx:key="{{key}}">{{itemName}} </text>
+					</view>
+				</view>
+			</view>
+		</block>
+		<view class="goodsWrap base-mB10" wx:if="{{shop_id>0}}">
+			<view class="argument base-iconRight" bindtap="f_changeSpreadCon">
+				<text class="aName">配送方式：</text>
+				<view class="aParameter">
+					<text>{{data.shop_config_info.express==1?"物流配送":""}} {{data.shop_config_info.seller_dispatching==1?"店员配送":""}} {{data.shop_config_info.call_by_self==1?"自提":""}}</text>
+				</view>
+			</view>
+			<view class="base-ovh">
+				<view class="{{b_showSpreadCon?'spreadCon':'spreadCon spread-hide'}}">
+					<view class="argument" wx:if="{{data.shop_config_info.express==1}}">
+						<text class="aName">物流配送：</text>
+						<view class="aParameter">
+							<text>运费：{{data.goods_info.goods_freight>0?data.goods_info.goods_freight:"包邮"}}</text>
+						</view>
+					</view>
+					<view class="argument" wx:if="{{data.shop_config_info.seller_dispatching==1}}">
+						<text class="aName">店员配送：</text>
+						<view class="aParameter">
+							<text>{{data.shop_config_info.seller_dispatching_info.money_limit || 0}}元起送,{{data.shop_config_info.seller_dispatching_info.free_freight || 0}}元包邮,运费{{data.shop_config_info.seller_dispatching_info.freight || 0}}元 \n配送时间：</text> <text wx:for="{{data.shop_config_info.seller_dispatching_info.time_limit}}"  wx:key="{{index}}">{{item.start}}-{{item.end}} </text>
+						</view>
+					</view>
+					<view class="argument">
+						<text class="aName">自提：</text>
+						<view class="aParameter">
+							自提时间：<text wx:for="{{data.shop_config_info.call_by_self_info.time_limit}}" wx:key="{{index}}">{{item.start}}-{{item.end}} </text>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="storeInfo"> 
+			<template is="mediaItem" data="{{id:'storeIndexMediaItem',b_line:true,l_label:shop_id>0?data.shop_info.shop_name:data.goods_info.store_name,r_label:'',l_icon:'storeIcon.png'}}"/>
+			<view class="storeApprove">
+				<view><image src="{{storeApprove}}"></image>企业认证</view>
+				<view><image src="{{storeApprove}}"></image>担保交易</view>
+				<view></view>
+			</view>
+		</view>
+	</scroll-view>
+
+	<scroll-view class="scroll-container {{i_tabIndex===1?'':'base-hide'}}" scroll-y="{{true}}">
+		<!--商品详情-->
+		<view class="g_detail base-mT10" wx:if="{{a_mobile_body.length!=0}}">
+			<block wx:for="{{a_mobile_body}}" wx:key="{{index}}">
+				<image src="{{item}}"></image>
+			</block>
+		</view>
+		<block wx:if="{{a_mobile_body.length==0}}">
+			<template is="noData"/>
+		</block>
+	</scroll-view>
+
+	<scroll-view class="scroll-container {{i_tabIndex===2?'':'base-hide'}}" scroll-y="{{true}}" id="2" bindscrolltolower="f_scrollToLower">
+		<!--销售记录-->
+		<view class="goodsMarket">
+			<view class="mark_nav" wx:if="{{o_salesRecord.salesRecord.length>0}}">
+				<text>买家</text>
+				<text class="mark_num">数量</text>
+				<text>购买时间</text>
+			</view>
+			<block wx:for="{{o_salesRecord.salesRecord}}" wx:key="{{index}}">
+				<view class="mark_log">
+					<text>{{item.s_buyer_name}}</text>
+					<text class="mark_num">{{item.goods_num}}</text>
+					<text>{{item.s_add_time}}</text>
+				</view>
+			</block>
+		</view>	
+		<block wx:if="{{o_salesRecord.salesRecord.length==0}}">
+			<template is="noData"/>
+		</block>	
+	</scroll-view>
+
+	<scroll-view class="scroll-container {{i_tabIndex===3?'':'base-hide'}}" scroll-y="{{true}}" id="3" bindscrolltolower="f_scrollToLower">
+		<!--累计评价-->	
+		<view class="goodsEva">
+			<view class="evaGroup" wx:if="{{a_count[0]>0}}">
+				<view><text class="{{i_evaluateIndex===0?'active':''}}" bindtap="f_evaluateTab" data-index="0">全部（{{a_count[0]}}）</text></view>
+				<view><text class="{{i_evaluateIndex===1?'active':''}}" bindtap="f_evaluateTab" data-index="1">好评（{{a_count[1]}}）</text></view>
+				<view><text class="{{i_evaluateIndex===2?'active':''}}" bindtap="f_evaluateTab" data-index="2">中评（{{a_count[2]}}）</text></view>
+				<view><text class="{{i_evaluateIndex===3?'active':''}}" bindtap="f_evaluateTab" data-index="3">差评（{{a_count[3]}}）</text></view>
+			</view>	
+			<view class="{{i_evaluateIndex===0?'':'base-hide'}}">
+				<template is="evaluate" data="{{list:a_evaluate[0].list}}" wx:if="{{a_evaluate[0].list!=0}}"/>
+			</view>
+			<view class="{{i_evaluateIndex===1?'':'base-hide'}}">
+				<template is="evaluate" data="{{list:a_evaluate[1].list}}"/>
+			</view>
+			<view class="{{i_evaluateIndex===2?'':'base-hide'}}">
+				<template is="evaluate" data="{{list:a_evaluate[2].list}}"/>
+			</view>
+			<view class="{{i_evaluateIndex===3?'':'base-hide'}}">
+				<template is="evaluate" data="{{list:a_evaluate[3].list}}"/>
+			</view>
+
+		</view>
+		<block wx:if="{{a_count[0]==0}}">
+			<template is="noData"/>
+		</block>
+	</scroll-view>
+
+		<!--规格弹出层-->
+	<view class="base-mask {{isAnim ? '' : 'anim'}} "> 
+		<view class="goodType {{isAnim ? 'show' : 'hide'}} ">
+			<view class="typeHead">
+				<view class="carImg"><image src="{{data.all_com_goods[spec_goods_alias].s_goods_image}}"></image></view>
+				<view class="carInfo">
+					<view class="carTit base-ellipsis">{{data.all_com_goods[spec_goods_alias].goods_name}}</view>
+					<view class="carPrice">
+						<view><text class="sm_pIcon">￥</text><text class="base-bold">{{data.all_com_goods[spec_goods_alias].goods_price}}</text></view>						
+						<view class="goods_stock">库存：{{data.all_com_goods[spec_goods_alias].goods_storage}}</view>
+					</view>
+				</view>
+				<view class="carClose" bindtap="closeType"><view class="closeBtn"><image src="{{tips_close}}"></image></view></view>
+			</view>
+			<view class="typeNorms" wx:for="{{a_com_spec_list}}" wx:key="{{index}}">
+				<view class="typeTit">{{item.name}}</view>
+				<view class="normsList">
+					<text bindtap="f_changeSpec" data-index="{{index}}" data-value="{{key}}" class="{{key==a_activeSpec[index]?'active':''}} {{(key==a_activeSpec[index]&&data.all_com_goods[spec_goods_alias].goods_storage<=0)?'noStorage':''}}" wx:for="{{item.value}}" wx:for-item="itemName" wx:for-index="key" wx:key="{{key}}">{{itemName}}</text>
+				</view>
+			</view>
+			<view class="typeNum">
+				<view class="typeTit">数量<text class="goods_limit"> {{data.goods_info.goods_limit?"(限购："+data.goods_info.goods_limit+")":""}}</text></view>
+				<template is="numBox" data="{{s_val:i_inputValue,minus_dis:b_minus_dis,plus_dis:b_plus_dis}}" />
+			</view>
+			<view class="buyWrap">
+				<button class="nowBuy" bindtap="f_buyBtn">{{data.all_com_goods[spec_goods_alias].goods_storage<=0?"库存不足":(i_openSpecType==0?"加入购物车":"立即购买")}}</button>
+			</view>
+		</view> 
+	</view>
+	<!--底部菜单-->
+	<view class="footerBuy">
+		<!--<view class="footerItem w16 service">
+			<view class="itemIco"><image src="{{service}}"></image></view>
+			<text>客服</text>
+		</view>-->
+		<view class="footerItem w16 collect " bindtap="f_favorites">
+			<view class="itemIco"><image src="{{is_favorites?collect_o:collect}}"></image></view>
+			<text>{{is_favorites?"已收藏":"收藏"}}</text>
+		</view>
+		<view class="footerItem w18 base-positionRel" bindtap="f_toMyShopCart">
+			<view class="shopCartNum {{data.shopping_cart>0?'':'base-hide'}}" >{{data.shopping_cart}}</view>
+			<view class="itemIco"><image src="{{shopCart}}"></image></view>
+			<text>购物车</text>
+		</view>
+		<view class="footerItem w25 btn shopCar" bindtap="f_showSpecMask" data-index="0">加入购物车</view>
+		<view class="footerItem w25 btn nowBuy" bindtap="f_showSpecMask" data-index="1">立即购买</view>
+	</view>
+
+</view>

@@ -1,0 +1,14 @@
+<import src="base.wxml"/>
+<view class="goods_lose">
+	<view class="lose_code"><image mode="widthFix" src="shopC_publicCode.png"></image></view>
+	<view class="lose_goods">
+		<view class="lose_tit">这个宝贝已经不见了</view>
+		<view class="lose_subTit">看看我们最新的商品吧</view>
+		<view class="lose_wx">(关注微信号，可随时来逛)</view>
+		<view class="lose_wxCode">搜索：Chengjl_1988</view>
+		<button type="primary">去逛逛</button>
+	</view>
+</view>
+<view class="lose_spend">
+	<image mode="widthFix" src="goods_lose.png"></image>
+</view>

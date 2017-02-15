@@ -1,0 +1,66 @@
+<import src="base.wxml"/>
+<view class='address_edit'>  
+	<template is="labelItem" data="{{id:'true_name',b_line:true,l_label:'收货人',value:true_name,r_label:'请输入姓名'}}"/>
+	<template is="labelItem" data="{{id:'mob_phone',b_line:true,s_type:'number',l_label:'联系电话',value:mob_phone,r_label:'请输入电话'}}"/>
+	<view class="mediaItem base-after-line" bindtap='cityItem_handler'>      
+        <view class="mediaItem-wrap">
+            <view class="mediaItem-label">
+                <text class="l_width base-tl base-ellipsis">省、市、区</text>
+            </view>
+            <view class="mediaItem-label">
+                <text class="r_width base-tr base-ellipsis">{{area_info}}</text>
+            </view>
+        </view>
+    </view>
+	<template is="labelItem" data="{{id:'address',b_line:true,l_label:'详细地址',value:address,r_label:'请输入地址'}}"/> 
+	<template is="fixedBlockBtn" data="{{s_label:'完成'}}"/>
+	<view class="modal">
+		<view class="modal-mask {{maskVisual}}" bindtap="cascadeDismiss"></view>
+		<view animation="{{animationData}}" class="modal-content">
+			<view class="modal-header">
+				<text class="modal-title">所在地区</text>
+				<view class='modal-close' bindtap="cascadeDismiss">
+					<icon size="26" type="cancel"/>
+				</view>
+			</view>
+			<view class="modal-body">
+				<text class="viewpager-title {{current == 0 ? 'area-selected' : ''}}" bindtap="changeCurrent" data-current="0">{{provinceName}}</text>
+				<text class="viewpager-title {{current == 1 ? 'area-selected' : ''}}" bindtap="changeCurrent" data-current="1">{{cityName}}</text>
+				<text class="viewpager-title {{current == 2 ? 'area-selected' : ''}}" bindtap="changeCurrent" data-current="2">{{regionName}}</text>
+				<view class="viewpager-divider"></view>
+				<swiper class="swiper-area" current="{{current}}" bindchange="currentChanged">
+					<block wx:if="{{cityData.length > 0}}">
+						<swiper-item>
+							<scroll-view scroll-y="true" class="viewpager-listview">
+								<view wx:for="{{cityData}}" wx:key="index" data-index="{{index}}" bindtap="provinceTapped">
+									<text wx:if="{{index == provinceIndex}}" class="area-selected">{{item.text}}</text>
+									<text wx:else>{{item.text}}</text>
+								</view>
+							</scroll-view>
+						</swiper-item>
+					</block>
+					<block wx:if="{{city.length > 0}}">
+						<swiper-item>
+							<scroll-view scroll-y="true" class="viewpager-listview">
+								<view wx:for="{{city}}" wx:key="index" data-index="{{index}}" bindtap="cityTapped">
+									<text wx:if="{{index == cityIndex}}" class="area-selected">{{item.text}}</text>
+									<text wx:else>{{item.text}}</text>
+								</view>	
+							</scroll-view>
+						</swiper-item>
+					</block>
+					<block wx:if="{{region.length > 0}}">
+						<swiper-item>
+							<scroll-view scroll-y="true" class="viewpager-listview">
+								<view wx:for="{{region}}" wx:key="index" data-index="{{index}}" bindtap="regionTapped">
+									<text wx:if="{{index == regionIndex}}" class="area-selected">{{item.text}}</text>
+									<text wx:else>{{item.text}}</text>
+								</view>
+							</scroll-view>
+						</swiper-item>
+					</block>
+				</swiper>
+			</view>
+		</view>
+	</view>
+</view>

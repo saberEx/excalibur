@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<import src="base.wxml"/>
+<import src="noData.wxml"/>
+<view class="container"> 
+    <scroll-view class="scroll-container" scroll-y="true" bindscrolltolower="scrollBottom_handler">
+        <view class='topCon'>
+            <view wx:if="{{shop_name || address}}" class="address" bindtap='addressHandler'> 
+                <image class='address-img' wx:if="{{address || shop_name}}" mode="scaleToFill" src="addres_sed_info.png"></image>
+                <text class="area">{{address}}</text>
+                <text>{{shop_name?'（'+shop_name+'）':''}}</text>
+            </view>
+            <view class='searchCon'>
+                <image class='searchBg' src="index_bg.png"></image>
+                <view class='inputCon base-transX'>
+                    <input class='search' bindinput='searchInput' placeholder-class='placeholderCls' placeholder='商品搜索：请输入商品关键字'></input>
+                    <view class='searchBtnCon' bindtap='searchHandler'>
+                        <icon type='search' color='#fff'></icon>
+                        <text>搜索</text>
+                    </view>
+                </view>
+            </view>
+            <view class="good_title">
+                <text>全部商品</text>
+            </view>
+        </view>
+        <include src="goodsList.wxml"/>
+        <template wx:if="{{goodsList.length === 0}}" is="noData"/>
+    </scroll-view>
+</view>

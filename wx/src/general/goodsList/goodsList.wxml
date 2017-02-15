@@ -1,0 +1,22 @@
+<template name="goodsItem">
+    <view class="goodsItem" bindtap="goodsList_click_item" data-goods_alias="{{goods_alias}}" data-shop_id="{{shop_id}}">
+        <view class="goods_img">
+            <image class="goods_avatar" src="{{goods_image}}" binderror="errorImgHandler"></image>
+        </view>
+        <view class="goods_info">
+            <view class="goods_name">{{goods_name}}</view>
+            <view class="mt10">
+                <text class="goods_price">￥{{goods_price}}</text>
+                <image catchtap="{{send_order}}" class="btn_pay btn_pay_sty4" data-id="{{goods_name}}" wx:if="{{btn_pay_style===4}}" src="buy_btn.png"></image>
+            </view>
+        </view>
+    </view>
+</template>
+
+<view class="goodsList">
+	<block wx:for="{{goodsList}}" wx:key="index">
+		<view class='goodsItemCon'>
+			<template is="goodsItem" data="{{...item}}"/>
+		</view>
+	</block>
+</view>

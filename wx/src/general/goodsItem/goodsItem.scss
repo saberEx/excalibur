@@ -1,0 +1,156 @@
+/*商品列表-简*/
+
+.goodsItem {
+    padding: 10px 10px 10px 90px;
+    background: #fff;
+    position: relative;
+    &::after {
+        left: 0;
+    }
+    .goods_img {
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+    }
+    .goodsInfo {
+        height: 70px;
+        color: #333;
+        .good_tit {
+            height: 30px;
+            line-height: 30px;
+            font-size: 14px;
+        }
+        .good_type {
+            line-height: 20px;
+            font-size: 12px;
+            color: #999;
+        }
+        .g_price {
+            line-height: 20px;
+            color: #E0682E;
+            font-size: 10px;
+            .good_pir {
+                font-size: 12px;
+            }
+        }
+        .g_num {
+            font-size: 10px;
+            color: #333;
+        }
+        /*全部商品-购物车按钮*/
+        .add_shopCar {
+            position: absolute;
+            right: 10px;
+            bottom: 5px;
+            image {
+                width: 30px;
+                height: 30px;
+            }
+            &.show {
+                display: block;
+            }
+            &.hide {
+                display: none;
+            }
+        }
+        /*覆盖num组件样式*/
+        .numBtnGroup {
+            border: 0;
+            border-radius: 0;
+            button {
+                background-color: transparent;
+                /*font-weight: bold;*/
+            }
+        }
+    }
+    &.orderGoodsItem {
+        background: #f5f5f5;
+        .g_count {
+            text-align: right;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+        }
+        .g_price {
+            color: #333;
+        }
+    }
+    &.shopCart {
+        padding: 10px 10px 10px 120px;
+        border-bottom: 1px solid rgba(238, 238, 238, .8);
+        .radio-group {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            // radio{
+            //     width: 20px;
+            //     height: 20px;
+            // }
+        }
+        .goods_img {
+            left: 40px;
+        }
+        .goodsInfo {
+            .buy_num {
+                text-align: center;
+                .numBtnGroup {
+                    button,
+                    input {
+                        float: left;
+                        font-size: 16px;
+                    }
+                    input {
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+        .g_count {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
+
+.orderItem {
+    color: #333;
+    margin-bottom: 10px;
+    .mediaItem {
+        &::after {
+            left: 0;
+        }
+        .mediaItem-label {
+            color: #333;
+        }
+        &:nth-child(1) {
+            .r_width {
+                color: #f20;
+            }
+        }
+    }
+    .order_type {
+        width: 100%;
+        padding: 5px 10px;
+        border-top: 1px solid rgba(238, 238, 238, .8);
+        background: #fff;
+        display: inline-flex;
+        justify-content: flex-end;
+        align-items: center;
+        box-sizing: border-box;
+        button {
+            margin: 0 0 0 15px;
+            padding: 0px 10px;
+            border-radius: 3px;
+            border-color: #333;
+            color: #333;
+            &.goBuy {
+                border-color: #E0682E;
+                color: #E0682E;
+            }
+        }
+    }
+}

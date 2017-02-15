@@ -1,0 +1,43 @@
+<import src="base.wxml"/>
+<template name="goodsItem">
+    <view class=" goodsItem">
+            <image class="goods_img" src="{{goods_image}}"></image>
+            <view class="goodsInfo">
+                <view class="base-ellipsis good_tit">{{geval_goodsname}}</view> 
+                <view class="g_time">
+                   交易成功时间：{{geval_ordertime}}
+                </view>
+            </view>
+    </view>
+</template>
+<view class="order_assess">
+   <view class="base-mB10" wx:for="{{a_list}}" wx:key="{{index}}">
+        <template is="goodsItem" data="{{...item}}"/>
+        <view class="evaList">
+            <view class="evaUser">
+                <view>
+                    {{item.geval_frommembername}}
+                </view>
+                <view>
+                    {{item.geval_addtime}}
+                </view>
+            </view>
+             <view class="eavDetail">
+                {{item.geval_content}}
+            </view>
+            <view class="store">
+                <view class="evaUser">
+                    <view>
+                        {{item.geval_storename}}@{{item.geval_frommembername}}
+                    </view>
+                    <view>
+                        {{item.explain_time}}
+                    </view>
+                </view>
+                 <view class="eavDetail">
+                    {{item.geval_explain}}
+                </view>
+            </view>
+        </view>
+   </view>
+</view>

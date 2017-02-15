@@ -1,0 +1,20 @@
+<!--订单收货地址-->
+<!--参数  
+-->
+<template name="addressItem">
+    <view class="addressItem base-iconRight" bindtap="addressItem_handle" data-params="{{params}}">
+        <view class="addrIcon">
+            <image src="addres_sed_info.png"></image>
+        </view>
+        <view class="addrInfo" wx:if="{{mob_phone}}">
+            <view class="addr_user">
+                <text>收货人：{{true_name}}</text>
+                <text>{{mob_phone}}</text>
+            </view>
+            <view>收货地址：{{area_info+address}}</view>
+        </view>
+        <view class="addrInfo" wx:if="{{!mob_phone}}">
+            <view>请设置收货地址</view>
+        </view>
+    </view> 
+</template>

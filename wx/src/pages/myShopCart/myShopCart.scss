@@ -1,0 +1,32 @@
+/*购物车列表*/
+
+
+/* @import "goodsItem.wxss"; */
+
+
+/* @import "fixedBtn_submit.wxss"; */
+
+
+/* @import "noData.wxss"; */
+
+.myShopCart {
+    padding-bottom: 44px;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    .shopCartItem {
+        .mediaItem {
+            &::after {
+                left: 0;
+            }
+        }
+    }
+    .fixedBtn_submit {
+        .fixedItem {
+            &.one {
+                background: #999;
+                color: #fff;
+            }
+        }
+    }
+}

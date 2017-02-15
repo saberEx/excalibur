@@ -1,0 +1,10 @@
+<import src="base.wxml"/>
+<import src="addressItem.wxml"/>
+<import src="noData.wxml"/>
+<view class='address_list'>   
+	<block wx:for="{{address_list}}" wx:key="address_id">
+		<template is='addressItem' data='{{...item,params:item}}'/>
+	</block>
+	<template wx:if="{{address_list.length===0}}" is="noData" data="{{s_label:'您需要设置收货地址哦'}}"/>
+	<template is="fixedBlockBtn" data="{{params:'address_edit',s_label:'新增地址'}}"/>
+</view>

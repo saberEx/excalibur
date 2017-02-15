@@ -1,0 +1,82 @@
+<!--index.wxml-->
+<import src="base.wxml"/>
+<view class="container">
+    
+    <button type="default" bindtap="default" hover-class="other-button-hover">点击</button>
+    
+    <template is="actionsheet" data="{{i_index:i_tabIndex,isAnim:isAnim}}"/>
+
+
+    <navigator url="address" hover-class="navigator-hover"><view class="navigator_page">新增地址</view></navigator>
+    <navigator url="address_list" hover-class="navigator-hover"><view class="navigator_page">地址管理</view></navigator>
+    <navigator url="order_list" hover-class="navigator-hover"><view class="navigator_page">订单列表</view></navigator>
+    <navigator url="order_submit" hover-class="navigator-hover"><view class="navigator_page">提交订单</view></navigator> 
+    <navigator url="goods_all" hover-class="navigator-hover"><view class="navigator_page">全部商品</view></navigator>
+    <navigator url="goods_detail" hover-class="navigator-hover"><view class="navigator_page">商品详情</view></navigator>
+    <navigator url="myShopCart" hover-class="navigator-hover"><view class="navigator_page">购物车</view></navigator>
+    <navigator url="order_detail" hover-class="navigator-hover"><view class="navigator_page">订单详情</view></navigator>
+    <navigator url="order_list" hover-class="navigator-hover"><view class="navigator_page">全部订单</view></navigator>
+    <navigator url="user_center" hover-class="navigator-hover"><view class="navigator_page">个人中心</view></navigator>
+    
+
+    <template is="tabBtnGroup" data="{{i_index:i_tabIndex,a_controlItems:['商品详情','商品信息','销售记录','累计评价']}}"/>
+    <template is="orderItem" data="{{params:['user_center','1'],id:'firstItem',b_right:true,b_line:true,l_icon:'http://img.infinitynewtab.com/weatherIcon/B.png',s_label:'333',r_label:'右侧信息',r_icon:'http://img.infinitynewtab.com/weatherIcon/B.png'}}"/>
+    <template is="mediaItem" data="{{params:['user_center','1'],id:'firstItem',b_right:true,b_line:true,l_icon:'http://img.infinitynewtab.com/weatherIcon/B.png',s_label:'333',r_label:'右侧信息',r_icon:'http://img.infinitynewtab.com/weatherIcon/B.png'}}"/>
+    <template is="mediaItem" data="{{b_right:false,b_line:true,l_label:'333',r_label:'右侧信息',r_icon:'http://img.infinitynewtab.com/weatherIcon/B.png'}}"/>
+    <template is="mediaItem" data="{{b_right:true,b_line:true,l_icon:'http://img.infinitynewtab.com/weatherIcon/B.png',s_label:'333',r_label:'右侧信息'}}"/>
+    <template is="mediaItem" data="{{b_right:false,b_line:false,l_label:'333',r_label:'右侧信息'}}"/>
+
+    <template is="title_tpl" data="{{...title,onClick_menuLink:'onClick_menuLink',onClick_wxLink:'onClick_wxLink'}}"/>
+
+    <template is="advBox_tpl" data="{{b_isbig:true,is_swiper:true,adv_imgList:advImgList}}"/>
+
+    <template is="custom_nav_text_tpl" data="{{custom_nav_list,onClick_customnavItem:'onClick_customnavItem'}}"/>
+
+    <template is="custom_nav_img_tpl" data="{{custom_navImg_list,onClick_customImgnavItem:'onClick_customImgnavItem'}}"/>
+
+    <template is="goods_search_tpl"  data="{{onClick_Search:'onClick_Search'}}"/>
+
+    <template is="custom_showcase_tpl" data="{{showcase_img_list,b_cloumn:false,s_showcase_title:'橱窗标题',s_showcase_body_title:'以下信息根据您的兴趣推荐',s_showcase_remark:'美国警察伪装未成年少女钓鱼钓到脸书高管',onClick_showcaseImgItem:'onClick_showcaseImgItem'}}"/>
+    <template is="custom_line_tpl"/>
+
+    <template is="custom_box_empty_tpl" data="{{s_heihgt:'30'}}"/>
+
+    <template is="custom_store_tpl" data="{{s_store_name:'店铺名称店铺名称店铺名称店铺名称店铺名称店铺名称店铺名称店铺名称店铺名称店铺名称店铺名称店铺名称店铺名称',onClick_custom_store:'onClick_custom_store'}}"/>
+
+    <template is="custom_notice_scroll_tpl" data="{{s_notice:'部分商品内部测试用，亲们如需购买，拍前请咨询！',noticescroll_value:noticescroll_value}}"/>
+
+    <template is="custom_colums_tpl" data="{{s_title:'栏目名称栏目名称栏目名称',s_icon_style:1,s_bgcolor:'orange',s_borcolor:'red'}}"/>
+
+    <template is="mediaItem" data="{{b_right:true,b_line:true,onClick:'aaaa',l_icon:'http://img.infinitynewtab.com/weatherIcon/B.png',s_label:'333',r_label:'右侧信息',r_icon:'http://img.infinitynewtab.com/weatherIcon/B.png'}}"/>
+    <template is="mediaItem" data="{{b_right:false,b_line:true,onClick:'aaaa',l_label:'333',r_label:'右侧信息',r_icon:'http://img.infinitynewtab.com/weatherIcon/B.png'}}"/>
+    <template is="mediaItem" data="{{b_right:true,b_line:true,onClick:'aaaa',l_icon:'http://img.infinitynewtab.com/weatherIcon/B.png',s_label:'333',r_label:'右侧信息'}}"/>
+    <template is="mediaItem" data="{{b_right:false,b_line:false,onClick:'aaaa',l_label:'333',r_label:'右侧信息'}}"/>
+    <text>输入列表</text>
+    <template is="labelItem" data="{{b_right:false,b_line:true,s_type:'text',onClick:'aaaa',l_label:'333',r_label:'右侧信息'}}"/>
+    <template is="labelItem" data="{{b_right:true,b_line:true,s_type:'search',onClick:'aaaa',l_label:'333',r_label:'右侧信息'}}"/>
+    <template is="labelItem" data="{{b_right:true,b_line:false,onClick:'aaaa',l_label:'333',r_label:'右侧信息'}}"/>
+    <text>选择列表</text>
+    <template is="selectItem" data="{{b_right:true,b_line:true,onChange:'aaaa',l_label:'333',r_label:'右侧信息'}}"/>
+    <include src="goodsList.wxml"/>
+    <!-- 
+    <view class="usermotto">
+
+    <template is="tabBtnGroup" data="{{i_index:i_tabIndex,onClick:'onClickaaaa',a_controlItems:['商品详情','商品信息','销售记录','累计评价']}}"/>
+    <template is="mediaItem" data="{{b_right:true,b_line:true,onClick:'aaaa',l_icon:'http://img.infinitynewtab.com/weatherIcon/B.png',s_label:'333',r_label:'右侧信息',r_icon:'http://img.infinitynewtab.com/weatherIcon/B.png'}}"/>
+    <template is="mediaItem" data="{{b_right:false,b_line:true,onClick:'aaaa',l_label:'333',r_label:'右侧信息',r_icon:'http://img.infinitynewtab.com/weatherIcon/B.png'}}"/>
+    <template is="mediaItem" data="{{b_right:true,b_line:true,onClick:'aaaa',l_icon:'http://img.infinitynewtab.com/weatherIcon/B.png',s_label:'333',r_label:'右侧信息'}}"/>
+    <template is="mediaItem" data="{{b_right:false,b_line:false,onClick:'aaaa',l_label:'333',r_label:'右侧信息'}}"/>
+
+    <text>输入列表</text>
+    <template is="labelItem" data="{{id:'name',b_right:false,b_line:true,s_type:'text',l_label:'333',r_label:'右侧信息'}}"/>
+    <template is="labelItem" data="{{id:'age',b_right:true,b_line:true,s_type:'search',l_label:'333',r_label:'右侧信息'}}"/>
+    <template is="labelItem" data="{{b_right:true,b_line:false,l_label:'333',r_label:'右侧信息'}}"/>
+    <text>选择列表</text>
+    <template is="selectItem" data="{{b_right:true,b_line:true,onChange:'aaaa',l_label:'333',r_label:'右侧信息'}}"/>
+    <!--<include src="../../template/goodsList/goodsList.wxml"/>
+    -->
+    <!-- <view class="usermotto">
+    <text class="user-motto" bindtap="bindViewTap">{{motto}}</text>
+</view>
+-->
+</view>

@@ -1,0 +1,38 @@
+<import src="base.wxml"/>
+<import src="fixedBtn_submit.wxml"/>
+<import src="noData.wxml"/>
+<!--购物车商品列表-->
+<!--参数
+g_img: 图标
+g_tit: 商品标题 
+g_price: 价格 
+g_num: 数量
+-->
+<template name="shopCart">
+    <view class=" goodsItem shopCart">
+        <radio-group class="radio-group base-transY">
+            <label class="radio" bindtap="f_radioChange" data-i_a_index="{{params.i_a_index}}" data-i_b_index="{{params.i_b_index}}">
+                <radio value="1" checked="{{b_checked}}"/>
+            </label>
+        </radio-group> 
+        <image class="goods_img" src="{{goods_image_url}}"></image>
+        <view class="goodsInfo">
+            <view class="base-ellipsis good_tit" wx:if="{{!b_edit}}" >{{goods_name}}</view> 
+            <view class="buy_num"  wx:else>
+                <template is="numBox" data="{{s_val:goods_num,minus_dis:b_minus_dis,params:params}}" />
+            </view>
+            <view class="g_count">
+                <view class="g_price">￥<text class="good_pir">{{goods_price}}</text></view> 
+                <view class="g_num" wx:if="{{!b_edit}}">x {{goods_num}}</view>
+            </view>
+        </view> 
+    </view>
+</template>
+<view class='myShopCart'> 
+    <view class="shopCartItem" wx:for="{{cart_list}}" wx:for-item="shopItem" wx:key="{{index}}">  
+        <template is="mediaItem" data="{{r_label_id:'editLabel',b_line:true,l_icon:'storeIcon.png',l_label:shopItem.store_name,r_label:b_edit?'完成':'编辑'}}"/> 
+        <template wx:for="{{shopItem.list}}" wx:for-index="key" wx:key="{{key}}" is="shopCart" data="{{b_edit:b_edit,...item}}" /> 
+    </view>  
+    <template wx:if="{{b_noData}}" is="noData" data="{{s_label:'购物车是空'}}"/>
+    <template wx:else is="fixedBtn_submit" data="{{l_label:b_edit?'删除':'结算',b_notShowPrice:b_edit,b_isShopCart:true,sum:sum,b_allChecked:b_allChecked,disabled:b_allNotChecked}}"/>
+</view>

@@ -1,0 +1,49 @@
+.order_logisticsDetails {
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    .scroll-container {
+        flex: 1;
+        .logistics_list {
+            padding: 10px;
+            .tr {
+                display: flex;
+                font-size: 12px;
+                &:first-child {
+                    .td_two {
+                        color: #f20;
+                    }
+                }
+                &:last-child {
+                    image {
+                        display: none;
+                    }
+                }
+                .td_one {
+                    width: 60px;
+                    color: #333;
+                    text-align: left;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                }
+                .td_two {
+                    flex: 1;
+                    color: #888;
+                    .details {
+                        display: flex;
+                    }
+                    .des {
+                        margin-left: 10px;
+                        flex: 1;
+                    }
+                    image {
+                        width: 15px;
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

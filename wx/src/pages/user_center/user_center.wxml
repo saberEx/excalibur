@@ -1,0 +1,33 @@
+<import src="base.wxml"/>
+<view  class="user_box">
+	<view class="user_info">
+		<image class="user_tmenu_bg"  src="user_header_bg.png"></image>
+		<image class="wave" src="wave.png" mode="aspectFill"></image>
+		<image class="wave wave-bg" src="wave.png" mode="aspectFill"></image>
+		<view class="user_icon">
+			<image class="goods_avatar" src="{{member_avatar}}" binderror="errorImg"></image>
+			<view>
+				<view class="user_name">{{member_name || ''}}</view>
+				<view class="user_text">{{member_mobile || ''}}</view>
+			</view>
+		</view>
+		<view class="user_tendcon">
+			<view class="user_menu_item" bindtap="clickRecord" data-type="1">商品收藏</view>
+			<view class="user_menu_item last" bindtap="clickRecord">浏览记录</view>
+		</view>
+	</view>
+	<view class="menu_state_box">
+		<view class="menu_state_item" bindtap="clickGoodsState" data-index="{{10}}"><image src="order_payment.png"></image><view>待付款<text wx:if="{{needPayOrderNum > 0}}">{{needPayOrderNum}}</text></view></view>
+		<view class="menu_state_item" bindtap="clickGoodsState" data-index="{{20}}"><image src="order_wait.png"></image><view>待发货<text wx:if="{{waitPayOrderNum > 0}}">{{waitPayOrderNum}}</text></view></view>
+		<view class="menu_state_item" bindtap="clickGoodsState" data-index="{{30}}"><image src="order_receipt.png"></image><view>待收货<text wx:if="{{alreadyPayOrderNum > 0}}">{{alreadyPayOrderNum}}</text></view></view>
+		<view class="menu_state_item" bindtap="clickGoodsState" data-index="{{50}}"><image src="order_since.png"></image><view>待自提<text wx:if="{{sinceOrderNum > 0}}">{{sinceOrderNum}}</text></view></view>
+		<view class="menu_state_item" bindtap="clickGoodsState" data-index="{{40}}"><image src="order_ok.png"></image><view>已完成</view></view>
+	</view>
+
+	<view class="menu_view">
+		<template is="mediaItem" data="{{params:['order_list',0],b_right:false,b_line:true,l_label:'全部订单',l_icon:'u_allOrder.png',b_right:true}}"/>
+		<template is="mediaItem" data="{{params:['order_afterList'],b_right:false,b_line:true,l_label:'售后订单',l_icon:'u_afterSales.png',b_right:true}}"/>
+		<template is="mediaItem" data="{{params:['myShopCart'],b_right:false,b_line:true,l_label:'我的购物车',l_icon:'u_shopCar.png',b_right:true}}"/>
+		<template is="mediaItem" data="{{params:['address_manage'],b_right:false,b_line:true,l_label:'地址管理',l_icon:'u_manage.png',b_right:true}}"/>
+	</view>
+</view>

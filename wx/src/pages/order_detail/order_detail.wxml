@@ -1,0 +1,97 @@
+<import src="base.wxml"/>
+<import src='addressItem.wxml'/>
+<!--订单商品列表-->
+<!--参数
+g_img: 图标
+g_tit: 商品标题 
+g_price: 价格 
+g_num: 数量
+-->
+<template name="orderGoodsItem">
+    <view class=" goodsItem orderGoodsItem">
+        <image class="goods_img" src="{{goods_image}}"></image>
+        <view class="goodsInfo">
+            <view class="base-ellipsis good_tit">{{goods_name}}</view> 
+            <view class="g_count base-transY">
+                <view class="g_price">￥<text class="good_pir">{{goods_price}}</text></view> 
+                <view class="g_num">x {{goods_num}}</view>
+            </view>
+        </view>
+    </view>
+</template>
+<view class='order_detail' wx:if="{{b_hasLoad}}">
+	<view class="order_infoWrap">
+		<view class="order_info">
+			<view class="order_state">订单状态：{{s_orderState}}</view>
+			<view wx:if="{{s_orderState=='待付款'}}" class="order_close_time">请尽快完成支付，超时系统将自动取消</view>
+			<view wx:else class="order_close_time">物流方式：{{data.delivery_type_name}}</view>
+		</view>
+		<view class="order_img">
+			<image src="{{s_orderStateImg}}"></image>
+		</view>
+	</view>	 
+	<block wx:if="{{shop_id<=0}}">
+		<view class="detail_addressCon">
+			<template is="addressItem" data="{{...o_address}}"/>
+		</view>
+	</block>
+	<block wx:else>
+		<block wx:if="{{i_status==1 && delivery_type==1}}">
+			<view class="order_send">
+				<view class="order_info">
+					<view class="order_state">配送员：{{data.extend_order_common.person_name}}</view>
+					<view class="order_close_time">配送时间：{{claim_time}}</view>
+				</view>
+				<view class="order_img" bindtap="f_call_deliveryPerson">
+					<image src="tel_icon.png"></image>
+				</view>
+			</view>
+		</block>
+		<block wx:if="{{i_status==4}}">
+			<view class="order_since">
+				自提号：<text>{{data.extend_order_common.dlyo_pickup_code}}</text>
+				<image class="base-fr singe_img" src="{{data.self_delivery_qrcode||''}}"/>
+			</view>
+		</block>
+		<block wx:if="{{(i_status==2 && delivery_type==2)||i_status==3||i_status==4}}">
+			<view class="order_send">
+				<view class="order_info">
+					<view class="order_state">收货人：{{data.extend_order_common.reciver_name}}<text class="base-fr">{{extend_order_common.reciver_phone}}</text> </view>
+					<view class="order_close_time">自提时间：{{claim_time}}</view>
+				</view>
+			</view>
+		</block>
+		<view class="detail_addressCon">
+			<template wx:if="{{delivery_type !=2}}" is="addressItem" data="{{...o_address}}"/>
+		</view>
+	</block>
+	<view class="orderItem">  
+        <template is="mediaItem" data="{{b_line:true,l_icon:'storeIcon.png',l_label:data.store_name}}"/>
+        <template is="orderGoodsItem" wx:for="{{data.extend_order_goods}}" wx:key="{{index}}" data="{{...item}}" /> 
+		<block wx:if="{{shop_id>0}}">
+			 <template is="mediaItem" data="{{b_line:true,l_label:'当前门店',r_label:data.shop_name}}"/>
+       	 	 <template is="mediaItem" data="{{id:'shopMap',b_line:true,l_icon:'u_manage.png',l_label:data.shop_info.distance,r_label:data.shop_info.shop_address}}"/>
+		</block>
+        <template is="mediaItem" data="{{b_line:true,l_label:'支付方式',r_label:data.payment_name}}"/>
+        <view class="total">
+        	共{{data.goods_count}}件，合计：<text class="total_num">￥{{data.goods_amount}}</text>
+        </view>  
+    </view> 
+	<view class="order_wrap" wx:if="{{data.order_state !=0}}">
+		<template is="mediaItem" data="{{b_line:true,l_label:'订单编号：',r_label:data.order_sn}}"/>
+		<template is="mediaItem" data="{{b_line:true,l_label:'创建日期：',r_label:data.s_add_time}}"/>
+		<template wx:if="{{data.order_state !=40 && data.order_state !=10}}" is="mediaItem" data="{{b_line:true,l_label:'付款时间：',r_label:s_payment_time}}"/>
+		<template wx:if="{{data.order_state ==40}}" is="mediaItem" data="{{b_line:true,l_label:'完成时间：',r_label:s_finnshed_time}}"/>
+	</view>
+	<view class="order_call">
+		<!--<view bindtap="f_contact_seller">
+			<image src="store_shophome.png"></image>联系卖家
+		</view>-->
+		<view bindtap="f_call_seller" wx:if="{{data.shop_info.shop_phone}}">
+			<image src="store_home_tel.png"></image>卖家电话
+		</view>
+	</view>
+	<template is="apposeFixedBtn" data="{{...o_bottom}}" />
+	<!--提交订单的样式 不要删除-->
+	<!-- <template is="fixedBtn_submit" data="{{params:['user_center','1'],id:'firstItem',l_label:'结算'}}" /> -->
+</view>

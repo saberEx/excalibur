@@ -1,0 +1,38 @@
+<import src="base.wxml"/>
+<import src="noData.wxml"/>
+<!--售后订单列表-->
+<!--参数
+g_img: 图标
+g_tit: 商品标题 
+g_price: 价格 
+g_num: 数量
+-->
+<template name="orderGoodsItem">
+    <view class=" goodsItem orderGoodsItem"  bindtap="f_order_detail" data-order_id="{{order_id}}">
+            <image class="goods_img" src="{{goods_image}}"></image>
+            <view class="goodsInfo">
+                <view class="base-ellipsis good_tit">{{goods_name}}</view> 
+                <view class="g_count base-transY">
+                    <view class="g_price">￥<text class="good_pir">{{goods_price}}</text></view> 
+                    <view class="g_num">x {{goods_num}}</view>
+                </view>
+            </view>
+    </view>
+</template>
+
+<view class='order_afterList' wx:if="{{b_hasRequest}}"> 
+    <scroll-view wx:if="{{data.length !== 0}}" class="scroll-container" scroll-y="true" bindscrolltolower="scrollBottom_handler">
+        <view wx:for="{{data}}" wx:for-item="o_item" wx:key="{{index}}">  
+           <view class="orderItem" >
+                <template is="mediaItem" data="{{id:'firstItem',b_line:true,l_icon:'order_detail_icon.png',l_label:'订单号：'+o_item.order_sn,r_label:o_item.topOrderState}}"/>
+                <template is="mediaItem" data="{{params:['user_center','1'],id:'firstItem',l_label:o_item.cur_name,r_label:'配送方式:'+o_item.delivery_type_name}}"/>
+                <template is="orderGoodsItem" wx:for="{{o_item.goods_list}}" wx:key="{{key}}" wx:for-item="goods_item" data="{{order_id:o_item.order_id,...goods_item}}"/>
+                <template is="mediaItem" data="{{params:['user_center','1'],id:'firstItem',r_label:'合计：￥'+o_item.refund_amount+(o_item.shipping_fee>0?'含运费￥'+o_item.shipping_fee:'')}}"/>
+                <view class= "order_type">
+                    <button class="goBuy" type="default" size="mini" plain="true" bindtap="f_bottom_btn" data-refund_id="{{o_item.refund_id}}" hover-class="other-button-hover">售后明细</button>
+                </view>
+            </view>
+        </view> 
+    </scroll-view>
+    <template wx:if="{{data.length === 0}}" is="noData"/>
+</view>

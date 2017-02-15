@@ -1,0 +1,30 @@
+/*售后订单列表*/
+
+
+/* @import "goodsItem.wxss"; */
+
+
+/* @import "noData.wxss"; */
+
+.order_afterList {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+    .orderGoodsItem {
+        background: #f5f5f5;
+        .g_count {
+            text-align: right;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+        }
+        .g_price {
+            color: #333;
+        }
+    }
+    // .scroll-container{
+    //     height: 624px;
+    // }
+}

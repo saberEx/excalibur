@@ -1,0 +1,23 @@
+/*暂无数据*/
+
+.noData {
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .no_tipsImg {
+        margin-top: 40px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+    .no_tit {
+        margin-top: 20px;
+        font-size: 12px;
+        color: #999;
+    }
+    button {
+        margin-top: 20px;
+    }
+}

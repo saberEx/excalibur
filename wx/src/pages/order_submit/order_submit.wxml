@@ -1,0 +1,54 @@
+<import src="base.wxml"/>
+<import src="addressItem.wxml"/>
+<import src="fixedBtn_submit.wxml"/>
+<template name="orderGoodsItem">
+    <view class=" goodsItem orderGoodsItem">
+        <image class="goods_img" src="{{goods_image_url}}"></image>
+        <view class="goodsInfo">
+            <view class="base-ellipsis good_tit">{{goods_name}}</view> 
+            <view class="g_count base-transY">
+                <view class="g_price">￥<text class="good_pir">{{goods_price}}</text></view> 
+                <view class="g_num">x {{goods_num}}</view>
+            </view>
+        </view>
+    </view>
+</template>
+<view class='order_detail' wx:if="{{b_hasData}}"> 
+	<view class="store_delivery" wx:if="{{shop_id>0}}">
+		<view class="labelTit">配送方式：</view>
+		<template is="tabBtnGroup" data="{{i_index:i_tabIndex,a_controlItems:a_controlItems}}"/> 
+	</view>
+	<view class="order_sub">
+		<template is="addressItem" data="{{...data.address_info}}" wx:if="{{delivery_type !=2}}"/> 
+        <block wx:if="{{shop_id>0}}">
+            <view class="{{delivery_type ==0?'':'base-hide'}}">
+                <template is="mediaItem" data="{{b_line:true,b_right:true,l_label:'当前门店',r_label:data.shop_name,id:'shopMap'}}"/> 
+            </view>
+            <view class="{{delivery_type ==1?'':'base-hide'}}">
+                <template is="selectItem" data="{{b_line:true,l_label:'收货日期',mode:'date',id:'date_1',s_time:date_1_value,s_start:s_currentDate}}"/>
+                <template is="selectItem" data="{{b_line:true,l_label:'收货时间',mode:'selector',id:'time_1',a_range:a_range,s_value:time_1_value}}"/>
+                <template is="mediaItem" data="{{b_line:true,b_right:true,l_label:'当前门店',r_label:data.shop_name,id:'shopMap'}}"/> 
+            </view>
+            <view class="{{delivery_type ==2?'':'base-hide'}}">
+                <template is="mediaItem" data="{{b_line:true,l_label:'目标门店',r_label:data.shop_name}}"/> 
+                <template is="selectItem" data="{{b_line:true,l_label:'到店日期',mode:'date',id:'date_2',s_time:date_2_value,s_start:s_currentDate}}"/>
+                <template is="selectItem" data="{{b_line:true,l_label:'到店时间',mode:'selector',id:'time_2',a_range:a_range_self,s_value:time_2_value}}"/>
+                <template is="labelItem" data="{{b_line:true,l_label:'用户姓名',r_label:'请输入姓名',value:true_name,id:'name'}}"/>
+                <template is="labelItem" data="{{b_line:true,l_label:'手机号码',r_label:'请输入号码',value:mob_phone,id:'phone'}}"/>
+            </view>
+        </block>
+	</view>
+
+
+	<view class="orderItem">  
+        <template is="mediaItem" data="{{b_line:true,l_icon:'storeIcon.png',l_label:shop_id>0?data.shop_name:store_name}}"/>
+        <template is="orderGoodsItem" data="{{...item}}" wx:for="{{goods_list}}" wx:key="{{index}}" /> 
+        <!--<template is="mediaItem" data="{{b_line:true,b_right:true,l_icon:'favorable_icon.png',l_label:card_info?card_info.card_alias_name:'暂无优惠'}}"/>-->
+        <template is="mediaItem" data="{{b_line:true,l_label:'运费',r_label:freight>0?freight:'包邮'}}"/>
+        <template is="mediaItem" data="{{b_line:true,l_label:'售后保障',r_label:'该商品由'+store_name+'负责配送和售后服务'}}"/>
+        <template is="labelItem" data="{{b_line:true,l_label:'买家留言',r_label:'选填，对本次交易有效',id:'mssage'}}"/> 
+    </view> 
+	<template is="actionsheet" data="{{id:'wxPay',isAnim:isAnim}}"/>
+	<!--提交订单的样式 不要删除-->
+	<template is="fixedBtn_submit" data="{{l_label:'提交订单',sum:totalPrice}}" />
+</view>

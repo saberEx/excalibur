@@ -1,0 +1,55 @@
+{
+    "pages": [
+        "index",
+        "address_edit",
+        "order_list",
+        "goods_record",
+        "order_submit",
+        "address_select",
+        "myShopCart",
+        "after_order",
+        "index_tpl",
+        "address_manage",
+        "goods_lose",
+        "order_detail",
+        "goods_detail",
+        "user_center",
+        "goods_all",
+        "apply_service",
+        "order_afterList",
+        "evaluate_order",
+        "order_logisticsDetails",
+        "order_assess",
+        "pay_success"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#393a3f",
+        "navigationBarTitleText": "首页",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "color": "#999",
+        "selectedColor": "#E36A21",
+        "backgroundColor": "#fff",
+        "list": [{
+                "pagePath": "index",
+                "text": "商城首页",
+                "iconPath": "tabBar_1.png",
+                "selectedIconPath": "tabBar_active_1.png"
+            },
+            {
+                "pagePath": "goods_all",
+                "text": "全部商品",
+                "iconPath": "tabBar_2.png",
+                "selectedIconPath": "tabBar_active_2.png"
+            },
+            {
+                "pagePath": "user_center",
+                "text": "个人中心",
+                "iconPath": "tabBar_3.png",
+                "selectedIconPath": "tabBar_active_3.png"
+            }
+        ]
+    }
+}

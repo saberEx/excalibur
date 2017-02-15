@@ -1,0 +1,33 @@
+<import src="base.wxml"/>
+<view class='after_order'> 
+    <view class="orderItem">  
+        <template is="mediaItem" data="{{b_line:true,l_label:'处理状态',r_label:s_curState}}"/>
+        <template is="mediaItem" data="{{b_line:true,l_label:'退款编号：',r_label:refund_sn}}"/>
+        <template is="mediaItem" data="{{b_line:true,l_label:'申请时间：',r_label:s_add_time}}"/>
+        <template is="mediaItem" data="{{b_line:true,l_label:'处理方式：',r_label:'退款'}}"/>
+        <template is="mediaItem" data="{{b_line:true,l_label:'退款金额：',r_label:'￥'+s_refund_amount}}"/>
+        <template is="mediaItem" data="{{b_line:true,l_label:'退款原因：',r_label:reason_info}}"/>
+        <template wx:if="{{buyer_message}}" is="mediaItem" data="{{b_line:true,l_label:'退款说明：',r_label:buyer_message}}"/> 
+        <template wx:if="{{contacts}}" is="mediaItem" data="{{b_line:true,l_label:'联系人：',r_label:contacts}}"/>
+        <template wx:if="{{phone}}" is="mediaItem" data="{{b_line:true,l_label:'手机号：',r_label:phone}}"/>
+        <block wx:if="{{a_pic_info.length>0}}">
+            <template is="mediaItem" data="{{b_line:true,l_label:'图片凭证：'}}"/>
+            <view class="photoNum" wx:for="{{a_pic_info}}">
+                <image class='apply_img' mode='widthFix' src="{{item}}"></image>
+            </view>
+            <view class="apply_tips">*如有退货请保留好物流运单，作为维权凭证</view>
+        </block>
+    </view> 
+    <view class="orderItem"> 
+        <template is="mediaItem" data="{{b_line:true,l_label:'操作记录'}}"/>
+        <view class="timeLog">
+            {{s_add_time}} 您提交了退款
+        </view>
+        <view class="timeLog" wx:if="{{seller_time>0}}">
+            {{s_seller_time}} 商家审核，审核结果：{{s_agree}}
+        </view>
+        <view class="timeLog" wx:if="{{admin_time>0}}">
+            {{s_admin_time}} 系统退款，售后完成
+        </view>
+    </view>
+</view>

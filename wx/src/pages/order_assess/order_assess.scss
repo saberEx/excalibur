@@ -1,0 +1,37 @@
+/* @import "goodsItem.wxss"; */
+
+.order_assess {
+    .goodsItem {
+        background: #f5f5f5;
+        .goodsInfo {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .g_time {
+            font-size: 12px;
+            color: #8B6C3E;
+        }
+    }
+    .evaList {
+        font-size: 12px;
+        padding: 0 10px;
+    }
+    .evaUser {
+        padding: 10px;
+        border-bottom: 1px solid #e1e1e1;
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+    }
+    .eavDetail {
+        padding: 10px;
+        border-bottom: 1px solid #e1e1e1;
+    }
+    .store {
+        .evaUser,
+        .eavDetail {
+            color: #E93E4B;
+        }
+    }
+}

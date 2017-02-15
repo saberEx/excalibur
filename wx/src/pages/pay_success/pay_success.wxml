@@ -1,0 +1,7 @@
+<view class="pay_success"> 
+    <view>
+        <image class='pay_successImg' src='success.png' />
+        <view class='pay_success_tit'>支付成功{{totalPrice}}元</view>
+        <button size="mini" bindtap="f_toOrderList">查看订单</button>
+    </view>       
+</view> 

@@ -1,0 +1,179 @@
+<!--基础模板-->
+
+<!--图文item-->
+<!--参数
+b_line:是否底部有线
+onClick:点击事件
+b_right:是否有右箭头
+l_icon:左边icon
+r_icon:右边icon
+l_label:左边label
+r_label:右边label
+-->
+<template name="mediaItem">
+    <view class="{{b_line ? 'mediaItem base-after-line' : 'mediaItem'}}" bindtap='mediaItem_handler' id='{{id}}' data-params="{{params}}">      
+        <view class="{{b_right ? 'mediaItem-wrap base-iconRight r_icon' : 'mediaItem-wrap'}}">
+            <view class="mediaItem-label">
+                <image wx:if="{{l_icon}}" class='mediaItem-img' mode="scaleToFill" src="{{l_icon}}"></image>
+                <text class="l_width base-tl base-ellipsis">{{l_label}}</text>
+            </view>
+            <view class="mediaItem-label" bindtap='mediaItem_r_label_handler' id='{{r_label_id}}'>
+                <text class="r_width base-tr base-ellipsis">{{r_label ? r_label : ""}}</text>
+                <image wx:if="{{r_img}}" class='mediaItem-img' mode='scaleToFill' src="{{r_img}}"></image>
+            </view>
+        </view>
+    </view>
+</template>
+
+<!--输入列表item-->
+<!--参数
+b_line:是否底部有线
+onClick:点击事件
+b_right:是否有右箭头
+l_label:左边label
+r_label:右边label（默认值）
+-->
+<template name="labelItem">
+    <view class="{{b_line ? 'labelItem base-after-line' : 'labelItem'}}">
+        <view class="{{b_right ? 'labelItem-wrap base-iconRight r_icon' : 'labelItem-wrap'}}">
+            <view class="labelItem-label">
+                <text class="l_width base-tl base-ellipsis">{{l_label}}</text>
+            </view>
+            <view class="labelItem-label">
+                <input class="base-transY" type="{{s_type ? s_type : 'text'}}" value="{{value}}" placeholder="{{r_label}}" id="{{id}}" bindchange="labelItem_handler"/>
+            </view>
+        </view>
+    </view>
+</template>
+
+<!--选择列表item-->
+<!--参数
+b_line:是否底部有线
+onChange:change事件
+b_right:是否有右箭头
+l_label:左边label
+r_label:右边label（默认值）
+-->
+<template name="selectItem">
+    <view class="{{b_line ? 'labelItem base-after-line' : 'labelItem'}}">
+        <view class="{{b_right ? 'labelItem-wrap base-iconRight r_icon' : 'labelItem-wrap'}}">
+            <view class="labelItem-label">
+                <text class="l_width base-tl base-ellipsis">{{l_label}}</text>
+            </view>
+            <view class="labelItem-label">
+                <picker wx:if="{{mode=='time'}}" class="base-transY" id="{{id}}" mode="time" value="{{s_value}}" start="{{s_start}}" end="{{s_end}}" bindchange="selectItem_handle">
+                    <view class="picker">{{s_time?s_time:'请选择时间'}}</view>
+                </picker>
+                <picker wx:elif="{{mode=='date'}}" class="base-transY" id="{{id}}" mode="date" value="{{s_value}}" start="{{s_start}}" end="{{s_end}}" bindchange="selectItem_handle">
+                    <view class="picker">{{s_time?s_time:'请选择日期'}}</view>
+                </picker>
+                <picker wx:else class="base-transY" id="{{id}}" mode="selector" range="{{a_range}}"  bindchange="selectItem_handle">
+                    <view class="picker">{{s_value?s_value:'请选择'}}</view>
+                </picker>
+            </view>
+        </view>
+    </view>
+</template>
+
+<!--tab按钮组-->
+<!--参数
+a_controlItems:item组
+onClick:item点击事件
+i_index:当前索引
+-->
+<template name="tabBtnGroup">
+    <view class="tabBtnGroup">
+        <block wx:for="{{a_controlItems}}" wx:key="{{*this}}">
+            <view class="{{i_index==index?'tabBtnItem active':'tabBtnItem'}}" bindtap="tabBtnGroup_handler" data-index="{{index}}">{{item}}</view>
+        </block>
+        <view class="tab-line" style="width:{{100/a_controlItems.length+'%'}};transform:translate3d({{100*i_index+'%'}},0,0)"></view>
+    </view>
+</template>
+
+<!--数量选择器-->
+<!--参数
+s_val: 当前数量
+minus_dis: 减号状态
+plus_dis: 加号状态
+-->
+<template name="numBox">
+    <view class="numBox">  
+        <button type="default" size="mini" disabled="{{minus_dis}}" bindtap="numBox_handler" hover-class="other-button-hover" data-value="{{s_val}}" data-type="0" data-params="{{params}}">-</button>
+        <input type="number" id="num" value="{{s_val}}" maxlength="99" bindinput="numBox_handler" data-value="{{s_val}}" data-type="1" data-params="{{params}}"/>
+        <button type="default" size="mini" disabled="{{plus_dis}}" bindtap="numBox_handler" hover-class="other-button-hover" data-value="{{s_val}}" data-type="2" data-params="{{params}}">+</button>
+    </view>
+</template>
+
+<!--底部浮动左右按钮-->
+<!--参数 
+l_label: 左侧文案
+r_label: 右侧文案
+l_params: 左侧点击传递参数
+r_params: 左侧点击传递参数
+-->
+<template name="apposeFixedBtn">
+    <view class="apposeFixedBtn" wx:if="{{l_label || r_label}}">
+        <view wx:if="{{l_label}}" class="fixedItem one" bindtap="apposeFixedBtn_handler" id='{{l_id}}' data-params="{{l_params}}"> 
+            {{l_label}}
+        </view>
+        <view wx:if="{{r_label}}" class="fixedItem" bindtap="apposeFixedBtn_handler" id='{{r_id}}' data-params="{{r_params}}"> 
+            {{r_label}}
+        </view>        
+    </view>
+</template>
+
+<!--块级底部浮动按钮-->
+<!--参数 
+s_label: 按钮文字
+params: 点击传递参数
+-->
+<template name="fixedBlockBtn">
+    <view class="fixedBlockBtn" bindtap="fixedBlockBtn_handler" id='{{id}}' data-params="{{params}}"> 
+        {{s_label}} 
+    </view>
+</template>
+
+
+<!--升起选项-->
+<!--参数 
+s_label: 按钮文字
+params: 点击传递参数
+-->
+<template name="actionsheet">
+    <view class="base-mask  {{isAnim ? '' : 'anim'}} " bindtap="actionsheet_handle" data-mask="1">
+        <view class="actionsheet {{isAnim ? 'show' : 'hide'}} "> 
+            <view class="sheetItem" catchtap="actionsheet_handle" id='{{id}}' data-params="{{params}}">
+                <image src="wx_pay.png"></image>
+                <view class="itemInfo">
+                    <view class="payName">微信支付</view>
+                    <view class="payTips">微信安全支付</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>
+
+<!--星星-->
+<!--参数 
+s_label: 按钮文字
+params: 点击传递参数
+-->
+<template name="star">
+    <view class="starManage">
+        <view id="starBg" class="star_bg">    
+            <radio-group bindchange="radio_group_handler" data-name="{{forName}}">
+                <block wx:for="{{a_star}}">
+                    <radio id='{{forName}}{{index+1}}' class="score score_{{index+1}}" value="{{index+1}}"/>
+                    <label href="#{{forName}}{{index+1}}" class="star star_{{index+1}} {{item?'checked':''}}" title="{{index+1}}">
+                        <label class="checkLabel" for='{{forName}}{{index+1}}' >{{index+1}}</label>
+                    </label>
+                </block>
+            </radio-group>
+        </view>               
+    </view>
+</template>
+
+<!--滚动-->
+<!--<scroll-view class="scroll-container" style="height: 690rpx;" scroll-y="true" bindscrolltolower="scrollBottom_handler">
+	//组件
+</scroll-view>-->

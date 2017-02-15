@@ -1,0 +1,57 @@
+/* @import "noData.wxss"; */
+
+.address_list {
+    height: 100%;
+    .address_manage {
+        margin-bottom: 10px;
+        padding: 10px 10px 10px 50px;
+        background: #fff;
+        position: relative;
+        .radio-group {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+        }
+        .address_info {
+            .user_info,
+            .user_add,
+            .user_type {
+                line-height: 24px;
+                font-size: 12px;
+                color: #999;
+            }
+            .user_info {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .user_add {
+                padding-bottom: 5px;
+                color: #999;
+                border-bottom: 1px solid rgba(238, 238, 238, .8);
+            }
+            .user_type {
+                padding-top: 5px;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                view {
+                    margin-right: 20px;
+                    display: flex;
+                    align-items: center;
+                    image {
+                        margin-right: 10px;
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+        }
+        &.default {
+            .user_type,
+            .user_info {
+                color: #333;
+            }
+        }
+    }
+}
