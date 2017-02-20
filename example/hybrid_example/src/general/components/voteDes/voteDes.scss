@@ -1,0 +1,28 @@
+@import '../../../lib/base/css/globalStyle';
+/*
+* @Author: 代汉桥
+* @Date:   2016-10-18 14:33:05
+* @Last Modified by:   代汉桥
+* @Last Modified time: 2016-10-19 11:45:38
+*/
+
+.remark{
+    background: url("../../common/image/vote/remark_bg.png") no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    padding: pxToRem(20px) 0;
+    .remark_box {
+        margin: pxToRem(15px);
+        background-color: #fef7c4;
+        padding: pxToRem(10px) pxToRem(15px) pxToRem(10px) pxToRem(25px);
+        border: 2px solid #f0a126;
+        border-radius: pxToRem(5px);
+        color: #f27720;
+        font-size: pxToRem(12px);
+        line-height: pxToRem(20px);
+        p {
+            margin-bottom: pxToRem(4px);
+            color: #666;
+        }
+    }
+}

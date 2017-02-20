@@ -1,0 +1,56 @@
+/*
+* @Author: 卢旺
+* @Date:   2016-09-21 15:23:24
+* @Last Modified by:   代汉桥
+* @Last Modified time: 2016-12-09 14:59:20
+*/
+@import '../../../lib/base/css/globalStyle';
+.groupInfo{
+	padding: pxToRem(10px);
+	background: #fff;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	color: #999;
+	overflow: hidden;
+	em{
+		font-style: normal;
+	}
+	img{
+		width: pxToRem(70px);
+		height: pxToRem(70px);
+		float: left;
+	}
+	.goodsInfo{
+		margin-left: pxToRem(75px);
+		font-size: pxToRem(14px);
+		color: #333;
+	}
+	.groupType{
+		margin-top: pxToRem(5px);
+		font-size: pxToRem(11px);
+		.newGroup{
+			color: #666;
+			em{
+				font-size: pxToRem(14px);
+				color: #FC1E47;
+			}
+		}
+		.oldGroup{
+			margin-left: pxToRem(5px);
+			color: #999;
+		}
+		.btn_detial{
+			margin-top: pxToRem(2px);
+			font-size: pxToRem(11px);
+			color: #999;
+		}
+	}
+	.groupTips{
+		margin-top: pxToRem(10px);
+		padding: 0 pxToRem(6px);
+		display: inline-block;
+		background: #E56A20;
+		font-size: pxToRem(11px);
+		color: #fff;
+	}
+}

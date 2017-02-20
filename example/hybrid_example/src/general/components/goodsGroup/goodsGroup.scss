@@ -1,0 +1,99 @@
+@import '../../../lib/base/css/globalStyle';
+/*
+* @Author: 卢旺
+* @Date:   2016-08-17 19:26:59
+* @Last Modified by:   代汉桥
+* @Last Modified time: 2016-12-13 15:55:14
+*/
+.goodsGroup{
+	li{
+		position: relative;
+		padding: pxToRem(10px) 0 !important;
+		padding-bottom: pxToRem(10px);
+		background:#f5f5f5;
+		&:last-of-type{
+			//padding-bottom: 0 !important;
+			&:after{
+				height: 0;
+			}
+		}
+		&.spec:after{
+			left: 0;
+			right: -10px;
+		}
+		&:after{
+			left: 0;
+			width: 100%;
+		}
+		.goods_img{
+			margin-left: pxToRem(8px);
+			width: pxToRem(50px);
+			height: pxToRem(50px);
+			float: left;
+		}
+		.goods_info{
+			margin-left: pxToRem(65px);
+			padding-right: pxToRem(65px);
+			position: relative;
+			height: pxToRem(50px);
+			line-height: 1.3;
+			overflow: hidden;
+			.good_tit{
+				// height: pxToRem(34px);
+				font-size: pxToRem(12px);
+				color: #333;
+			}
+			.good_num{
+				margin: 0;
+				padding-right: pxToRem(5px);
+				position: absolute;
+				right: 0;
+				top: pxToRem(0px);
+				font-size: pxToRem(12px);
+				text-align: right;
+				div{
+					color: #333;
+					font-size: 14px;
+					&:last-of-type{
+						margin-top: pxToRem(6px);
+						text-align: right;
+					}
+				}
+				.old_price{
+					color: #999;
+					text-decoration: line-through;
+				}
+				.base-fr{
+					margin-right: 0;
+				}
+			}
+			.s_time{
+				position: absolute;
+				bottom: 0;
+			}
+		}
+		.good_type{
+			color: #888;
+		}
+		.goods_spec{
+			padding: pxToRem(5px);
+			background: #FFF7DE;
+			border-radius: 3px;
+			font-size: pxToRem(13px);
+			span{
+				width: pxToRem(60px);
+				display: inline-block;
+				text-align: right;
+			}
+		}
+		.goods_isBenefit{
+			margin-top: pxToRem(10px);
+			font-size: pxToRem(14px);
+			img{
+				margin-right: pxToRem(15px);
+				width: 15%;
+				vertical-align: middle;
+			}
+		}
+	}
+}

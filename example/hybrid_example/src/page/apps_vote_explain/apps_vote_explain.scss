@@ -1,0 +1,45 @@
+@import "../../lib/base/css/globalStyle";
+.apps_vote_explain{
+	padding-bottom: pxToRem($bottomTabHeight);
+	/*说明*/
+	.activityImage{
+		margin: pxToRem(10px) 0;
+		img{
+			width: 100%;
+		}
+	}
+	.acIntro{
+		.blockTitle{
+			.title{ 
+				h3{
+					font-size: pxToRem(11px);
+					&::before{
+						width: 0;
+					}	
+				}
+			}
+			.content{
+				padding-top: 0;  
+				font-size: pxToRem(10px);
+				color: #999;
+			}
+		}
+	}
+	.fixedBtn{
+		height: pxToRem(44px);
+		line-height: pxToRem(44px);
+		padding: 0;
+		button{
+			height: 100%;
+			width: 50%;
+			margin: 0 !important;
+			font-size: pxToRem(13px);
+			border:0;
+			border-radius: 0;
+			&.base-btn-main{
+				color: #fff;
+				background-color: #e16830;
+			}
+		}
+	}
+}

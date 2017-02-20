@@ -1,0 +1,9 @@
+@import "../../lib/base/css/globalStyle";
+html,body,.base-container,.record_myFavorites{
+	height: 100%;
+	box-sizing: border-box;
+}
+.record_myFavorites{
+	@extend .display-flex;
+	@extend .flex-dv;
+}

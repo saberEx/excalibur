@@ -1,0 +1,17 @@
+@import "../../lib/base/css/globalStyle";
+.apps_bbs_tips{
+	text-align: center;
+	img{
+		width: 2.5rem;
+		margin-top: 1rem;
+	}
+	p{
+		margin: 15px 0;
+		font-size: pxToRem(12px);
+		color: #999;
+	}
+	p.tipsTitle{
+		font-size: pxToRem(14px);
+		color: #333;
+	}
+}

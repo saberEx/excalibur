@@ -1,0 +1,42 @@
+@import "../../lib/base/css/globalStyle";
+ 
+.scan_code{
+	width: 90%;
+	height: auto !important;
+	margin: 20% auto;
+	padding: pxToRem(20px) 0;
+	background:#fff;
+	border-radius: pxToRem(5px);
+	text-align: center;
+	.page_tips{    
+		margin-top: pxToRem(28px);
+		font-size: pxToRem(20px);
+		color:#333;
+	}
+
+	img{
+		width: 80%; 
+		margin: 5% 0;
+	}
+	.card_wrap{
+		color: #999;
+		font-size: pxToRem(11px);
+		p{
+			margin-bottom: pxToRem(10px);
+			font-size: pxToRem(18px);
+			color: #E2682D;
+		}
+	}
+	.er_code{
+		padding: pxToRem(100px) 0;
+		font-size: pxToRem(12px);
+		text-align: center;
+		color: #888;
+		em{
+			font-size: pxToRem(12px);
+			font-style: normal;
+			margin-left: pxToRem(5px);
+			color: #4181E2;
+		}
+	}
+}

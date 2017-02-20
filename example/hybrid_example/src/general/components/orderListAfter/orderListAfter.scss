@@ -1,0 +1,50 @@
+@import '../../../lib/base/css/globalStyle';
+.orderListAfter{
+	.order_list_wrap{
+		&:last-child{
+			margin-bottom: 0;
+		}
+		.mediaItem{
+			&::after{
+				height: 0 !important; 
+				left: 0; 
+			}
+		}
+		.store_num,.store_price,.store_info{			
+			margin: 0;
+			// border-bottom: 1px solid rgba(200,199,204,.5);
+			border-bottom: 1px solid #f1f1f1;
+		}
+		.store_num{
+			.mediaItem{				
+				.mediaItem-body{
+					.base-fr{
+						color: #f20;
+					}
+				}	
+			} 
+		}
+		.store_info{ 
+			border-bottom: none;
+			.mediaItem {				
+				.mediaItem-body {
+					padding-left: 0;
+				}
+			}
+		} 
+		.order_handle{
+			padding: pxToRem(10px);
+			background:#fff;
+			text-align: right;
+			.base-btn{
+				border-radius: pxToRem(2px);
+				margin-left: pxToRem(10px);
+				font-size: pxToRem(10px);
+				&.goBuy{
+					border-color: #f20;
+					color: #f20;
+				}
+			}
+		}
+	}
+}

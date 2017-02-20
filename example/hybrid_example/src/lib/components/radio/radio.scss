@@ -1,0 +1,73 @@
+/*radio*/
+@import '../../base/css/globalStyle';
+.radio{
+    height: pxToRem(25px);
+    line-height: pxToRem(25px);
+    padding-left: pxToRem(25px);
+    .radioTag{
+        font-size: pxToRem(11px);
+    }
+    .radioWrap{
+        position:absolute;
+        left:0;
+        top:pxToRem(3px);
+        .radioGroup{
+            width: pxToRem(20px);
+            height: pxToRem(20px);
+            // background: #D8D8D8;
+            display:inline-block;
+            // border-radius: 100%;
+            position: relative;
+            .circle {
+                display: block;
+                width: 100%;
+                height: 100%;
+                border-radius: 100%;
+                -webkit-transition: all .5s ease;
+                -moz-transition: all .5s ease;
+                -o-transition: all .5s ease;
+                -ms-transition: all .5s ease;
+                transition: all .5s ease;
+                cursor: pointer;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                // background: #D8D8D8;
+                background: url("../../../general/common/image/check.png");
+                background-repeat: no-repeat;
+                background-size: 100%;
+                -webkit-box-shadow:inset 0px 0px 1px rgba(0,0,0,0.5) inset;
+                -moz-box-shadow:inset 0px 0px 1px rgba(0,0,0,0.5) inset;
+                box-shadow:inset 0px 0px 1px rgba(0,0,0,0.5) inset;
+                // &:after{
+                //     opacity: 0.1;
+                //     content: '';
+                //     position: absolute;
+                //     width: pxToRem(15px);
+                //     height: pxToRem(5px);
+                    
+                //     top: pxToRem(2px);
+                //     left: pxToRem(-2px);
+                //     background: url("../../../general/common/image/check.png");
+                //     background-repeat: no-repeat;
+                //     background-size: 100%;
+                //     // -webkit-transform: rotate(-45deg);
+                //     // -moz-transform: rotate(-45deg);
+                //     // -o-transform: rotate(-45deg);
+                //     // -ms-transform: rotate(-45deg);
+                //     // transform: rotate(-45deg);
+                // }
+            }
+            input[type=radio]:checked + label {
+                background: url("../../../general/common/image/checked.png");
+                background-repeat: no-repeat;
+                background-size: 100%;
+                // border: 3px solid #337ab7;
+                // border-top: none;
+                // border-right: none;
+                opacity: 1;
+            }
+        }
+    }
+}

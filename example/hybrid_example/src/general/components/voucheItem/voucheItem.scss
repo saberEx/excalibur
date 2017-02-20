@@ -1,0 +1,76 @@
+@import '../../../lib/base/css/globalStyle';
+/*
+* @Author: 代汉桥
+* @Date:   2016-12-06 11:12:08
+* @Last Modified by:   代汉桥
+* @Last Modified time: 2016-12-06 13:39:48
+*/
+.voucheItem{
+	background:#fff;
+	padding:pxToRem(10px);
+	margin-top: pxToRem(10px);
+	position: relative;
+	box-sizing:border-box;
+	.img_wr{
+		display: inline-block;
+		float: left;
+		padding: pxToRem(10px) pxToRem(10px) pxToRem(10px) 0;
+		box-sizing:border-box;
+		border-right: 1px dotted #ddd;
+		img{
+			border-radius:50%;
+			width: pxToRem(50px);
+			height: pxToRem(50px);
+			vertical-align: middle;
+		}
+	}
+	.dot_wp{
+		width: pxToRem(10px);
+		height: 100%;
+		position: absolute;
+		left:pxToRem(60px);
+		top:0;
+		&::after{
+			content: '';
+			background:#F5F6FA;
+			border-radius: 50%;
+			width: pxToRem(10px);
+			height: pxToRem(10px);
+			display: inline-block;
+			position: absolute;
+			top:0;
+			left:0;
+			z-index: 9;
+			margin-left: pxToRem(5px);
+			margin-top:  pxToRem(-5px);
+		}
+		&::before{
+			content: '';
+			background:#F5F6FA;
+			width: pxToRem(10px);
+			height: pxToRem(10px);
+			border-radius: 50%;
+			display: inline-block;
+			position: absolute;
+			bottom:0;
+			left:0;
+			z-index: 9;
+			margin-left: pxToRem(5px);
+			margin-bottom:  pxToRem(-5px);
+		}
+	}
+	.info_content{
+		width: 78%;
+		padding-left: 2%;
+		float: left;
+		display: inline-block;box-sizing:border-box;
+		h2{
+			font-size: pxToRem(14px);
+			font-weight: normal;
+			margin:pxToRem(5px) 0 pxToRem(25px) 0;
+		}
+		p{
+			color:#999;
+		}
+	}
+}

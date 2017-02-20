@@ -1,0 +1,37 @@
+@import "../../lib/base/css/globalStyle";
+.apps_registration_join{
+	.labelInput{
+		label{
+			min-width: pxToRem(70px);
+			text-align: left;
+		}
+		input{
+			padding-right: 0;
+			float: right;
+			text-align: right;
+		}
+		&:last-of-type{
+			.base-after-line::after{
+				height: 0;
+			}
+		}
+	}
+	.join_Btn{ 
+		text-align: center;
+		position: fixed;
+		bottom: 0;
+		left:0;
+		width: 100%;
+		.r_btn{
+			padding: 0;
+			width: 100%;
+			height: pxToRem(44px);
+			line-height: pxToRem(44px);
+		    color: #E2682D;
+		    font-size: 16px; 
+		    border-top: 1px solid #eee;
+		    border-color: transparent;
+		    box-sizing: border-box;
+		}
+	} 
+}

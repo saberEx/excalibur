@@ -1,0 +1,67 @@
+@import '../../base/css/globalStyle';
+.labelInput{
+	font-size: pxToRem(11px);
+	position: relative;
+	div{
+		position: relative;
+	    overflow: hidden;
+	    padding: pxToRem(16px) pxToRem(15px);//11px 15px;
+		background-color: #fff;
+	    -webkit-touch-callout: none;
+	}
+    input{
+        width: 50%;
+        height: pxToRem(18px);
+        text-align: right;
+    }
+	label{
+		min-width: 60px;
+		max-width:40%;
+		display: inline-block;
+	    color: $blackColor;
+        vertical-align: top;
+        font-size: pxToRem(11px);
+	}
+	span{
+		margin-top: pxToRem(2px);
+		max-width:60%;
+		text-indent: 15px;
+		display: inline-block;
+		font-size: pxToRem(11px);
+		color: $gray-light; //#999;
+	}
+    img{
+	    position: absolute;
+	    top: 50%;
+	    transform: translateY(-50%);
+	    -webkit-transform: translateY(-50%);
+    	&.r_img{
+	        width: pxToRem(30px); 
+	        right:15px;
+	    }
+	    &.l_img{
+			width: pxToRem(16px);
+			left: pxToRem(8px);
+	    }
+    }
+    /*新增左侧图片*/
+    .leftImg{
+		padding-left: pxToRem(30px);
+    }
+
+    /*箭头*/
+	.iconRight:before{
+		content: "";
+	    position: absolute;
+	    right: pxToRem(15px);
+	    top: 50%;
+	    display: inline-block;
+	    width: pxToRem(6px);
+    	height: pxToRem(6px);
+	    border:1px solid #777;
+	    border-left:0;
+	    border-bottom: 0;
+	    -webkit-transform: rotate(45deg)  translateY(-50%);
+	    transform: rotate(45deg)  translateY(-50%);
+	}
+}

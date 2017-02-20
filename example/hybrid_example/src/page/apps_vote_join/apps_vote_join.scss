@@ -1,0 +1,168 @@
+@import "../../lib/base/css/globalStyle";
+.apps_vote_join{
+	// padding: pxToRem(10px);
+	padding-bottom: pxToRem(80px);
+	.labelInput{
+		.base-after-line::after{
+			left: 0;
+		}
+		input{
+			padding-right: 0;
+			float: right;
+			text-align: right;
+		}
+	}
+	.voteImgDiv{
+	    background:#fff;
+	    margin-bottom: -27px;
+	    .leftSec{
+			padding: 10px ; 
+	    	overflow: hidden!important;
+		    width: 100%;
+		    position: relative;
+		    box-sizing: border-box;
+		    .multiPic {
+			    position: absolute;
+			    width: 100%;
+			    height: 71%;
+			    z-index: 999;
+			    opacity: 0;
+			}
+			.imgBtn{
+				max-width: 100%;
+			    max-height: 100%;
+			    border-radius: 5px;
+			}
+			span{
+				padding: pxToRem(10px) 0;
+				display: block;
+				font-size: pxToRem(12px);
+				color: #666;
+				em{
+					margin: 0 pxToRem(3px) ;
+					font-style:normal;
+					color: #d32f26;
+				}
+			}
+			.voteImg{
+				overflow: hidden;
+				li{
+					width: calc(25% - 8px);
+					-webkit-width: calc(25% - 8px);
+					margin-right: 10.6px;
+					margin-bottom: 10px;
+					float: left;
+					&:nth-child(4n){
+						margin-right: 0;
+					}
+					&.noAdd{
+						display: none;
+					}
+					.imgWrap{
+						padding-bottom: 100%;
+						position: relative;
+						img{
+							max-width: 100%;
+							max-height: 100%;
+						    margin: auto;
+							position: absolute;
+						    left: 0;
+						    right: 0;
+						    top: 0;
+						    bottom: 0;
+						    vertical-align: bottom;
+						}
+						.delInImg{
+							width: 30px; 
+							height: 30px;
+						    background-image: url('../../general/common/image/vote/voteDel.png');
+						    background-repeat: no-repeat;
+						    background-size: 60%;
+						    background-position: 50%;
+						    position: absolute;
+						    right: -5px;
+						    top: -5px;
+						    z-index: 900;
+			    		}
+					}
+					
+				}
+			}
+	    }
+	    .imgList{
+	    	.uploadImg{
+	    		margin-top: 10px;
+    			position: relative;
+	    		.img_list{
+					width: 100%;
+					display: block;
+	    		}
+	    		.delInImg{
+					width: 52px;
+				    height: 52px;
+				    background-image: url('../../general/common/image/vote/voteDel.png');
+				    background-repeat: no-repeat;
+				    background-size: 60%;
+				    background-position: 50%;
+				    position: absolute;
+				    right: 0;
+				    top: 0;
+				    z-index: 900;
+	    		}
+	    	}
+	    }
+	    .blockBtn{
+	    	margin-top: 0;
+	    	border-top: 1px solid #e1e1e1;
+	    	padding: pxToRem(2px) 0;
+		    .base-btn-main{
+		    	background:#fff;
+		    	border-color: #fff;
+		    	color: #d42e29;
+		    }
+	    }
+	}
+	.sexItem{
+		padding: pxToRem(10px) pxToRem(15px);
+		border: 0;
+		background:#fff;
+		position: relative;
+		span{
+			position: absolute;
+    		top: 50%;
+    		left: pxToRem(15px);
+    		font-size: pxToRem(11px);
+		}
+		.sexWrap { 
+			padding-left: 60px;
+			text-align: right;
+			.radio {
+			    margin-left: pxToRem(10px);
+			    display: inline-block;
+			    .radioWrap{
+			    	.radioGroup{
+			    		width: pxToRem(14px);
+			    		height: pxToRem(14px);
+			    	}
+			    }
+			}
+		}
+	}
+	.fixedBtn{
+		height: pxToRem(44px);
+		line-height: pxToRem(44px);
+		padding: 0;
+		button{
+			height: 100%;
+			width: 50%;
+			margin: 0 !important;
+			font-size: pxToRem(13px);
+			border:0;
+			border-radius: 0;
+			&.base-btn-main{
+				color: #fff;
+				background-color: #e16830;
+			}
+		}
+	}
+}

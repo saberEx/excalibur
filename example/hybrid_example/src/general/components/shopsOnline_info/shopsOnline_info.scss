@@ -1,0 +1,39 @@
+@import '../../../lib/base/css/globalStyle';
+/*
+* @Author: 万敏
+* @Date:   2016-11-28 14:45:49
+* @Last Modified by:   卢旺
+* @Last Modified time: 2016-12-15 15:38:37
+*/
+.line_box{
+    background: #fff;
+    width: 100%;
+    overflow: hidden;
+    padding:pxToRem(5px) 0;
+    &.one_box{
+        li{
+            width:100%;
+            padding-left:pxToRem(10px);
+            text-align:center;
+        }
+    }
+    li{
+        width: 50%;
+        float: left;
+        padding:pxToRem(5px) pxToRem(15px) pxToRem(5px) pxToRem(30px);
+        box-sizing:border-box;
+        text-align: center;
+        line-height: pxToRem(20px);
+        font-size: pxToRem(11px);
+        color:#333;
+        &:first-of-type{
+            border-right: 1px solid  #E3E3E4;
+        }
+        img{
+            width: pxToRem(16px);
+            height: pxToRem(16px);
+            margin-right: pxToRem(8px);
+            vertical-align: middle;
+        }
+    }
+}

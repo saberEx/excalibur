@@ -1,0 +1,54 @@
+@import "../../lib/base/css/globalStyle";
+.order_refund{
+	.labelInput{ 
+		.pdBottom6{
+			&::after{
+				left: 0;
+			}  
+			.base-fr{ 
+				color: #333;
+			}
+		}
+	}
+	.apply_price,.apply_cause{
+		position: relative;
+		&::before{
+			content: "*";
+			position: absolute;
+			left: pxToRem(8px);
+			top: 50%;
+			transform: translateY(-40%);
+			-webkit-transform: translateY(-40%);
+			color: #E74522;
+			z-index: 1;
+		}
+	}
+	.apply_price{
+		.labelInput{
+			.pdBottom6{
+				.base-fr{
+					color: #E74522;
+				}
+			}
+		}
+	}
+	.apply_cause{
+		.labelInput{
+			input{
+				padding-right: 0;
+				float: right;
+				color: #888;
+			}
+		}
+	}
+	.blockFixedBtn{
+		background-color: $mainColor;
+		.base-btn-main{
+			padding: 0;
+			border-color: $mainColor;
+			height: pxToRem(44px);
+			line-height: pxToRem(44px);
+			font-size: pxToRem(14px);
+		}
+	}
+}

@@ -1,0 +1,187 @@
+@import "../../lib/base/css/globalStyle";
+*{
+	box-sizing: border-box; 
+}
+body{
+	font-family:"microsoft yahei";
+	position: relative;
+	height: 100%;
+	box-sizing: border-box; 
+}
+.apps_pictorial_index{
+
+.swiper-container {
+	width: 100%;
+    height: 100%;
+	background:#000;
+
+  
+}  
+.swiper-slide{
+	padding: 8px;
+	width:100%;
+	height:100%;
+	background-size:100% 100%;
+
+}
+img{
+	  max-width: 100%;
+}
+.swiper-pagination-bullet {
+	width: 6px;
+	height: 6px;
+	background: #fff;
+	opacity: .4;
+}
+.swiper-pagination-bullet-active {
+	opacity: 1;
+}
+@-webkit-keyframes start {
+	0%,30% {opacity: 0;-webkit-transform: translate(0,10px);}
+	60% {opacity: 1;-webkit-transform: translate(0,0);}
+	100% {opacity: 0;-webkit-transform: translate(0,-8px);}
+}
+@-moz-keyframes start {
+	0%,30% {opacity: 0;-moz-transform: translate(0,10px);}
+	60% {opacity: 1;-moz-transform: translate(0,0);}
+	100% {opacity: 0;-moz-transform: translate(0,-8px);}
+}
+@keyframes start {
+	0%,30% {opacity: 0;transform: translate(0,10px);}
+	60% {opacity: 1;transform: translate(0,0);}
+	100% {opacity: 0;transform: translate(0,-8px);}
+}
+
+#array{
+	position:absolute;z-index:999;-webkit-animation: start 1.5s infinite ease-in-out;
+}
+
+
+
+.video_exist {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 5;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+}
+
+.play_yinfu {
+  background-image: url('./music.gif');
+  background-repeat: no-repeat;
+  background-size: 60px 60px;
+  background-position: center center;
+}
+
+.rotate {
+  background-size: 100% 100%;
+  -webkit-animation: rotating 1.2s linear infinite;
+  -moz-animation: rotating 1.2s linear infinite;
+  -o-animation: rotating 1.2s linear infinite;
+  animation: rotating 1.2s linear infinite;
+  background-image: url('./music_on.png');
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.off {
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  background-image: url('./music_on.png');
+  background-position: center center;
+}
+
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+.text_c{
+	width: 100%;
+}
+
+textarea{
+  resize: vertical;
+  overflow-y: auto;
+  line-height: 20px;
+  margin-left: 1%;
+  min-height: 30px;
+  display: block;
+  background: transparent;
+  outline: none;
+  border: none;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin:0;
+}
+	.hidden_bg{
+		z-index:10;
+		position:absolute;
+		width:100%;
+		height:100%;
+		top:0;
+		left:0;
+		background:#000000;
+		  filter:alpha(opacity=50);   
+	      -moz-opacity:0.5;   
+	      -khtml-opacity: 0.5;   
+	       opacity: 0.5;   
+	}	
+	.hidden_charid{
+		width:100%;
+		position:absolute;
+		top:20%;
+		left:0px;
+		z-index:11;
+		text-align:center;
+	}
+	.margin-bottom_10{
+		width:20px;
+		height:20px;
+		color:#fff;
+		position:absolute;
+		top:10%;
+		right:12px;
+		z-index:11;
+		text-align:center;
+	}
+	.vide_css{
+		height:210px !important; 
+		width:100% !important;
+	}
+	
+	#array {
+		height: 17.75px; 
+		bottom: 20px; 
+		left:47%;
+		 width: 20px !important;
+	  position: absolute;
+	  z-index: 999;
+	  -webkit-animation: start 1.5s infinite ease-in-out;
+	}
+	.ani{
+		word-break: break-all;
+		 word-wrap: break-word;
+	}
+}

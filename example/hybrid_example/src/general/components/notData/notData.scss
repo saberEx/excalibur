@@ -1,0 +1,31 @@
+@import '../../../lib/base/css/globalStyle';
+/*
+* @Author: 代汉桥
+* @Date:   2016-10-18 14:33:05
+* @Last Modified by:   代汉桥
+* @Last Modified time: 2016-10-19 11:45:38
+*/
+.notData{
+    @extend .flex1;
+    @extend .display-flex;
+    @extend .flex-dv;
+div{
+	@extend .flex1;
+    margin-top: pxToRem(65px);
+	text-align: center;
+	img{
+		margin: auto;
+		width: pxToRem(80px);
+	}
+	color: #aaa;
+	p{
+		margin-top: pxToRem(10px);
+		font-size: pxToRem(13px);
+	}
+	button{
+		margin-top: pxToRem(20px);
+		font-size: pxToRem(13px);
+        padding: pxToRem(8px) pxToRem(20px);
+	}
+}
+}

@@ -1,0 +1,48 @@
+@import "../../../lib/base/css/globalStyle";
+/*列表组件*/
+.listUl{	
+	background: $whiteColor; //#fff;
+	li{
+		padding:pxToRem(16px) pxToRem(15px);
+		position: relative;		
+		a{			
+			display: block;
+			font-size: pxToRem(11px);; //.438rem;
+			color: $gray-dark; //#333;
+			text-decoration: none;
+		}
+	}
+	&.circle{
+		list-style-type:circle;
+		li{
+			padding-left: pxToRem(10px);
+			// &::before{
+			// 	content:"";
+			// 	width:pxToRem(5px);
+			// 	height: pxToRem(5px);
+			// 	border-radius:50%;
+			// 	background: $blackColor; //#000;
+			//     position: absolute;
+	  //   		left: 15px;
+	  //   		top: 50%;
+	  //   		transform:translateY(-50%);
+			// 	-webkit-transform:translateY(-50%);
+			// 	overflow:hidden;
+			// }
+		}		
+	}
+	&.beforeImg{
+		li{
+			padding-left: pxToRem(35px);
+		}
+		img{
+			width: pxToRem(16px);
+			height: pxToRem(16px);
+			position: absolute;
+			left:12px;
+			top:50%;
+			transform:translateY(-50%);
+			-webkit-transform:translateY(-50%);
+		}
+	}
+}

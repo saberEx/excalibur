@@ -1,0 +1,31 @@
+@import "../../../lib/base/css/globalStyle";
+/*个人中心菜单*/
+.userMenu{
+	width: 100%;
+	height: pxToRem(40px);
+	line-height: pxToRem(40px);
+	text-align: center;
+	display: table;
+	background: $azureBlue; //#5389D8;
+	color: $fontSizeBlue; //#84ABE4;
+	.userMenuItem{
+		position: relative;
+		display: table-cell;
+		font-size: pxToRem(11px); //.45rem;
+		&.active{
+			color: $whiteColor; //#fff;
+			&::after{
+				content:"";
+				border:.3rem solid $whiteColor; //#fff;
+				border-top-color: $transparent;
+				border-left-color: $transparent;
+				border-right-color: $transparent;
+				position: absolute;
+				left:50%;
+				bottom:0;
+				transform:translateX(-50%);
+				-webkit-transform:translateX(-50%);
+			}
+		}
+	}
+}

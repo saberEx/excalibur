@@ -1,0 +1,129 @@
+@import "../../lib/base/css/globalStyle";
+body{
+	height: auto;
+	padding-bottom: pxToRem(50px);
+}
+.apps_luckDraw_index{
+	background: url("../../general/common/image/luckDraw/drawDetailBg.jpg");
+	background-size: 100%;
+	.rotaryTable{
+		padding: pxToRem(30px) 50px;
+		text-align: center;
+		font-size: pxToRem(14px);
+		color: #fff;
+		position: relative;
+		.turnplate{
+			background-image: url(../../general/common/image/luckDraw/turnplate-bg.png);
+			background-size:100% 100%;
+		}
+		.canvas-container{
+			width: 100%;
+			position: relative;
+		}
+		.draw-pointer{
+			position: absolute;
+			left: 50%;
+			top:46.8%;
+			width: 17%;
+			-webkit-transform: translate(-50%,-50%);
+			transform: translate(-50%,-50%);
+		}
+	}
+
+	.luckDetail{
+		padding: pxToRem(10px);
+		.giantInfo{
+			margin-bottom: pxToRem(10px);
+			text-align: center;
+			font-size: pxToRem(12px);
+			color: #fff;
+			em{
+				margin: 0 pxToRem(5px);
+				vertical-align: middle;
+				font-size: pxToRem(14px);
+			}
+		}
+		.award{
+			.title{
+				border-bottom: 1px solid #eee;
+			}
+			.awardList{
+				li{
+					padding: pxToRem(5px) 0; 
+					width: 100%;
+					display: table;
+					border-bottom: 1px dashed #eee;
+					&:first-of-type{
+						padding-top: 0;
+					}
+					span{
+						display: table-cell;
+						text-align: left;
+						font-size: pxToRem(12px);
+						color: #333;
+						&:nth-child(2){
+							width: 50%;
+						}
+						// &:first-of-type,&:last-of-type{
+						// 	text-align: left;
+						// }
+						&:last-of-type{
+							width: 25%;
+						}
+					}
+				}
+			}
+		}
+	}
+	.base-btn-main{
+		background-color: #F04349;
+		border-color: #F04349;
+	}
+	.lostPrize_layer{
+		position: fixed;
+		top:0;
+		bottom: 0;
+		width: 100%;
+		z-index: 10;
+		background-color: rgba(0,0,0,0.7);
+		text-align:center;
+		.lost-container{
+		    padding: 15px 0px;
+			width: 80%;
+		    background: #fff;
+			position: absolute;
+			top:50%;
+			left:50%; 
+			-webkit-transform: translate(-50%,-50%);
+			transform: translate(-50%,-50%);
+			&.w_p_bg{
+				background:#fff url('../../general/common/image/luckDraw/winningPrizeBg.png') left top no-repeat;
+				background-size: 100%;
+			}
+			&.n_w_p_bg{
+				background:#fff url('../../general/common/image/luckDraw/luckBg.png') left top no-repeat;
+				background-size: 100%;
+			}
+		}
+		img.tipsImg{
+			height: pxToRem(170px);
+		}
+		img.w_p_tit{
+			width: pxToRem(150px);
+			height: auto;
+		}
+		.lostBody{
+			font-size: pxToRem(25px);
+			color: #333;
+		}
+		.lostBody2{
+			color: #333;
+			font-size: pxToRem(14px); 
+			p{
+				margin-top: pxToRem(5px);
+				font-size: pxToRem(16px);
+				font-weight: bold;
+			}
+		}
+	}
+}

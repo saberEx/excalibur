@@ -1,0 +1,40 @@
+@import '../../../lib/base/css/globalStyle';
+/*
+* @Author: 代汉桥
+* @Date:   2016-10-18 14:33:05
+* @Last Modified by:   卢旺
+* @Last Modified time: 2016-12-27 17:24:11
+*/
+.addrManage{
+    padding: pxToRem(10px) 0;
+    background:#fff;
+    font-size: pxToRem(10px);
+    border-bottom: 1px solid #f1f1f1;
+    .checkAddr_off{
+        text-align: center;
+        font-size: pxToRem(12px);
+    }
+    .checkAddr_on,.checkAddr_off{
+        padding-left: pxToRem(40px);
+        padding-right: pxToRem(20px);
+        position: relative;
+        color: #000;
+        .addrIcon{
+            width: pxToRem(16px);
+            height: pxToRem(16px);
+            position: absolute;
+            left: pxToRem(10px);
+            top: 50%;
+        }
+        .addrUser{
+            margin-bottom: pxToRem(5px);
+        }
+
+    }
+    .checkAddr_off{
+        padding-top: pxToRem(7px);
+        padding-bottom: pxToRem(7px);
+        text-align: right;
+        font-size: pxToRem(10px);
+    }
+}

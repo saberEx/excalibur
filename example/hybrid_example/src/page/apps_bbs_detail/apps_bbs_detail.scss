@@ -1,0 +1,107 @@
+@import "../../lib/base/css/globalStyle";
+.apps_bbs_detail{
+	@extend .display-flex;
+	@extend .flex-dv;
+	/*帖子详情*/
+	.landlord{ 
+		background: $whiteColor; //#fff;
+		.landlordWrap{
+			padding: 0 pxToRem(10px); //.3125rem;
+		}
+		.landlordInfo{
+			padding: pxToRem(10px) 0; //.3125rem 0;
+			font-size: pxToRem(11px); //.5rem;
+			a{
+				display: block;
+				color: $blackColor; //#000;
+			}		
+			img{
+				width: pxToRem(30px);
+				height: pxToRem(30px);
+				margin-right: pxToRem(5px); //.15625rem;
+				border-radius: 50%;
+				vertical-align: middle;
+			}
+		}
+		.landlordCardInfo{
+			padding: pxToRem(10px) 0; //.3125rem 0;
+			.cardTitle{
+				font-size: pxToRem(11px); //.5rem;
+				font-weight: bold;
+			}
+			.cardTime{
+				margin: pxToRem(5px) 0; //.156rem 0;
+				font-size: pxToRem(10px); //.406rem;
+				color: #999;
+			}
+			.cardContent{
+				p{
+					margin: pxToRem(5px) 0; //.156rem 0;
+					font-size: pxToRem(10px); //.4375rem;
+					color: $gray; //#666;
+				}
+				>div {
+					img{
+						width: 100%;
+					}
+				}
+			}
+		}
+		.landlordCardOption{
+			width: 100%;
+			padding: pxToRem(10px) 0; //.3125rem 0;
+			position: relative;
+			display: table;
+			border-top: 1px solid $gray-lighter; //#eee;
+			span{
+				display: table-cell;
+				text-align: center;
+				font-size: pxToRem(14px); //.4375rem;
+				img{
+					width: .64rem;
+					height: .64rem;
+					margin-right: pxToRem(5px); //.156rem;
+					vertical-align: top;
+				}
+			}
+		}
+	}
+
+
+	/*浮动按钮*/
+	.fixedCont{
+		width: 100%;
+		height: pxToRem(44px);
+		line-height: pxToRem(44px); 
+		display: table;
+		background: $whiteColor; //#fff;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		z-index: 99;
+		span{
+			width: 50%;
+			height: 100%;
+			display: table-cell;
+			text-align: center;
+			border-right: 1px solid $gray-lighter; //#eee;
+			font-size: pxToRem(10px); //.4375rem;
+			&:last-of-type{
+				border-right: 0;
+			}
+			img{
+				width: pxToRem(14px); //.625rem;
+				vertical-align: middle;
+				margin-right: pxToRem(8px);
+			}
+		}
+	}
+	.fixed-container{ 
+		margin-top: pxToRem(3px); 
+	}
+	.scroll {
+		.replyContent{
+			margin-bottom: 0;
+		}
+	}
+}

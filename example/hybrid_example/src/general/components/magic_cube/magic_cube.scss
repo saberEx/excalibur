@@ -1,0 +1,43 @@
+.magic_cube{
+    .form-horizontal {
+      display: block;
+      width: 100%;
+      overflow-x: hidden;
+      .custom-cube2-table{
+        width: 100%;
+        height: auto;
+        border-collapse: collapse;
+        border-spacing: 0;
+        tr {
+          margin: 0;
+          padding: 0;
+          td{
+            width: 25%;
+            margin: 0;
+            padding: 0;
+            vertical-align: middle;
+            text-align: center;
+            &.cols-2{
+              width: 50%;
+            }
+            &.cols-3 {
+              width: 75%;
+            }
+            &.cols-4 {
+              width: 100%;
+              img {
+                width: 100% !important;
+              }
+            }
+            img{
+              display: inline-block;
+              vertical-align: middle;
+              max-width: 100%;
+              width: auto;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+}

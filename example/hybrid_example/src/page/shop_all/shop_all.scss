@@ -1,0 +1,130 @@
+@import "../../lib/base/css/globalStyle";
+.shop_all{
+	@extend .display-flex;
+	@extend .flex-dv;
+	height: 100%;
+	box-sizing: border-box;
+	.comSearch{
+		padding: pxToRem(10px);
+		background:#fff;
+		position: relative;
+		overflow: hidden;
+		.location{
+			transition: all .5s;
+			-webkit-transition: all .5s;
+		}
+		.opacity_0{
+			opacity: 0;
+			transition: all .3s;
+			-webkit-transition: all .3s;
+		}
+		.addIcon{
+			width: pxToRem(14px);
+			height: pxToRem(14px);
+			margin-right: pxToRem(5px);
+			vertical-align: bottom;
+		}
+		.searchBtn{
+			width: pxToRem(16px);
+			height: pxToRem(16px);
+		}
+	}
+	.fixedSearch{
+		position: absolute;
+		right: -1000px;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background:#fff;
+		padding: pxToRem(7px) pxToRem(10px);
+		box-sizing: border-box;
+		&.anim{
+			right: 0;
+			transition: all .3s;
+			-webkit-transition: all .3s;
+		}
+		&.n_anim{
+			right: -100%;
+			transition: all .5s;
+			-webkit-transition: all .5s;
+		}
+		input[type='search']{
+			width: 100%;
+			height: pxToRem(24px);
+			border: 1px solid #e1e1e1;
+			border-radius: pxToRem(25px);
+			font-size: pxToRem(11px);
+			background: rgba(0,0,0,.1);
+			padding-right: pxToRem(45px);
+		}
+		.searchBtn{
+			position: absolute;
+		    text-align: center;
+		    top: 50%;
+		    right: pxToRem(20px);
+		    width: pxToRem(16px);
+		}
+	}
+
+
+	.shopList{
+		background:#fff;
+		border-top: 1px solid #f5f5f5;
+		border-bottom: 1px solid #f5f5f5;
+		font-size: pxToRem(11px);
+		&:last-child{
+			margin-bottom: 0;
+		}
+		.shopHeader,.shopAddress{
+			padding: pxToRem(11px) pxToRem(10px);
+		}
+		.shopHeader{
+			position: relative;
+			padding-left: pxToRem(45px);
+			img{
+				width: pxToRem(22px);
+				height: pxToRem(22px);
+				border-radius: 50%;
+				position: absolute;
+				left: pxToRem(10px);
+				top: 50%;
+			}
+			.base-fr{
+				color: #888;
+			}
+		}
+		.shopAddress{
+			border-top: 1px solid #f5f5f5;
+			border-bottom: 1px solid #f5f5f5;
+		}
+		.shopType{
+			width: 100%;
+			display: table;
+			span{
+				width: 50%;
+				padding: pxToRem(8px) 0;
+				display: table-cell;
+				border-right: 1px solid #f5f5f5;
+				text-align: center;
+				position: relative;
+				font-size: pxToRem(10px);
+				&:last-of-type{
+					border-right: 0;
+				}
+				a{
+					color: #000;
+					position: absolute;
+					left: 0;
+					right: 0;
+					top:0;
+					bottom: 0;
+				}
+				img{
+					margin-right: pxToRem(10px);
+					width: pxToRem(14px);
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+}

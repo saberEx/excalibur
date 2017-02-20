@@ -1,0 +1,64 @@
+/*
+* @Author: 卢旺
+* @Date:   2016-09-21 15:23:24
+* @Last Modified by:   卢旺
+* @Last Modified time: 2016-12-19 14:11:43
+*/
+@import "../../../lib/base/css/globalStyle";
+.balanceList{
+	margin-bottom: pxToRem(10px);
+	.i_list{
+		&:last-of-type{
+			// border-bottom: 1px solid #e1e1e1;
+		}
+		// border-top: 1px solid #e1e1e1;
+		.plus{
+			color: #FC454E;
+		}
+		.minus{
+			color: #2AB72C;
+			&.minus_red{
+				color:red;
+			}
+		}
+		.i_item{
+			padding: pxToRem(8px) pxToRem(10px);
+			background:#fff;
+			.i_tit{
+				font-size: pxToRem(14px);
+			}
+			.i_time{
+				font-size: pxToRem(12px);
+				color: #888;
+			}
+		}
+	}
+
+	ul {
+		overflow: hidden;
+		li{
+			padding:pxToRem(8px) pxToRem(10px);
+			background: #fff;
+			border-bottom:1px solid #eee;
+			overflow: hidden;
+			.xf_name{
+				line-height: pxToRem(32px);
+				font-size: pxToRem(11px);
+			}
+			.integral_number{
+				color: #E2682D;
+				&.minus_red{
+					color:red;
+				}
+				em{
+					display: inline-block;
+					margin-top: pxToRem(5px);
+					color: #999;
+					font-size: pxToRem(10px);
+				}
+			}
+		}
+	}
+
+
+}

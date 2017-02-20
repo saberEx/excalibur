@@ -1,0 +1,68 @@
+/*
+* @Author: 卢旺
+* @Date:   2016-08-26 09:26:57
+* @Last Modified by:   卢旺
+* @Last Modified time: 2016-12-30 11:23:53
+*/
+@import '../../../lib/base/css/globalStyle';
+.timeLabel{
+	width:100%;
+	.con{
+		position: relative;
+	    overflow: hidden;
+	    padding: pxToRem(16px) pxToRem(15px);//11px 15px;
+		background-color: #fff;
+		&::after{
+			left: 0;
+		}
+		span{
+			margin-top: pxToRem(2px);
+			font-size: pxToRem(11px);
+			color: #999;
+		}
+	}
+	input{
+		width:60%;
+        float:right;
+        border:none;
+		// border-bottom: 1px solid #ccc;
+		border-radius: 0;
+		height: pxToRem(22px);
+		margin-bottom: pxToRem(0px);
+		text-align: right;
+		&::-webkit-calendar-picker-indicator{
+			width:pxToRem(100px);
+			height: pxToRem(30px);
+		}
+    }
+    input,select{
+    	position: absolute;
+    	right:pxToRem(10px);
+    	top: pxToRem(11px);
+    	opacity: 0;
+    }
+    input[type='date']{
+    	width: pxToRem(150px);
+    	padding: 0;
+		border-bottom: 0;
+		text-align: right;
+		margin-right: 8px;
+    }
+	label{
+		font-size: pxToRem(11px);
+		min-width: 60px;
+		max-width:30%;
+		display: inline-block;
+	    color: #333;
+
+	}
+	select{
+		appearance:none;
+		width:pxToRem(105px);
+		height: pxToRem(30px);
+		float:right;
+		padding: 0;
+		margin-bottom: pxToRem(0px);
+		border:none;
+	}
+}

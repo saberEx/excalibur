@@ -1,0 +1,271 @@
+@import '../../../lib/base/css/globalStyle';
+/*
+* @Author: 代汉桥
+* @Date:   2016-09-08 14:39:56
+* @Last Modified by:   代汉桥
+* @Last Modified time: 2017-01-20 10:32:20
+*/
+.goods_list{
+	.sc-goods-list{
+		font-size: pxToRem(12px);
+	    list-style: none;
+	    margin: 0;
+	    overflow:hidden;
+	    .jfb-flag {
+		    position: absolute;
+		    top: 0;
+		    width: pxToRem(50px);
+		    height: pxToRem(60px);
+		    background-image: url(./jfb_flag.png);
+		    background-size: 100% 100%;
+		    background-repeat: no-repeat;
+		    .jfb-tit {
+			    margin-top: pxToRem(5px);
+			    font-size: pxToRem(12px);
+			    color: #fff;
+			}
+			.jfb-salc {
+			    font-size: pxToRem(13px);
+			    color: #fff;
+			}
+
+		}
+	}
+	em{
+		font-style: normal;
+	}
+	.border{
+		border-top: 1px solid #e5e5e5;
+		border-right: 1px solid #e5e5e5;
+		border-bottom: 1px solid #e5e5e5;
+		border-left: 1px solid #e5e5e5;
+	}
+	.big-item{
+		margin: pxToRem(10px);
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		position: relative;
+		.con{
+			display: block;
+		    background: #fff;
+		    min-height: pxToRem(100px);
+		    position: relative;
+			.photo{
+				margin: 0;
+				min-height: pxToRem(100px);
+				text-align: center;
+				overflow: hidden;
+				position: relative;
+				background-color: #fff;
+				background-size: pxToRem(6px) pxToRem(6px);
+				img{
+					width: 100%;
+				}
+			}
+			.info{
+			    position: relative;
+			    margin:pxToRem(10px) pxToRem(5px) pxToRem(5px);
+				padding-right: pxToRem(8px);
+				min-height: pxToRem(34px);
+				padding-left: pxToRem(4px);
+			    .goods-title{
+			    	font-size: pxToRem(14px);
+			    	font-weight: bold;
+			    	width: pxToRem(200px);
+			    	line-height: pxToRem(20px);
+		    	    color: #333;
+			    }
+			    .goods-price{
+			    	font-size: pxToRem(15px);
+			    	padding-top: pxToRem(2px);
+		    	    font-weight: bold;
+		    	    color:#ff6600;
+			    }
+			}
+		    .goods-buy{
+				position: absolute;
+				height: pxToRem(25px);
+			    width: pxToRem(40px);
+			    right: 0;
+			    bottom: pxToRem(5px);
+			    img{
+			    	width:100%;
+			    	height:100%;
+			    }
+		    }
+			.info-normal{
+				background:rgba(0, 0, 0, 0.4);
+				min-height: pxToRem(25px);
+				border-radius: 3px;
+				position: absolute;
+				bottom:pxToRem(5px);
+				width:100%;
+				.goods-title{
+					padding-left: pxToRem(5px);
+					padding-top: pxToRem(4px);
+					color:#fff;
+					font-size: pxToRem(11px);
+				}
+				.goods-price{
+					color:#fff;
+					padding-right: pxToRem(5px);
+					font-size: pxToRem(15px);
+			    	padding-top: pxToRem(2px);
+		    	    font-weight: bold;
+				}
+			}
+		}
+	}
+	.small-item{
+	    width: 50%;
+    	float: left;
+    	&:nth-child(2n) .con{
+			margin-left:pxToRem(3px);
+			margin-right:pxToRem(6px);
+    	}
+    	&:nth-child(2n+1) .con{
+			margin-left:pxToRem(6px);
+			margin-right:pxToRem(3px);
+    	}
+    	.con{
+    		background: #fff;
+    		margin-top:pxToRem(6px);
+    		position: relative;
+    		.photo{
+			  	position: relative;
+			  	padding-bottom: 100%;
+			  	overflow: hidden;
+	    		img{
+	    			max-width: 100%;
+	    			max-height: 100%;
+	    			position: absolute;
+				    left: 0;
+				    right: 0;
+				    top: 0;
+				    bottom: 0;
+				    margin: auto;
+				    vertical-align: bottom;
+	    		}
+    		}
+    		.info{
+				.goods-title{
+					padding-left: pxToRem(5px);
+					padding-top: pxToRem(4px);
+					color:#666;
+					font-size: pxToRem(11px);
+					line-height: pxToRem(20px);
+					// height:pxToRem(30px);
+				}
+				.goods-price{
+					color:#ff6600;
+					padding-right: pxToRem(5px);
+					font-size: pxToRem(14px);
+			    	padding-top: pxToRem(2px);
+			    	padding-left: pxToRem(5px);
+			    	margin-bottom: pxToRem(5px);
+				}
+    		}
+    		.info-normal{
+    			position: relative;
+				.goods-price{
+					color:#fff;
+					font-size: pxToRem(12px);
+		    	    position: absolute;
+		    	    bottom: 5px;
+		    	    right: 5px;
+		    	    background:rgba(0, 0, 0, 0.6);
+		    	    padding: pxToRem(3px);
+		    	    border-radius:3px;
+				}
+    		}
+    		.info-promotion{
+    			padding-left:pxToRem(3px);
+				.goods-price{
+					font-size: pxToRem(14px);
+					color:#ff495b;
+				    font-weight: bold;
+				}
+				.goods-old-price{
+					font-size: pxToRem(12px);
+				    text-decoration: line-through;
+				    color:#999;
+				}
+    		}
+    		.goods-buy-label{
+    			position: absolute;
+    			right:0;
+    			bottom:0;
+    			background:#ff495b;
+    			text-align:center;
+    			vertical-align: middle;
+    			color:#fff;
+    			padding:pxToRem(3px) pxToRem(8px);
+    			font-size: pxToRem(12px);
+    		}
+		    .goods-buy{
+				position: absolute;
+				height: pxToRem(25px);
+			    width: pxToRem(40px);
+			    right: 0;
+			    bottom: pxToRem(3px);
+			    img{
+			    	width:100%;
+			    	height:100%;
+			    }
+		    }
+    	}
+	}
+	.detail-item{
+		margin:pxToRem(8px);
+		.con{
+			display: block;
+		    background: #fff;
+		    position: relative;
+		    border-bottom:1px solid #e5e5e5;
+		    padding: pxToRem(10px);
+		    overflow: hidden;
+			.photo{
+				float: left;
+				margin: 0;
+				text-align: center;
+				overflow: hidden;
+				width:pxToRem(125px);
+				background-color: #fff;
+				position: relative;
+				background-size: pxToRem(6px) pxToRem(6px);
+				img{
+					width: 100%;
+					display: block;
+				}
+			}
+			.info{
+				display: table-cell;
+				padding-left:pxToRem(10px);
+				// padding-top:pxToRem(10px);
+				.goods-title{
+				    color: #666;
+					font-size: pxToRem(14px);
+				    max-height: pxToRem(90px);
+				    overflow: hidden;
+				    padding-bottom: pxToRem(5px);
+				}
+				.goods-price{
+				    color: #ff6600;
+    				font-weight: bold;
+    				font-size: pxToRem(14px);
+				}
+			}
+		    .goods-buy{
+				position: absolute;
+				height: pxToRem(25px);
+			    width: pxToRem(40px);
+			    right: 0;
+			    bottom: pxToRem(5px);
+			    img{
+			    	width:100%;
+			    	height:100%;
+			    }
+		    }
+		}
+	}
+}

@@ -1,0 +1,29 @@
+@import '../../../lib/base/css/globalStyle';
+.title{
+  .custom-wx-title,.custom-ct-title{
+	padding: 0 pxToRem(10px);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-top: pxToRem(10px);
+	padding-bottom: pxToRem(10px);
+	overflow: hidden;
+	word-break: break-all;
+	.wx_title,.ct_title{
+	  margin: 0;
+	  font-size: pxToRem(18px);
+	  line-height: pxToRem(22px);
+	}
+	h2{
+		font-weight: 400;
+	}
+	.sub_title {
+	  color: #8c8c8c;
+	  font-size: pxToRem(11px);
+	}
+	.sub_title_link {
+	  font-size: pxToRem(11px);
+	  color: #6191bf;
+	}
+  }
+}

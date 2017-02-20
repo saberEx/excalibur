@@ -1,0 +1,23 @@
+@import '../../lib/base/css/globalStyle';
+.pay_success{
+	text-align: center;
+	img{
+		margin-top: 20%;
+		width: pxToRem(60px);
+		height: pxToRem(60px);
+	}
+	p{
+		margin: 20px 0;
+		font-size: pxToRem(18px);
+		color: #333;
+	}
+	.pay_div{
+		p{
+			margin-top: pxToRem(5px);
+		}
+		span{
+			font-size: pxToRem(11px);
+			color: #999;
+		}
+	}
+}

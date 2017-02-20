@@ -1,0 +1,77 @@
+@import "../../../lib/base/css/globalStyle";
+.minPost{
+	.fixed_bg {
+		background: rgba(0,0,0,.6);
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 999;
+	}
+	/*浮动评论表单*/
+	.commentForm{
+		width: 80%;
+		margin-left: 10%;
+		background: $whiteColor; //#fff;
+		border-radius: $borderRadius; //3px;
+		position: fixed;
+		z-index: 1000;
+		top: 50%;
+		transform:translateY(-50%);
+		-webkit-transform:translateY(-50%);
+		textarea{
+			height: pxToRem(100px);
+			border-top-left-radius: $borderRadius; //3px;
+			border-top-right-radius: $borderRadius; //3px;
+			display: block;
+			width: 100%;
+			padding: 6px 12px;
+			font-size: 12px;
+			line-height: 1.42857143;
+			color: #555;
+			background-color: #fff;
+			background-image: none;
+			border: none;
+			outline: none;
+			box-sizing: border-box;
+		}
+		.commentSetting{
+			padding: pxToRem(10px); //.3125rem;
+			border-top: 1px solid $gray-lighter; //#eee;
+			overflow: hidden;
+			span{
+				display: inline-block;
+				height: pxToRem(16px);
+				width: pxToRem(16px);
+				margin-top: pxToRem(5px); //20px;
+				overflow: hidden;
+				&.clickEmoj{
+					background: url('../../../general/common/image/emoj_off.png') no-repeat;
+					background-size: 100%;
+				}
+				&.active{
+					&.clickEmoj{
+						background: url('../../../general/common/image/emoj_on.png') no-repeat;
+						background-size: 100%;
+					}
+				}
+			}
+			.btn-primary{
+				padding: pxToRem(5px) pxToRem(10px);
+			    font-size: pxToRem(11px);
+				background-color: #6184CD;
+			    border-color: #6184CD;
+			    color: #fff;
+			}
+		}
+	}
+}
+#sinaEmotion{
+	left: 0 !important;
+	z-index: 1001  !important;
+	width: 100%  !important;
+	bottom: 0;
+	overflow: scroll  !important;
+	box-sizing: border-box;
+}

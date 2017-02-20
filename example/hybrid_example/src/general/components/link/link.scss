@@ -1,0 +1,56 @@
+@import '../../../lib/base/css/globalStyle';
+.link{
+  li{
+	height: pxToRem(44px);
+	background: url("./bottom_line.png") left top no-repeat;
+	background-size: 100% 1px;
+	background-position: left bottom;
+	margin: 0 pxToRem(10px);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	position: relative;
+	&:last-of-type{
+	  background-image: none;
+	}
+	&:first-of-type{
+	  background: url("./bottom_line.png") left top no-repeat;
+	  background-size: 100% 1px;
+	  background-position: left bottom;
+	}
+
+	a{
+	  display: block;
+	  height: 100%;
+	  color: #333;
+	  line-height: pxToRem(44px);
+	  span{
+		width: 80%;
+	  }
+	  i{
+		position: absolute;
+		top: pxToRem(15px);
+		right: pxToRem(10px);
+	  }
+	}
+
+  }
+  .clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: "\20 ";
+	clear: both;
+	height: 0
+  }
+
+  .clearfix:before,.clearfix:after {
+	display: table;
+	line-height: 0;
+	content: "";
+  }
+
+  .clearfix {
+	zoom: 1
+  }
+}

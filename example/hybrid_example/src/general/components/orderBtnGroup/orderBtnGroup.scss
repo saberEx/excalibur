@@ -1,0 +1,21 @@
+@import '../../../lib/base/css/globalStyle';
+.orderBtnGroup{
+  .order_handle{
+		padding: pxToRem(10px);
+		background:#fff;
+		text-align: right;
+		.base-btn{
+			border-radius: pxToRem(2px);
+			margin-left: pxToRem(10px);
+			font-size: pxToRem(10px);
+			border-color: #333;
+			&.goBuy{
+				border-color: #f20;
+				color: #f20;
+			}
+			&.hidden{
+				display: none;
+		  	}
+		}
+	}
+}

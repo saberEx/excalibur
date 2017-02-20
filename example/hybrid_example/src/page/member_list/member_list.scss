@@ -1,0 +1,8 @@
+@import "../../lib/base/css/globalStyle";
+.member_list{
+	.memberItem{
+		&:last-of-type{
+			margin-bottom: pxToRem(20px);
+		}
+	}
+}

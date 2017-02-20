@@ -1,0 +1,68 @@
+@import "../../lib/base/css/globalStyle";
+html,body,.base-container{ 
+	height:100%;
+	overflow: hidden;
+}
+.member_balance{
+	.notData{
+		height: initial;
+		padding-top:pxToRem(20px);
+	}
+	.scroll-bottom{
+		margin-bottom: pxToRem(10px);
+	}
+	.myInt{
+		background:#2CAD3F url(../../general/common/image/meun_title_bg.png) no-repeat left bottom;
+		text-align: center;
+		color: #fff;
+	    width: 100%;
+	    z-index: 999;
+	    height:pxToRem(120px);
+		img{
+			width: pxToRem(80px);
+			height: pxToRem(80px);
+		}
+		.newInt{
+			padding-top: pxToRem(30px);
+			font-size: pxToRem(10px);
+			color: #fff;
+		}
+		.intNum{
+			font-size: pxToRem(30px);
+			font-weight: 500;
+			margin-top: pxToRem(5px);
+			em{
+				font-size: 12px;
+			}
+
+		}
+	}
+	.rechargeTips{
+		padding: pxToRem(10px);
+		font-size: pxToRem(14px);
+		color: #4688DA;
+		span{
+			color: #FA6A6F;
+		}
+	}
+	.rechargeBtn{
+		padding: pxToRem(8px) 0;
+		margin-top: pxToRem(20px);
+		background: #158BD2;
+		border-radius: pxToRem(5px);
+		text-align: center;
+		font-size: pxToRem(14px);
+		color: #fff;
+	}
+	.btn_go_chong{
+		background:#fff;
+		margin:0 auto;
+		display: block;
+		width: pxToRem(60px);
+		margin-top: pxToRem(8px);
+		border:1px solid #eee;
+		padding:pxToRem(7px) pxToRem(5px);
+		text-align: center;
+		color:#999;
+	}
+}

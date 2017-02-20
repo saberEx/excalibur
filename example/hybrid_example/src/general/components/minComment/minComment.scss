@@ -1,0 +1,88 @@
+@import "../../../lib/base/css/globalStyle";
+
+/*帖子回复*/
+.replyContent{
+	margin-bottom: pxToRem(50px); //1.5625rem;
+	background: $whiteColor; //#fff;
+}
+/*暂无回复*/
+.noReply{
+	padding: pxToRem(10px); //.3125rem;
+	text-align: center;
+	img{
+		width: 50%;
+		margin-bottom: pxToRem(10px); //.3125rem;
+	}
+	p{
+		color: $gray-light; //#999;
+		font-size: pxToRem(10px); //.4375rem;
+	}
+}
+/*有回复*/
+.replyList{
+	
+	li{
+		padding: pxToRem(10px); //.3125rem;
+		position: relative;
+		overflow: hidden;
+		.replyUserIcon{
+			width: pxToRem(30px);
+			height: pxToRem(30px); 
+			border-radius: 50%;
+			position: absolute;
+			left: pxToRem(10px); //.3125rem;
+			top: pxToRem(10px); //.3125rem;
+		}
+		.replyWrap{
+			margin-left: pxToRem(40px);
+			.replyOne{
+				// padding: 
+				margin-bottom: pxToRem(2px); //.15625rem; 
+				.replyName{
+					font-size: pxToRem(11px); //.5rem;
+					color: $gray; //#666;
+					.rLevel{
+						margin: 0 pxToRem(8px);
+						padding: 0 pxToRem(5px); //.3125rem; 
+						border-radius: pxToRem(20px); //.625rem;
+						background: $brand-warning; //#FAAC3E;
+						font-size: pxToRem(10px);
+						color: $whiteColor; //#fff;
+					}	
+				}
+				.sex{					
+					width: pxToRem(14px);
+    				height: pxToRem(14px);
+    				vertical-align: top;
+				}
+				.replyLandlord{
+					color: $gray-light; //#999;
+				}
+			}
+			.replyTwo{
+				padding-top: pxToRem(5px);
+				margin-bottom: pxToRem(5px); //.15625rem;
+				font-size: pxToRem(10px); //.5rem;
+			}
+			.replyThree{
+				margin-top: pxToRem(8px);
+				text-align: right;
+				em{
+					font-size: pxToRem(10px); //.4375rem;
+					color: $gray-light; //#999;
+				}
+				span{
+					display: inline-block;
+					margin-left: .4rem;
+					font-size: pxToRem(10px); //.438rem;	
+					color: $gray-light; //#999;	
+					img{
+						width: pxToRem(14px); //.625rem;
+						vertical-align: top;
+						margin-right: pxToRem(8px);
+					}
+				}
+			}
+		}
+	}
+}

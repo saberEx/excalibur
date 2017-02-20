@@ -1,0 +1,49 @@
+@import "../../lib/base/css/globalStyle";
+.member_cneter{
+	
+	.memberItem{
+		width: 100%;
+		margin: 0;
+		padding-left: 0;
+		padding-right: 0;
+		border-radius: 0;
+		box-shadow: none;
+		.card_wrap{
+			padding-left: pxToRem(10px);
+			padding-right: pxToRem(10px);
+			.carName{
+				margin-bottom: pxToRem(5px);
+			} 
+		}
+	}
+
+
+	.labelInput label {
+		margin-left: pxToRem(5px);
+	}
+	.base-after-line:after {
+		left: 0;
+	}
+	.block_list{
+		overflow: hidden; 
+		margin-top: pxToRem(15px);
+		.item{
+			width: 33.3333%;
+			float: left;
+			position: relative;
+			text-align: center;
+			padding:pxToRem(20px);
+			box-sizing:border-box;
+			font-size: pxToRem(12px);
+			background: #fff;
+			border-right: 1px solid #f1f1f1;
+    		border-bottom: 1px solid #f1f1f1;
+			img{
+				width: pxToRem(30px);
+			}
+			p{
+				font-size: pxToRem(12px);
+			}
+		}
+	}
+}

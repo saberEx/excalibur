@@ -1,0 +1,73 @@
+@import '../../../lib/base/css/globalStyle';
+/*
+* @Author: 代汉桥
+* @Date:   2016-07-28 09:19:59
+* @Last Modified by:   卢旺
+* @Last Modified time: 2016-11-02 14:40:40
+* 会员卡
+*/
+.memberItem{
+    position: relative;
+    font-size: pxToRem(11px);
+    background: #158BD2;
+    padding:pxToRem(10px);
+    box-sizing: border-box;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-top: pxToRem(15px);
+    box-shadow: 3px 3px 3px #d2dcdf;
+    .card_wrap{
+        overflow: hidden;
+        margin-top: pxToRem(10px);
+        margin-bottom: pxToRem(20px);
+        p{            
+            color: #fff; 
+            &.carName{
+                margin-bottom: pxToRem(10px);
+                font-size: pxToRem(14px);
+            }
+        }
+        img{
+            float: left;
+            width: pxToRem(40px);
+            height: pxToRem(40px);
+            border-radius: 50%;
+        }
+        .mermber_info{
+            margin-left: pxToRem(60px);
+        }
+    }
+    .card_number{
+        background: rgba(255,255,255,0.093);
+        height: pxToRem(36px);
+        line-height: pxToRem(36px);
+        color:#fff;
+        margin:pxToRem(20px) pxToRem(-10px) 0 ToRem(-10px);
+        padding-left: pxToRem(10px);
+    }
+    .card_price{
+        margin-top: pxToRem(10px);
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        span{
+            color:#fff;
+        }
+        .price{
+            color: #fff;
+            font-size: pxToRem(14px);
+            em{
+                font-size: pxToRem(10px);
+                font-style: normal;
+            }
+        }
+    }
+    .qrcode{
+        position: absolute;
+        top:pxToRem(50px);
+        right: pxToRem(10px);
+        width: pxToRem(20px);
+        height: pxToRem(20px); 
+    }
+}

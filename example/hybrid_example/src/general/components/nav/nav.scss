@@ -1,0 +1,23 @@
+@import '../../../lib/base/css/globalStyle';
+.nav {
+  padding: pxToRem(10px);
+  text-align: center;
+  overflow: hidden;
+  li {
+	width: 25%;
+	float: left;
+	overflow: hidden;
+	text-align: center;
+	.nav-img-wap {
+	  display: block;
+	  overflow: hidden;
+	  .base-ellipsis{
+	  	font-size: pxToRem(12px);
+	  }
+	}
+	img {
+	  vertical-align: middle;
+	  max-width: 100%;
+	}
+  }
+}

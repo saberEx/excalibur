@@ -1,0 +1,32 @@
+@import "../../lib/base/css/globalStyle";
+.address_edit{
+	.labelInput{
+		label{
+			font-size: pxToRem(11px);
+		}
+		input{
+			padding-right: 0;
+			float: right;
+			color: #666;
+			width: auto;
+			text-align: right;
+		}
+	}
+	.base-btn-main{
+		// background-color: #e16830;
+		// border-color: #e16830;
+		padding: 0;
+		height: pxToRem(44px);
+		line-height: pxToRem(44px);
+		border-radius: 0;
+		border:none;
+		&:active{
+			background-color: #cc4b0f;
+			border-color: #cc4b0f;
+		}
+		&.disabled{
+			background-color: #f1b396;
+			border-color: #f1b396;
+		}
+	}
+}

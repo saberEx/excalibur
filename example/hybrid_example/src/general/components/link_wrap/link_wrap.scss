@@ -1,0 +1,18 @@
+@import '../../../lib/base/css/globalStyle';
+.link_wrap {
+  height: pxToRem(30px);
+  position: relative;
+  .line-wrap-hr {
+	border: 0 none;
+	border-top: 1px dashed #bbb;
+	margin: auto;
+	padding: 0;
+	height: 1px;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+  }
+}

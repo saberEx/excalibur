@@ -1,0 +1,25 @@
+@import '../../../lib/base/css/globalStyle';
+/*
+* @Author: 代汉桥
+* @Date:   2016-10-18 14:33:05
+* @Last Modified by:   代汉桥
+* @Last Modified time: 2016-10-19 11:45:38
+*/
+
+.header{
+	text-align: center;
+    background: url("../../common/image/vote/header_bg.png") no-repeat;
+    background-size: 100%;
+    color: #fff;
+    padding: 18% 0;
+    position: relative;
+    h1{
+    	font-weight: 500;
+    	font-size: pxToRem(16px);
+		position: absolute;
+		top: 13%;
+	    left: 50%;
+	    transform: translate(-50%);
+	    -webkit-transform: translate(-50%);
+    }
+}

@@ -1,0 +1,17 @@
+@import "../../lib/base/css/globalStyle";
+.apps_payvote_ranking{
+	.ranking_box{
+		.my_add {
+		    padding: pxToRem(10px);
+		    width: 50%;
+		    border-radius: pxToRem(5px);
+		    margin: pxToRem(20px) auto;
+		    text-align: center;
+		    color: #fff;
+		    display: block;
+		    font-size: pxToRem(14px);
+		    background: #fec52d;
+		    border-bottom: 3px solid #fdab28;
+		}
+	}
+}

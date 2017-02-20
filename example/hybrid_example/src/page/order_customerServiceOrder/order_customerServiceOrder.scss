@@ -1,0 +1,10 @@
+@import "../../lib/base/css/globalStyle";
+html,body,.base-container,.order_customerServiceOrder{
+	height: 100%;
+	box-sizing: border-box;
+}
+.order_customerServiceOrder{
+	background: #e1e1e1;
+	@extend .display-flex;
+	@extend .flex-dv;
+}

@@ -1,0 +1,7 @@
+@import "../../lib/base/css/globalStyle";
+body,.base-container,.base-container > div{
+	height: 100%;
+}
+.vouche_list{
+	padding-bottom: pxToRem(60px);
+}

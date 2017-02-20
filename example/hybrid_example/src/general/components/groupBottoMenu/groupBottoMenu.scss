@@ -1,0 +1,60 @@
+/*
+* @Author: 卢旺
+* @Date:   2016-09-21 15:23:24
+* @Last Modified by:   卢旺
+* @Last Modified time: 2016-10-24 16:04:41
+*/
+@import "../../../lib/base/css/globalStyle";
+.gMenu{
+	width: 100%;
+	height: pxToRem(44px);
+	display: table;
+	background: #fff;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 999;
+	div{
+		display: table-cell;
+		text-align: center;
+		img{
+			margin-top: pxToRem(8px);
+			width: pxToRem(14px);
+		}
+		span{
+			display: block;
+			font-size: pxToRem(11px);
+			color: #999;
+		}
+	}
+	.mGroup{
+		width: 20%;
+	}
+	.indexGroup{
+		width: 20%;
+		position: relative;
+		&:after{
+			content:"";
+			height: 80%;
+			width: 1px;
+			background: #ebebeb;
+			position: absolute;
+			left: 0;
+			top: 10%;
+		}
+	}
+	.iGroup{
+		width: 60%;
+		vertical-align: middle;
+		background: #FC1E47;
+		font-size: pxToRem(14px);
+		color: #fff;
+	}
+	.nGroup{
+		width: 60%;
+		vertical-align: middle;
+		background: #999;
+		font-size: pxToRem(14px);
+		color: #fff;
+	}
+}

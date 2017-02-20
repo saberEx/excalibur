@@ -1,0 +1,19 @@
+@import "../../lib/base/css/globalStyle";
+.base-container{
+	overflow: hidden;
+}
+.index{
+	height: 100%;
+	overflow: initial !important;
+	box-sizing: border-box;
+	@extend .display-flex;
+	@extend .flex-dv;
+	>iframe{
+		@extend .flex1;
+	}
+	.bottomNav{
+		.preview-nav-menu{
+			position: relative;
+		}
+	}
+}

@@ -1,0 +1,64 @@
+@import '../../../lib/base/css/globalStyle';
+.group_Comonent{
+	 
+	overflow:hidden; 
+	background:#E2682D url(../../../general/common/image/group_time_bg.png) no-repeat center right;
+	background-size:40% pxToRem(82px);
+	.group_left{
+		width:60%;
+		display:inline-block;
+		padding:pxToRem(5px)  pxToRem(10px);
+		box-sizing:border-box;
+		& >span{
+			display:inline-block;
+			vertical-align: middle;
+			color:#fff;
+		}
+		.g_prices{
+			font-size:pxToRem(19px);
+			padding-right: pxToRem(8px);
+			color:#fff;
+			border-right: 1px solid #C35C29;
+			i{
+				font-size: pxToRem(12px);
+			} 
+		}
+		.g_pri_info{
+			margin-left: pxToRem(8px);
+			& >span{
+				display:inline-block;
+				vertical-align: middle; 
+			}
+		}
+		.one_prices{
+			color:#9D4114;
+			margin-top: pxToRem(3px);
+		}
+	}
+	.group_right{
+		padding:pxToRem(5px)  pxToRem(10px);
+		box-sizing:border-box;
+		text-align: right;
+		width:40%;
+		display:inline-block; 
+		.g_tips{
+			color: #333;
+			font-size: pxToRem(12px);
+			&.align{
+				margin-top: 10px;
+			}
+		}
+		.times_box{
+			margin-top: pxToRem(2px);
+			font-size: pxToRem(12px);
+			span{
+				color: #fff;
+				background:#E2682D;
+				padding:0 pxToRem(2px);
+				border-radius: pxToRem(2px);
+				font-size: pxToRem(12px);
+				margin-left: pxToRem(2px);
+			}
+		}
+	}
+}

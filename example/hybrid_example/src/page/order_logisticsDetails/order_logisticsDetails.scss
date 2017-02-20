@@ -1,0 +1,50 @@
+@import "../../lib/base/css/globalStyle";
+.order_logisticsDetails{
+	@extend .display-flex;
+	@extend .flex-dv;
+	height: 100%;
+	.labelInput{
+    	.base-after-line,.pdBottom6 {
+            &::after{
+                left: 0;
+            } 
+        } 
+        .base-fr{
+        	color: #333;
+        }
+    }
+    .logistics_list{
+    	width: 100%;
+    	border-collapse: collapse;
+    	tr{
+    		&:last-child{
+				td{
+					.logIco{
+						display: none;
+					}	
+				} 
+    		}
+    		&:first-child{
+				td{
+					color: #333;
+					&.f_two{
+						color: #f20;
+					}
+				}
+    		}
+    		td{
+    			padding-top: pxToRem(10px);
+    			vertical-align: top;
+    			font-size: pxToRem(11px);
+    			color: #888;
+    			&.f_one{
+    				padding-left: pxToRem(15px);
+					width: pxToRem(65px);
+    			}
+				.logIco{
+					margin-top:pxToRem(10px);
+				}
+    		}
+    	}
+    }
+}

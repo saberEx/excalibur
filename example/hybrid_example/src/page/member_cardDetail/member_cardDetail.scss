@@ -1,0 +1,31 @@
+@import "../../lib/base/css/globalStyle";
+.member_cardDetail{
+	.base-after-line::after {
+		left: 0;
+	}
+	.cardTit,.cardCont{
+		padding: pxToRem(5px) pxToRem(10px);
+		font-size: pxToRem(11px);
+		font-weight: 500;
+		color: #333;
+	}
+	.cardCont{
+		background: #fff;
+		font-size: pxToRem(11px);
+		color: #666;
+	}
+	.foldItem .fold-menu{
+		padding: pxToRem(16px) pxToRem(15px);
+	}
+	.foldItem .fold-menu .msgTitle {
+	    margin-left: 0;
+	    font-size: pxToRem(11px);
+	}
+	.foldItem .fold-group.open .fold-conent{ 
+		color:#666;
+	}
+	.foldItem .fold-group .fold-conent p{
+		color:#666;
+	}
+
+}

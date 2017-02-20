@@ -1,0 +1,64 @@
+@import '../../../lib/base/css/globalStyle';
+/*
+* @Author: 代汉桥
+* @Date:   2016-10-18 14:33:05
+* @Last Modified by:   代汉桥
+* @Last Modified time: 2016-10-19 11:45:38
+*/
+
+.formItem{
+    margin-bottom: pxToRem(10px);
+    padding: 0 pxToRem(50px);
+    position: relative;
+    border: 1px solid #e1e1e1;
+    border-radius: 3px;
+    font-size: pxToRem(12px);
+    input{
+        width: 100%;
+        height: pxToRem(35px);
+        line-height: pxToRem(35px); 
+        font-size: pxToRem(12px);
+        box-sizing: border-box;
+    }
+    textarea{
+        padding: pxToRem(5px) pxToRem(8px);
+        width: 100%;
+        height: pxToRem(80px);
+        display: block;
+        font-size: pxToRem(12px);
+        box-sizing: border-box;
+        resize:none;
+        border:none;
+    }
+    input,textarea{
+        border-left: 1px dashed #e1e1e1;
+        border-right: 1px dashed #e1e1e1;
+    }
+    span{
+        position: absolute;
+        top: 50%;
+        &.jName{
+            left: pxToRem(10px);
+        }
+        &.jRe{
+            right: pxToRem(10px);
+            em{
+                vertical-align: middle;
+                color: #d74335;
+            }
+        }
+    }
+    .sexWrap{
+        padding: pxToRem(5px) 0;
+        .radio{
+            margin-left: pxToRem(30px);
+            display: inline-block;
+            .radioWrap{
+                top: 0;
+            }
+            .radioTag{
+                margin-left: pxToRem(5px);
+            }
+        }
+    }
+}

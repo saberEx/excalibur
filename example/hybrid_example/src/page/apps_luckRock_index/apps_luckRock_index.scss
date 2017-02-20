@@ -1,0 +1,113 @@
+@import "../../lib/base/css/globalStyle";
+.apps_luckRock_index{
+	background:url('../../general/common/image/luckRock/rockBg.jpg') no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+	.rockRule{
+		padding: pxToRem(10px) pxToRem(15px);
+		span{
+			font-size: pxToRem(14px);
+			color: #666;
+		}
+	}
+	.prize{
+		width: 90%;
+		display: block;
+		position: absolute;
+		bottom: pxToRem(85px);
+		left: 5%;
+		.prize_list{
+			width: 100%;
+			overflow: hidden;
+			li{
+				width: 33.333%;
+				float: left;
+				text-align: center;
+				img{
+					width: pxToRem(60px);
+					height: pxToRem(60px);
+					border-radius: 50%;
+				}
+				p{
+					margin-top: pxToRem(5px);
+					font-size: pxToRem(12px);
+					color: #333;
+				}
+			}			
+		}
+	}
+	.fixedRock{
+		width: 100%;
+		height: pxToRem(70px); 
+		position: fixed;
+		left: 0;
+		bottom: 0;
+	}
+}
+
+/*未中奖*/
+.base-mask{
+	.closeBtn{
+		width: 80%;
+		height: pxToRem(40px);
+		line-height: pxToRem(38px);
+		margin: auto;
+		background:url('../../general/common/image/luckRock/rockBtn.png') no-repeat;
+		background-size: 100% 100%;
+		color: #fff;
+		font-size: pxToRem(14px);
+		text-align: center;
+	}
+}
+.fail_tips{
+	padding-top: 38%;
+	padding-bottom: pxToRem(10px);
+	width: 80%; 
+	border-radius: pxToRem(10px);
+	background:#fff url('../../general/common/image/luckRock/noTips.png') no-repeat;
+	background-size: 100% 100%; 
+	position: absolute;
+	left: 10%;
+	top: 50%;
+	
+}
+
+.win_tips{ 
+	// padding-bottom: pxToRem(10px);
+	width: pxToRem(280px);
+	height: pxToRem(450px); 
+	border-radius: pxToRem(10px);
+	background: url('../../general/common/image/luckRock/yesTips.png') no-repeat;
+	background-size: 100% 100%; 
+	position: absolute;
+	left: pxToRem(20px);
+	top: 50%;
+	.wrap{
+		margin-top: 45%;
+		text-align: center;
+		.winPrize{
+			font-size: pxToRem(16px);
+			font-weight: bold;
+			color: #D0454F;
+		}
+		p{
+			margin-top: pxToRem(15px);
+			font-size: pxToRem(12px);
+			color: #666;
+		}
+	}
+	.winInfo{
+		margin-top: pxToRem(25px);
+		margin-bottom: pxToRem(40px);
+		.labelInput{
+			.base-after-line::after{
+				right: pxToRem(15px);
+				left: pxToRem(15px);
+			}
+			input{
+				padding-right: pxToRem(2px);
+				float: right;
+			}
+		}
+	}
+}

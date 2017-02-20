@@ -1,0 +1,9 @@
+@import "../../lib/base/css/globalStyle";
+html,body,.base-container,.record_myBrowse{
+	height: 100%;
+	box-sizing: border-box;
+}
+.record_myBrowse{
+	@extend .display-flex;
+	@extend .flex-dv;
+}

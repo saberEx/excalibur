@@ -1,0 +1,53 @@
+@import '../../../lib/base/css/globalStyle';
+.rich_text{
+	.custom-richtext {
+		padding: 0 pxToRem(10px);
+		padding-top: pxToRem(10px);
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		font-size: pxToRem(14px);
+		color: #333;
+		line-height: 1.5;
+		overflow: hidden;
+		text-align: left;
+		word-wrap: break-word;
+		list-style: none;
+		font-weight: normal;
+		outline: none;
+		p {
+		  	margin: 0 0 1em 0;
+		  	color: #8f8f94;
+		}
+		strong,b{
+		  	font-weight: bold;
+		}
+		em,i{
+		  	font-style: italic;
+		}
+		table {
+			margin-bottom: pxToRem(10px);
+			border-collapse: collapse;
+			display: table;
+			td,th{
+				padding: pxToRem(5px) pxToRem(10px);
+				border: 1px solid #ddd;
+			}
+		}
+		ul{
+		  	li{
+				list-style-type: disc !important;
+				list-style-position:inside;
+		  	}
+		}
+		ol{
+		  	li{
+				list-style-type: decimal  !important;
+				list-style-position:inside;
+		  }
+		}
+		img{
+		  	max-width: 100%;
+		}
+	}
+}

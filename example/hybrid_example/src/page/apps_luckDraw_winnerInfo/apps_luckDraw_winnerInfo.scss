@@ -1,0 +1,44 @@
+@import "../../lib/base/css/globalStyle";
+.apps_luckDraw_winnerInfo{
+	.no_luck{
+		text-align: center;
+		color: #AEAEB6;
+		position: absolute;
+		top:50%;
+		left:50%;
+		width: 100%;
+		-webkit-transform: translate(-50%,-50%);
+		transform: translate(-50%,-50%);
+	}
+	.history{
+		border-top: 1px solid #eee;
+		border-bottom: 1px solid #eee;
+	}
+	.winningList{
+		.itemWinning{
+			padding-left: pxToRem(10px);
+			margin-bottom: pxToRem(10px);			
+			background:#fff;
+			// .rewardDetail,.rewardInfos{
+			// 	padding: pxToRem(8px) 0;
+			// }
+			.rewardDetail{				
+				border-bottom: 1px solid #eee;
+				font-size: pxToRem(14px);
+				color: #ff1f1f;
+				.labelInput{
+					 
+					label,span{
+						font-weight: 500;
+					}
+				}
+			}
+			.rewardInfos{
+				padding: pxToRem(16px) pxToRem(10px);
+				font-size: pxToRem(12px);
+				color: #888;
+			}
+		}
+	}
+	
+}

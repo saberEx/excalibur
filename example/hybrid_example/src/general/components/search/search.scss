@@ -1,0 +1,36 @@
+@import '../../../lib/base/css/globalStyle';
+.search{
+  	.search-container{
+		padding: pxToRem(10px);
+		form {
+			margin: 0;
+			position: relative;
+			border: 1px solid #c0c0c0;
+			background: #fff;
+			border-radius: pxToRem(4px);
+			overflow: hidden;
+		}
+		.search-text-title {
+			height: pxToRem(35px);
+			line-height: pxToRem(35px);
+			text-indent: pxToRem(50px);
+			color: #999;
+		}
+		.custom-search-button {
+			position: absolute;
+			top: 0;
+			left: 0;
+			border: 0px none;
+			height: pxToRem(35px);
+			line-height: pxToRem(35px);
+			width: pxToRem(37px);
+			padding: 0;
+			color: #fff;
+			font-size: pxToRem(14px);
+			text-indent: -9999px;
+			background: #fff url("./search_icon.png") center center no-repeat;
+			background-size: pxToRem(16px) pxToRem(16px);
+			border-radius: 5px 0 0 5px;
+		}
+	}
+}

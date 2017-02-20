@@ -1,0 +1,123 @@
+@import "../../lib/base/css/globalStyle";
+.apps_integration_convert{
+	.shopC_submit{
+		.shopC_rel{
+			padding-right: 50%;
+			text-align: center;
+			.shopC_buy{
+				width: 50%;
+			}
+		}
+	}
+	.goodsGroup{
+		li{
+			.good_num{
+				display: none;
+			}
+		}
+	}
+	.labelInput input{
+		float: right;;
+	}
+	.covert_type{
+		position: relative;
+		border-bottom:1px solid #eee;
+		.covert_title{
+			position: absolute;
+			top:50%;
+			left: pxToRem(13px);
+			transform:translateY(-50%);
+		}
+		ul{
+			overflow: hidden;
+			background: #fff;
+			padding-left:pxToRem(80px);
+			li{
+				float: left;
+				width: 50%;
+				text-align:center;
+				border-bottom:2px solid transparent;
+				box-sizing:border-box;
+				padding:pxToRem(15px) pxToRem(10px); 
+				color:#999;
+				&:first-of-type{
+					border-left:1px solid #eee; 
+					border-right:1px solid #eee;
+				}
+				&.active{
+					color:#F06D42;
+					border-bottom:2px solid #F06D42;
+				}
+			}
+		}
+	}
+	.ziti_box{
+		.tips{
+			color: #444;
+			padding: pxToRem(10px);
+			background: #fff;
+			border-bottom: 1px solid #eee;
+			span{
+				color:#F06D42;
+			} 
+		}
+	}
+	.fx_bg{
+		position: absolute;
+		top:0;
+		left:0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,0.3);
+		z-index: 9;
+	}
+	.exchange_limit{
+		position: absolute;
+		top:50%;
+		left:50%;
+		width: 80%;
+		transform:translate(-50%,-50%); 
+		background: #fff;
+		z-index: 10;
+		.headers{
+			color:#fff;
+			background: #F06D42;
+			text-align: center;
+			padding:pxToRem(10px);
+		}
+		.exchange_content{
+			padding:pxToRem(20px);
+			text-align: center;
+			h3{
+				color: #000;
+				margin-bottom: pxToRem(10px);
+				font-weight: normal;
+			}
+			p{
+				color:#999;
+				text-align: left;
+			}
+		}
+		.exchange_actions{
+			padding:pxToRem(10px);
+			border-top: 1px solid #eee; 
+			.btn{
+				display: inline-block;
+				width: 50%;
+				color: #000;
+				text-align: center; 
+				box-sizing:border-box;
+				&:first-of-type{
+					border-right:1px solid #ddd;
+				}
+				&.submit{
+					color:#F06D42;
+				}
+			}
+		}
+		.intr_number{
+			color:#F06D42;
+			font-weight: bold;
+		}
+	}
+}

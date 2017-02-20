@@ -1,0 +1,44 @@
+@import "../../../lib/base/css/globalStyle";
+/*首页*/
+.bbsIndex{
+	.bbsWarp{ 
+		padding:pxToRem(30px) pxToRem(10px) pxToRem(30px) pxToRem(80px);
+		position: relative;
+		background: $azureBlue;  
+		overflow: hidden;
+		.bbsLogo{
+			width: pxToRem(50px);
+			height: pxToRem(50px);
+			position: absolute;
+			left:pxToRem(20px);
+			top:50%;
+			transform: translateY(-50%);
+			-webkit-transform: translateY(-50%);
+			border-radius: $imgRadius;  
+		}
+		.bbsInfo{
+			color: $whiteColor; //#fff;
+			span{
+				display: inline-block;
+				padding-left: pxToRem(18px);
+				margin-right: pxToRem(5px);
+				font-size: pxToRem(11px);	
+				position: relative;			
+				&.topic,&.card{		
+					img{
+						position: absolute;
+						left: 0;
+						top: 50%;
+						transform: translateY(-50%);
+						-webkit-transform: translateY(-50%); 
+						width: pxToRem(14px); 
+					}
+				}
+			}
+			p{
+				margin-top: pxToRem(15px);
+				font-size: pxToRem(10px);  
+			}
+		}
+	}	
+}

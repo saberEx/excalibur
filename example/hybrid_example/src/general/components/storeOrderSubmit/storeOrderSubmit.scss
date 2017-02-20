@@ -1,0 +1,28 @@
+@import '../../../lib/base/css/globalStyle';
+/*
+* @Author: 卢旺
+* @Date:   2016-08-17 15:44:58
+* @Last Modified by:   代汉桥
+* @Last Modified time: 2016-08-20 15:23:42
+*/
+.selectBtnGroup{ 
+	.give_warp{
+		overflow: hidden;
+		li{
+			width: 30%;
+			margin-left: 3%;
+			float: left;
+			span{
+				padding: pxToRem(3px) pxToRem(5px);
+				border: 1px solid #eee;
+				border-radius: 3px;
+				font-size: pxToRem(12px);
+			}
+			&.active span{
+				border-color: #e16830;
+				background: #e16830;
+				color: #fff;
+			}
+		}
+	}
+}

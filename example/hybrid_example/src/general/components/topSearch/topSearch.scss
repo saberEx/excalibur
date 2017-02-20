@@ -1,0 +1,33 @@
+@import '../../../lib/base/css/globalStyle';
+/*
+* @Author: 代汉桥
+* @Date:   2016-07-28 09:19:59
+* @Last Modified by:   代汉桥
+* @Last Modified time: 2016-08-11 17:28:59
+* 多选列表
+*/
+.headerSearch{
+    height: pxToRem(33px);
+    padding: pxToRem(5px) pxToRem(10px) pxToRem(5px) pxToRem(45px);
+    border-bottom: 1px solid #E9E9E9;
+    background: #FAFAFA;
+    position: relative;
+    .shearchBack{
+        position: absolute;
+        left: pxToRem(10px);
+        top: 50%;
+        img{
+            width: pxToRem(25px);
+            display: block;
+        }
+    }
+    input[type='search']{
+        width: 100%;
+        height: pxToRem(33px);
+        &.searchInput{
+            background-position: pxToRem(5px) center !important;
+            background-size: pxToRem(20px) !important;
+            text-indent: pxToRem(15px);
+        }
+    }
+}

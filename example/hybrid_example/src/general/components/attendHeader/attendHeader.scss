@@ -1,0 +1,40 @@
+@import '../../../lib/base/css/globalStyle';
+/*
+* @Author: 代汉桥
+* @Date:   2016-10-18 14:33:05
+* @Last Modified by:   卢旺
+* @Last Modified time: 2016-12-21 10:53:52
+*/
+.attendHeader{
+    .topIntro{
+    height: 45px;
+    line-height: 45px;
+    font-size: 14px;
+    color: #fefefe;
+    background-color:#333 ;
+    }
+    .topIntro .storeInfo div{
+        margin-left: 10px;
+        color: #a1a1a1;
+    }
+    .topIntro .storeInfo img{
+        float: left;
+        height: 30px;
+        width: 30px;
+        margin-left: 10px;
+        margin-top: 7.5px;
+        border: 2px solid #E3E3E3 ;
+        border-radius: 50%;
+        -webkit-border-radius:50%;
+        /*background-color: #FFFFFF;
+        background-size: 100%;
+        background-repeat: no-repeat;*/
+    }
+    .topIntro .myAttendDiv{
+        margin:auto 10px;
+        color: #a1a1a1;
+    }
+    .topIntro .hasAttend{
+        color: #FF0000;
+    }
+}

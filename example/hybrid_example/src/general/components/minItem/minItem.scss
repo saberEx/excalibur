@@ -1,0 +1,98 @@
+@import "../../../lib/base/css/globalStyle";
+/*帖子列表*/
+.contentWrap{
+	// padding: pxToRem(10px); //.3125rem;
+	background: $whiteColor; //#fff;
+	.cardHeader{
+		padding: pxToRem(15px);
+		padding-left:pxToRem(55px);
+		// border-bottom: 1px solid #e1e1e1;
+		position: relative;
+		img{
+			width: pxToRem(30px);
+			height: pxToRem(30px);
+			border-radius: 50%;
+			position: absolute;
+			left: pxToRem(10px);
+			top: 50%;
+			transform: translateY(-50%);
+			-webkit-transform: translateY(-50%);
+		}
+		.cardInfo{
+			.cardUserName{
+				margin-bottom: pxToRem(2px); //.15625rem;
+				font-size: pxToRem(11px); //.5rem;
+				font-weight: 500;
+				.cardFans{ 
+					float: right;
+					padding: 0 pxToRem(3px); //.1562rem;
+					background: $skyBlue; //#9ABEF0;
+					border-radius: pxToRem(30px); //30px;
+					font-size: pxToRem(10px);
+					font-weight: 500;
+					color: $whiteColor; //#fff;
+				}
+			}
+			.cardTime{
+				margin-top: pxToRem(5px);
+				font-size: pxToRem(10px); //.375rem;
+				color: $gray; //#666;
+			}
+		}
+	}
+	.cardDescribe{
+		padding: pxToRem(10px);
+		background:#f5f5f5;
+		h2{
+			font-size: pxToRem(11px); //.5rem;
+			font-weight: 400;
+			color: $blackColor; //#000;
+			img{
+				width: pxToRem(20px);
+				height: pxToRem(20px);
+				margin-right: pxToRem(5px); //.15625rem;
+				vertical-align: top;
+			}
+		}
+		.cardDesInfo{
+			margin-top: pxToRem(5px); //.15625rem;
+			font-size: pxToRem(10px); //.4375rem;
+			color: #999;
+			.cardPhotoList{
+				margin-top: pxToRem(5px); //.15625rem;
+				overflow: hidden;
+				li{				
+					width: 32%;
+					float: left;
+					img{
+						width: 100%;
+					}
+					&:nth-child(2){
+						margin: 0 2%;
+					}					
+				}
+			}
+		}
+	}
+	.cardOption{
+		padding: pxToRem(10px);
+		width: 100%;
+		display: table;
+		box-sizing: border-box;
+		span{
+			display: table-cell;
+			width: 50%;
+			font-size: pxToRem(10px); //.438rem;	
+			text-align: center;
+			color: $gray-light; //#999;	
+			&.rLine{
+				border-right: 1px solid #e1e1e1;
+			}
+			img{
+				width: pxToRem(14px); //.625rem;
+				vertical-align: sub;
+				margin-right: pxToRem(5px);
+			}
+		}
+	}
+}

@@ -1,0 +1,80 @@
+@import '../../../lib/base/css/globalStyle';
+.pay_pop{
+
+  .card-popover{
+  		overflow:scroll;
+  		max-height:100%;
+		position: fixed;
+		z-index: 999;
+		bottom: 0;
+		width: 100%;
+		-webkit-transition: -webkit-transform .3s, opacity .3s;
+		transition: transform .3s, opacity .3s;
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 100%, 0);
+		border-radius: 0;
+		background: none;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		&.active{
+			transform: translate3d(0, 0, 0);
+			-webkit-transform: translate3d(0, 0, 0);
+			opacity: 1;
+		}
+		ul{
+			margin: 0;
+			padding: 20px 15px;
+			background: rgba(0,0,0,0.6);
+			position: relative;
+			list-style: none;
+			box-sizing: border-box;
+			max-height: none;
+			li{
+				margin-bottom: 15px;
+				border-radius: 10px;
+				background: #fff;
+				position: relative;
+				overflow: hidden;
+				padding: 11px 15px;
+				font-size: 14px;
+				&.disable{
+					background: #ccc;
+				}
+				&:after{
+					display: none;
+				}
+				a{
+					position: relative;
+					display: block;
+					overflow: hidden;
+					margin: -11px -15px;
+					padding: inherit;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					color: inherit;
+					> img {
+						width: 42px;
+						margin-right: 5px;
+					}
+					.payWayTextUp {
+						color: #000;
+						font-family: 微软雅黑;
+					}
+					.payWayTextDown {
+						color: #999999;
+						span:first-child {
+							color: #F88C23;
+						}
+						span:last-child {
+							color: #FF4C4C;
+							transform: translateY(5px);
+							-webkit-transform: translateY(5px);
+							margin-left: 5px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+}

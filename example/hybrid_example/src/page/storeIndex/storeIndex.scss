@@ -1,0 +1,91 @@
+@import "../../lib/base/css/globalStyle";
+#pageCon.isPc{
+	width: 375px;
+	margin: auto;
+	margin-top: 30px;
+	height: 667px;
+	.vertical{
+		height:667px;
+	}
+	.bottomNav{
+		z-index: 20;
+		.preview-nav-menu{
+		    position: fixed;
+		    width:375px;
+		    top: 741px;
+		    height:44px;
+		}
+	}
+	.storeIndex{
+		position: relative;
+	}
+	.store_code{
+		display:block;
+		padding: 10px;
+		background: #fff;
+		border-radius: 3px;
+		border: 1px solid #eee;
+		position: absolute;
+		right: -300px;
+		top: 100px;
+		img{
+			width: 200px;
+			height: 200px;
+		}
+		p{
+			margin-bottom: 10px;
+			color: #999;
+			font-size: 14px;
+		}
+	}
+	.slider,.js_frame{
+		width:375px !important;
+	}
+}
+.storeIndex{
+	.store_code{
+		display:none;
+	}
+	height: 100%;
+	box-sizing: border-box;
+	overflow: initial !important;
+	@extend .display-flex;
+	@extend .flex-dv;
+	.bottomNav{
+		.preview-nav-menu{
+			position: relative;
+		}
+	}
+  	.diy-container{
+		width: 100%;
+		border-radius:0;
+		float: none;
+		overflow-x: hidden;
+		&.paddingB44{
+		  padding-bottom: pxToRem(44px);
+		}
+  	}
+  	.location{
+		height: 44px;
+		border-bottom: 1px solid #eee;
+		background: #fff;
+		position: relative;
+		font-size: pxToRem(12px);
+		text-align: center;
+		color: #666;
+		.addressInfo{
+			height: 44px;
+		  	display: flex;
+	    	justify-content:center;
+	    	align-items:center;
+		  	.addStoreName{
+				max-width: pxToRem(120px);
+		  	}
+		  	img{
+				float: left;
+				margin-right: pxToRem(3px);
+				width: pxToRem(12px);
+		  	}
+		}
+  	}
+}

@@ -1,0 +1,46 @@
+@import '../../../lib/base/css/globalStyle';
+.rechargeGroup{
+    overflow: hidden;
+    .pay_number_item{
+        overflow: hidden;
+        background: #fff;
+        padding: pxToRem(11px) pxToRem(15px);
+        border-bottom: 1px solid #eee;
+        em{
+            color: #999999;
+        }
+    }
+    .radio_box{
+        display: inline-block;
+        width: pxToRem(20px);
+        height:pxToRem(20px);
+        background:url(../../../general/common/image/icon_checked_default.png) no-repeat center center;
+        background-size:pxToRem(20px) pxToRem(20px);
+        position: relative;
+
+        .opcity_layer{
+            position: absolute;
+            top:0;
+            left: 0;
+            display: inline-block;
+            width: pxToRem(20px);
+            height:pxToRem(20px);
+            z-index: 1;
+        }
+        input[type='radio']{
+            position: absolute;
+            top:0;
+            left: 0;
+            display: inline-block;
+            width: pxToRem(20px);
+            height:pxToRem(20px);
+            opacity: 0;
+            filter: alpha(opacity=0);
+            z-index: 2;
+        }
+        input[type='radio']:checked + .opcity_layer {
+            background:url(../../../general/common/image/icon_checked_sed.png) no-repeat center center;
+            background-size:pxToRem(20px) pxToRem(20px);
+        }
+    }
+}

@@ -1,0 +1,184 @@
+/*
+* @Author: 卢旺
+* @Date:   2016-09-21 15:23:24
+* @Last Modified by:   卢旺
+* @Last Modified time: 2016-12-21 14:07:33
+*/
+@import "../../../lib/base/css/globalStyle";
+.groupInfo{
+	padding: pxToRem(10px);
+	background: #fff;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	color: #999;
+	overflow: hidden;
+	em{
+		font-style: normal;
+	}
+	.img_box{
+		float: left;
+		height: pxToRem(90px);
+		width:pxToRem(90px);
+		overflow: hidden;
+		img{
+			width: pxToRem(85px);
+			margin-top: 50%;
+			transform:translateY(-50%);
+			-webkit-transform:translateY(-50%);
+		}
+	}
+	.goodsInfo{
+		margin-left: pxToRem(100px);
+		p{
+			color: #999;
+			margin-bottom: pxToRem(6px);
+			overflow: hidden;
+			&:last-of-type{
+				margin-bottom: 0;
+			}
+			.p_number{
+				background: url(../../common/image/my_group.png) no-repeat left center;
+				background-size:pxToRem(12px);
+				display: inline-block;
+				padding-left: pxToRem(12px);
+				color: #444;
+			}
+			.base-fr{
+				background: #E56A20;
+				color: #fff;
+				border-radius: pxToRem(10px);
+				display: inline-block;
+				padding:pxToRem(2px) pxToRem(10px);
+				font-size: pxToRem(12px);
+			}
+			&.price{
+				font-size: pxToRem(14px);
+				em{
+					font-size: pxToRem(12px);
+				}
+				color:  #E56A20;
+			}
+		}
+		.title{
+			color: #333;
+		}
+	}
+}
+.groupWarp{
+	margin-top:0;
+	// margin-bottom: pxToRem(10px);
+	background: #fff;
+	border:1px solid #f2f2f2;
+	em{
+		font-style: normal;
+	}
+	.groupNum,.groupStore,.groupBottom{
+		padding: pxToRem(10px);
+		color: #999;
+	}
+	.groupNum{
+		font-size: pxToRem(11px);
+		em{
+			color: #333;
+		}
+		.ongoing{
+			color: #e46a21;
+		}
+	}
+	.groupStore{
+		em{
+			color: #666;
+		}
+	}
+	.groupBottom{
+		em{
+			color: #e46a21;
+		}
+		.groupTime{
+			color: #e46a21;
+		}
+	}
+	.item{
+		padding:pxToRem(10px);
+		font-size: pxToRem(11px);
+		background: #fff;
+		// margin-bottom: pxToRem(10px);
+		overflow: hidden;
+		// border-bottom: 1px solid #eee;
+		border-top: 1px solid #eee;
+		height:pxToRem(90px);
+		.img_box{
+			float: left;
+			height: pxToRem(90px);
+			width:pxToRem(90px);
+			overflow: hidden;
+			img{
+				width: pxToRem(85px);
+				margin-top: 50%;
+				transform:translateY(-50%);
+				-webkit-transform:translateY(-50%);
+			}
+		}
+		.fight_info{
+			margin-left: pxToRem(100px);
+			height: pxToRem(90px);
+			overflow: hidden;
+			p{
+				color: #999;
+				margin-bottom: pxToRem(6px);
+				overflow: hidden;
+				font-size: pxToRem(10px);
+				&:last-of-type{
+					margin-bottom: 0;
+				}
+				&.title{
+					font-size: pxToRem(12px);
+					color: #333;
+				}
+				.p_number{
+					background: url(../../../general/common/image/my_group.png) no-repeat left center;
+					background-size:pxToRem(12px);
+					display: inline-block;
+					padding-left: pxToRem(18px);
+					color: #444;
+				}
+				.base-fl{
+					margin-top: pxToRem(5px);
+				}
+				.base-fr{
+					background: #E56A20;
+					color: #fff;
+					border-radius: pxToRem(10px);
+					display: inline-block;
+					padding:pxToRem(2px) pxToRem(10px);
+					font-size: pxToRem(12px);
+				}
+				&.price{
+					font-size: pxToRem(16px);
+					font-weight: bold;
+					font-style: italic;
+					em{
+						font-size: pxToRem(10px);
+					}
+					color:  #E56A20;
+				}
+				&.goBuy{
+					.base-fl{
+						margin-top: pxToRem(4px);
+					}
+					.base-fr{
+						margin-top: pxToRem(2px);
+						font-size: pxToRem(11px);
+					}
+				}
+				&.ongoing{
+					.base-fr{
+						background: #ccc;
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+}
+

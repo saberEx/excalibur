@@ -1,0 +1,40 @@
+@import '../../../lib/base/css/globalStyle';
+.colums {
+  .colums-title {
+	padding: pxToRem(10px) 0 pxToRem(10px) pxToRem(10px);
+	position: relative;
+	color: #333;
+	&.round{
+	  	i{
+			width: pxToRem(8px);
+			height: pxToRem(8px);
+			margin-right: pxToRem(10px);
+			display: inline-block;
+		  &:after{
+			content: "";
+			width: pxToRem(14px);
+			height: pxToRem(14px);
+			position: absolute;
+			top: pxToRem(14px);
+			background: transparent;
+			border: 1px solid #f20;
+			border-radius: 50%;
+		  }
+		}
+	}
+	i{
+	  width: pxToRem(8px);
+	  height: pxToRem(8px);
+	  margin-right: 5px;
+	  display: inline-block;
+	  &:after{
+		content: "";
+		width: pxToRem(8px);
+		height: pxToRem(14px);
+		position: absolute;
+		top: pxToRem(14px);
+		background: #f20;
+	  }
+	}
+  }
+}

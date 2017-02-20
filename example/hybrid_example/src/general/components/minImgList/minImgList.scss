@@ -1,0 +1,45 @@
+@import "../../../lib/base/css/globalStyle";
+/*列表组件*/
+.listUl{	
+	background: $whiteColor; //#fff;
+	li{
+		padding:.32rem 15px;
+		position: relative;		
+		a{			
+			display: block;
+			font-size: pxToRem(14px);; //.438rem;
+			color: $gray-dark; //#333;
+		}
+	}
+	&.circle{
+		list-style-type:circle;
+		li{
+			padding-left: .8rem;
+			&::before{
+				content:"";
+				width:.2rem;
+				height: .2rem;
+				border-radius:50%;
+				background: $blackColor; //#000;
+			    position: absolute;
+	    		left: 15px;
+	    		top: 50%;
+	    		transform:translateY(-50%);
+				-webkit-transform:translateY(-50%);
+				overflow:hidden;
+			}
+		}		
+	}
+	&.beforeImg{
+		li{
+			padding-left: 1.18rem;
+		}
+		img{
+			width: .7rem;
+			height: .7rem;
+			position: absolute;
+			left:12px;
+			top:10px;
+		}
+	}
+}

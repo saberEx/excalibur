@@ -1,0 +1,81 @@
+@import '../../../lib/base/css/globalStyle';
+/*
+* @Author: 卢旺
+* @Date:   2016-08-18 09:44:20
+* @Last Modified by:   代汉桥
+* @Last Modified time: 2016-08-23 09:43:05
+*/
+.logisticsState{
+	.record_warp{
+		padding: pxToRem(10px);
+		position: relative;
+		border-bottom: 1px solid #eee;
+		.codeImg{
+			width: pxToRem(40px);
+			height: pxToRem(40px);
+			position: absolute;
+			right: pxToRem(25px);
+			top: 50%;
+			transform:translateY(-50%);
+			-webkit-transform:translateY(-50%);
+		}
+		div{
+			margin-bottom: pxToRem(3px);
+			color: #333;
+			font-size: pxToRem(14px);
+		}
+		p{
+			color: #999;
+			font-size: pxToRem(13px);
+			&.d{
+				color: #333;
+				font-size: pxToRem(14px);
+			}
+			em{
+				font-style: normal;
+				color: #999;
+				&.c_r{
+					color: #E44F53;
+				}
+			}
+		}
+		span{
+			font-size: pxToRem(13px);
+		}
+		.re_phone{
+			color: #999;
+		}
+		.base-mask{
+			display: none;
+		}
+		.imgFixed{
+			// display: none;
+			position: relative;
+			// left: 15%;
+			// top: 50%;
+			width:70%;
+			margin-top: 50%;
+			margin-left: 15%;
+			text-align: center;
+			z-index: 999;
+			img{
+				width: 100%;
+				display: block;
+			}
+			span{
+				display: inline-block;
+				width: pxToRem(20px);
+				height: pxToRem(20px);
+				line-height: pxToRem(20px);
+				border: 1px solid #fff;
+				border-radius: 50%;
+				background: #555;
+				color: #fff;
+				font-size: pxToRem(14px);
+				position: absolute;
+				right: pxToRem(-10px);
+				top: pxToRem(-10px);
+			}
+		}
+	}
+}

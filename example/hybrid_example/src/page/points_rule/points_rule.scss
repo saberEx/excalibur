@@ -1,0 +1,27 @@
+@import "../../lib/base/css/globalStyle";
+.points_rule{
+	padding: pxToRem(10px);
+	background:#fff;
+	h2{
+		margin: 0;
+		margin-bottom: pxToRem(15px);
+		font-size: pxToRem(14px);
+		color: #333;
+	}
+	.ruleWrap{
+		margin-bottom: pxToRem(20px);
+		h4{
+			margin: 0;
+			margin-bottom: pxToRem(10px);
+			font-size: pxToRem(12px);
+			color: #666;
+		}
+		h6{
+			font-weight: normal;
+			margin: 0;
+			line-height: 1.42;
+			font-size: pxToRem(10px);
+			color: #999;
+		}
+	}
+}

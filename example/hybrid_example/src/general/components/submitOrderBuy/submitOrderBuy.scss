@@ -1,0 +1,39 @@
+@import '../../../lib/base/css/globalStyle';
+/*
+* @Author: 代汉桥
+* @Date:   2016-10-18 14:33:05
+* @Last Modified by:   代汉桥
+* @Last Modified time: 2016-10-19 11:45:38
+*/
+.shopC_submit{      
+    width: 100%;
+    height: pxToRem(44px);
+    background:#fff;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    .shopC_rel{
+        height: pxToRem(44px);
+        line-height: pxToRem(44px);
+        padding-right: 30%;
+        font-size: pxToRem(14px);
+        text-align: right;
+        position: relative;
+        em{
+            font-weight: bold;
+            color: #DB6B2C;
+        }
+        .shopC_buy{
+            width: 28%;
+            height: pxToRem(44px);
+            line-height: pxToRem(44px);
+            background:#DB6B2C;
+            text-align: center;
+            font-size: pxToRem(14px);
+            color: #fff;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+}

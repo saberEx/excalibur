@@ -1,0 +1,141 @@
+@import "../../lib/base/css/globalStyle";
+ 
+.user_center{
+	.cardInfo{
+		background: url('../../general/common/image/user_center/user_header_bg.png');
+		position: relative;
+		overflow: hidden;
+		.headerCon{
+			padding: pxToRem(30px) pxToRem(20px) pxToRem(20px) pxToRem(20px);
+		}
+		.userImg{
+			width: pxToRem(50px);
+			height: pxToRem(50px);
+			border-radius: 50%;
+			border: 2px solid #fff;
+			float: left;
+		}
+		.userInfo{
+			margin-top: pxToRem(8px);
+			margin-left: pxToRem(65px);
+			color: #fff;
+			.userName{
+				font-size: pxToRem(14px);
+				font-weight: 500;
+			}
+			.userLevel{
+				margin-top: pxToRem(3px);
+				display: inline-block;
+				font-size: pxToRem(10px);
+			}
+		}
+		.userMessage{
+			position: absolute;
+			right: pxToRem(10px);
+			top: pxToRem(10px);
+			color:#fff;
+			img{
+				width: pxToRem(20px);
+			}
+		}
+		.userAddress{
+			position: absolute;
+			right: pxToRem(10px);
+			bottom: pxToRem(10px);
+			font-size: pxToRem(12px);
+			color: #fff;
+		}
+		.myAttendCon{
+			margin-bottom: 0;
+			padding: pxToRem(10px) 0;
+			//position: absolute;
+			width: 100%;
+			//bottom: 0;
+			display: table;
+			background-color: rgba(0,0,0,0.1);
+			div{
+				display: table-cell;
+				text-align: center;
+				color: #FFFEFF;
+				font-family: "微软雅黑";
+				font-size: pxToRem(12px);
+				border-right: #fff solid 1px;
+				&:last-child{
+					border-right:0;
+				}
+			}
+		}
+	}
+	/*订单*/
+	.userOrder,.menuList{
+		// box-shadow: 0 2px 3px rgba(200,199,204,.5);
+	}
+	.userOrder{
+		background: #fff;
+		// border-bottom: 1px solid rgba(200,199,204,.5);
+		.listCon{
+			padding: pxToRem(10px) 0;
+			width: 100%;
+			display: table;
+			.listItem{
+				display: table-cell;
+				text-align: center;
+				position: relative;
+				img{
+					width: pxToRem(16px);
+				}
+				p{
+					margin-top: pxToRem(4px);
+					font-size: pxToRem(10px);
+					color: #666;
+				}
+				.saleNum{
+					font-size: pxToRem(12px);
+					color: #333;
+				}
+				.badge{
+					width: pxToRem(16px);
+					height: pxToRem(16px);
+					line-height: pxToRem(16px);
+				    // background-color: #FF3234;
+				    background:url('../../general/common/image/goodsDetial/shopNum.png') no-repeat;
+				    background-size: 100%; 
+				    display: inline-block; 
+				    border-radius: 50%;
+				    font-size: pxToRem(10px); 
+				    color: #fff;
+				    position: absolute;
+				    top: pxToRem(-8px);
+				    right: pxToRem(15px); 
+				}
+			}
+		}
+	}
+	.menuList{
+		padding-bottom: pxToRem(15px);
+		width: 100%;
+		background: #fff;
+		overflow: hidden;
+		.menuItem{
+			padding: pxToRem(15px) 0 0;
+			width: 33.333%;
+			float: left;
+			text-align: center;
+			img{
+				width: pxToRem(30px);
+			}
+			p{
+				color: #999;
+				font-size: pxToRem(11px);
+			}
+		}
+	}
+	.mediaItem{
+		&::after{
+			background-color: rgba(200,199,204,.5);
+		}
+		&:last-of-type::after{
+			height: 0;
+		}
+	}
+}

@@ -1,0 +1,35 @@
+@import "../../lib/base/css/globalStyle";
+.apps_bbs_userCentent{
+	@extend .display-flex;
+	@extend .flex-dv;
+	/*个人中心*/
+	.userInfo{
+		display: block;
+		padding-top: 30px; //$var30
+		height: 150px;
+		background: url('../../general/common/image/userInfoBg.png');
+		text-align: center;
+		.userImg{
+			width: 80px;
+			height: 80px; 
+			margin: auto;
+			text-align: center;
+			img{
+				width: 100%;
+				height: 100%;
+				border-radius:50%;
+				border: 3px solid #fff;
+			}
+		}
+		p{
+			margin-top: pxToRem(20px);
+			font-size: pxToRem(14px); //18px;
+			color: $whiteColor; //#fff; 
+		}
+	}
+	.scroll-container{
+		@extend .flex1;
+		@extend .display-flex;
+		@extend .flex-dv;
+	}
+}

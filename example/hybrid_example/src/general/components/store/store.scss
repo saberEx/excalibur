@@ -1,0 +1,43 @@
+@import '../../../lib/base/css/globalStyle';
+.store{
+  position: relative;
+  display: block;
+  padding: pxToRem(10px);
+  line-height: pxToRem(22px);
+  border: 0 none;
+  border-bottom: 1px solid #e5e5e5;
+  overflow: hidden;
+  .custom-store-img {
+	position: absolute;
+	top: pxToRem(11px);
+	left: pxToRem(10px);
+	height: pxToRem(18px);
+	width: pxToRem(18px);
+	background: url("./goods_c9431a6d41.png") no-repeat;
+	background-size: pxToRem(58px) pxToRem(48px);
+	background-position: pxToRem(-40px) 0;
+  }
+  .custom-store-name {
+	float: left;
+	padding: 0 0 0 pxToRem(25px);
+	height: pxToRem(22px);
+	line-height: pxToRem(22px);
+	font-size: pxToRem(14px);
+	color: #333;
+	max-width: pxToRem(210px);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+  }
+  .custom-store-enter {
+	float: right;
+	height: pxToRem(14px);
+	line-height: pxToRem(14px);
+	margin: pxToRem(4px) 0;
+	font-size: pxToRem(12px);
+	color: #999;
+	i{
+	  margin-left: pxToRem(8px);
+	}
+  }
+}

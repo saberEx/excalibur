@@ -1,0 +1,51 @@
+@import "../../lib/base/css/globalStyle";
+html,body,.base-container{ 
+	height:100%;
+}
+.suit_store{
+	&,.scroll{
+		height: 100%;
+	}
+	.shopList{
+		margin-top: pxToRem(10px);
+		.address_item{
+			position: relative;
+			overflow: hidden;
+			background: #fff;
+			padding:pxToRem(10px);
+			margin-bottom: pxToRem(10px);
+			padding-right: pxToRem(40px);
+			img{
+				float: left;
+				width: pxToRem(45px);
+				height: pxToRem(45px);
+				border-radius: 50%;
+			}
+			.add_info{
+				margin-left: pxToRem(55px);
+				border-right: 1px solid #eee;
+				margin-right: pxToRem(4px);
+	    		padding-right: pxToRem(10px);
+				p:first-of-type{
+					color:#333;
+					margin-bottom: pxToRem(6px);
+				}
+				p:last-of-type{
+					margin-bottom: 0;
+				}
+			}
+			.callEl{
+				position: absolute;
+				right: pxToRem(10px);
+				top: 50%;
+	    		margin-top: pxToRem(-12.5px);
+				img{
+					width: pxToRem(25px);
+					height: pxToRem(25px);
+					vertical-align: middle;
+				}
+
+			}
+		}
+	}
+}

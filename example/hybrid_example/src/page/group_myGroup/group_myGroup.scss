@@ -1,0 +1,25 @@
+@import "../../lib/base/css/globalStyle";
+html,body,.base-container,.myGroup,.scroll{
+	height: 100%; 
+	font-family: "微软雅黑";
+}
+.myGroup{
+	.groupStore{
+		text-align: center;
+		color: #999;
+		position: absolute;
+		top:50%;
+		left:50%;
+		transform:translate(-50%,-50%);
+		font-size:pxToRem(14px);
+		img{
+			vertical-align: middle;
+			width:pxToRem(30px);
+			margin-right:pxToRem(5px);
+		}
+	}
+	.scroll .vertical{
+		background:transparent;
+	}
+}
+

@@ -1,0 +1,73 @@
+@import "../../lib/base/css/globalStyle";
+html,body,.base-container,.points{
+	height: 100%;
+	box-sizing: border-box;
+}
+.points{
+	@extend .display-flex;
+	@extend .flex-dv;
+	// .labelInput div {
+	// 	padding-left: pxToRem(25px);
+	// }
+	.base-after-line:after{
+		left: 0; 
+	}
+	.myInt{
+		background:#E2682D url(../../general/common/image/meun_title_bg.png) no-repeat left bottom;
+		background-size: 100%;
+		text-align: center;
+		color: #fff;
+		width: 100%;
+		z-index: 999;
+		height:pxToRem(120px);
+		img{
+			width: pxToRem(80px);
+			height: pxToRem(80px);
+		}
+		.newInt{
+			padding-top: pxToRem(30px);
+			font-size: pxToRem(10px);
+			color: #fff;
+		}
+		.intNum{
+			font-size: pxToRem(30px);
+			font-weight: 500;
+			margin-top: pxToRem(5px);
+			em{
+				font-size: 12px;
+			}
+
+		}
+	}
+	.mem_items{
+		position: relative;
+		overflow: hidden;
+	}
+	.integral_box{
+		@extend .display-flex;
+		@extend .flex-dv;
+		@extend .flex1;
+		ul {
+			overflow: hidden;
+			li{
+				padding:pxToRem(8px) pxToRem(10px);
+				background: #fff;
+				border-bottom:1px solid #eee;
+				overflow: hidden; 
+				.xf_name{
+					line-height: pxToRem(32px);
+					font-size: pxToRem(11px);
+				}
+				.integral_number{
+					color: #E2682D;
+					em{
+						display: inline-block;
+						margin-top: pxToRem(5px);
+						color: #999;
+						font-size: pxToRem(10px);
+					}
+				}
+			}
+		}
+	}
+}

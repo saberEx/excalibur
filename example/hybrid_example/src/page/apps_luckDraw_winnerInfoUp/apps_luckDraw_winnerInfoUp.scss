@@ -1,0 +1,19 @@
+@import "../../lib/base/css/globalStyle";
+.apps_luckDraw_winnerInfoUp{
+	.infoTips{
+		padding: pxToRem(10px);
+		margin: pxToRem(10px) auto;
+		width: 90%;
+		background: #428BCA;
+		border-radius: pxToRem(3px);
+		color: #fff;
+		font-size: pxToRem(12px);
+	}
+	.base-btn-main{
+		border-color: #f04349;
+		background-color: #f04349;
+	}
+	.labelInput input{
+		text-align: left;
+	}
+}

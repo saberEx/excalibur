@@ -1,0 +1,245 @@
+@import "../../lib/base/css/globalStyle";
+html,body,.base-container,.apps_vote_index{
+	height: 100%;
+	box-sizing: border-box;
+}
+.apps_vote_index{
+	@extend .display-flex;
+	@extend .flex-dv;
+	padding-bottom: 45px;
+	&.apps_vote_explain{
+		background:#eee;
+	}
+	/*广告*/
+	.advertisement{
+		width: 100%;
+		min-height: pxToRem(150px);
+		img{
+			width: 100%;
+			display: block;
+		}
+	}
+	/*排行*/
+	.ranking{
+		width: 100%;
+		display: table;
+		border-bottom: 1px solid #e1e1e1;
+		background:#fff;
+		position: relative;
+		.rankItem{
+			width: 25%;
+			padding: pxToRem(15px) 0;
+			display: table-cell;
+			// background: #6563a4;
+			text-align: center;
+			font-size: pxToRem(14px);
+			color: #888;
+			position: relative;
+			&::after{
+				content: "";
+				display: inline-block;
+				height: 30%;
+				width: 1px;
+				background:#e1e1e1;
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform:translateY(-50%);
+				-webkit-transform:translateY(-50%);
+			}
+			&.noR{
+				&::after{
+					background:transparent;
+				}
+			}
+			p{
+				margin-bottom: pxToRem(5px);
+				font-size: pxToRem(11px);
+			}
+			span{
+				color: #333;
+			}
+			.searchBtn{
+				width: pxToRem(18px);
+				height: pxToRem(18px);
+			}
+		}
+		.fixedSearch{
+			position: absolute;
+			right: -1000px;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background:#fff;
+			padding: pxToRem(15px) pxToRem(15px);
+			box-sizing: border-box;
+			&.anim{
+				right: 0;
+				transition: all .3s;
+				-webkit-transition: all .3s;
+			}
+			&.n_anim{
+				right: -1000px;
+				transition: all .5s;
+				-webkit-transition: all .5s;
+			}
+			input[type='search']{
+				width: 100%;
+				height: pxToRem(38px);
+				border: 1px solid #e1e1e1;
+				border-radius: pxToRem(25px);
+				font-size: pxToRem(12px);
+				background: rgba(0,0,0,.1);
+				padding-right: pxToRem(45px);
+			}
+			.searchBtn{
+				position: absolute;
+			    text-align: center;
+			    top: 48%;
+			    right: pxToRem(30px);
+			    width: pxToRem(20px);
+			}
+		}
+	}
+
+	/*搜索*/
+	// .searchWrap{
+	// 	padding: pxToRem(10px) 0;
+	// 	margin-left: 3%;
+	// 	width: 94%;
+	// 	position: relative;
+	// 	input[type='search']{
+	// 		width: 100%;
+	// 		height: pxToRem(38px);
+	// 		border: 1px solid #e1e1e1;
+	// 		border-radius: pxToRem(25px);
+	// 		font-size: pxToRem(12px);
+	// 		background: rgba(0,0,0,.1);
+	// 		padding-right: pxToRem(45px);
+	// 	}
+	// 	.searchBtn{
+	// 		position: absolute;
+	// 	    text-align: center;
+	// 	    top: 50%;
+	// 	    right: pxToRem(10px);
+	// 	    width: pxToRem(25px);
+	// 	}
+	// }
+	/*用户列表*/
+	.userList{
+		background:#fff;
+		.tabBtnGroup{
+			.item{
+				border: 1px solid #eee;
+				border-left:0;
+				&:last-of-type{
+					border-right: 0;
+				}
+				&.active{
+					color: #d32f26;
+				}
+			}
+			.line{
+				background-color: #d32f26;
+			}
+		}
+		.uList{
+			padding: pxToRem(10px);
+			overflow: hidden;
+			li{
+				padding: pxToRem(8px);
+				margin-right: 1%;
+				margin-bottom: 2%;
+				width: 49%;
+				background:#fff;
+				float: left;
+				border: 1px solid #e1e1e1;
+				border-radius: pxToRem(3px);
+				box-sizing: border-box;
+				&:nth-child(2n){
+					margin-right: 0;
+					margin-left: 1%;
+				}
+				.uImg{
+					width: 100%;
+					padding-bottom: 100%;
+					position: relative;
+					//overflow: hidden;
+					img{
+						max-width:100%;
+						max-height: 100%;
+						position: absolute;
+					    left: 0;
+					    right: 0;
+					    top: 0;
+					    bottom: 0;
+					    margin: auto;
+					    vertical-align: bottom;
+					}
+					.uName{
+						width: 100%;
+						height: 30px;
+						line-height: 30px;
+						background: rgba(0,0,0,.5);
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						color: #fff;
+						text-align: center;
+						font-size: pxToRem(11px);
+					}
+				}
+				.uNum{
+					margin: pxToRem(8px) 0;
+					font-size: pxToRem(10px);
+					span{
+						color: #333;
+						&.base-fr{
+							color: #d74335;
+							font-size: pxToRem(11px);
+						}
+					}
+					.uCont{
+						// min-height:pxToRem(32px);
+						margin: pxToRem(5px) 0;
+						font-size: pxToRem(10px);
+						color: #888;
+					}
+				}
+				.voteBtn{
+					background-color: #F6F6F6;
+				    text-align: center;
+				    color: #333;
+				    width: 80%;
+				    margin: auto;
+				    height: pxToRem(25px);
+				    line-height: pxToRem(25px);
+				    border: 1px solid #dcdcdc;
+				    border-radius: pxToRem(20px);
+					font-size: pxToRem(11px);
+					&.disabled{
+						background-color: #b3b3b3;
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+	.fixedBtn{;
+		height: pxToRem(44px);
+		line-height: pxToRem(14px);
+		padding: 0;
+		button{
+			height: 100%;
+			width: 50%;
+			margin: 0 !important;
+			font-size: pxToRem(14px);
+			border:0;
+			border-radius: 0;
+			&.base-btn-main{
+				color: #fff;
+				background-color: #e16830;
+			}
+		}
+	}
+}

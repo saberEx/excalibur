@@ -1,0 +1,70 @@
+@import "../../../lib/base/css/globalStyle";
+body{
+	height: 100%;
+}
+.goods_list_wrap{
+	font-size: 14px;
+	padding:0 5px;
+	.goods_list{
+		li{
+			background:#fff;
+			padding:0 0 pxToRem(4px) 0;
+			margin-bottom: pxToRem(10px);
+			border: 1px solid #f2f2f2;
+			img{
+				width: 100%;
+				/* height:pxToRem(220px); */
+			}
+		}
+
+		.g_pc_info{
+			padding:pxToRem(6px) pxToRem(10px);
+			.goods_name{
+				color:#444;
+				font-size: pxToRem(14px);
+			}
+			.gg_pc{
+				margin-top: pxToRem(10px);
+				color: #999;
+			}
+			.p_number{
+				background: url(../../../general/common/image/p_icon.png) no-repeat left center;
+				padding-left: pxToRem(18px);
+				background-size: pxToRem(15px);
+				margin-right: pxToRem(4px);
+				line-height: pxToRem(26px);
+				color:#666;
+			}
+			.price{
+				color:#666;
+				padding-right: pxToRem(18px);
+				i{
+					font-style: normal;
+					font-size: pxToRem(12px);
+				}
+				em{
+					font-style: normal;
+					color:#FC1E47;
+					font-size: pxToRem(16px);
+				}
+			}
+			.pay_start_tuan{
+				border:2px solid #FC1E47;
+				display: inline-block;
+				line-height: pxToRem(26px);
+				padding:0 pxToRem(15px);
+				margin-top: pxToRem(-2px);
+				border-radius:pxToRem(4px);
+				color:#FC1E47;
+				&.status{
+					border:2px solid #ccc;
+					color:#999;
+				}
+			}
+		}
+	}
+}
+.scroll{
+	height: 100%;
+	background:transparent;
+}

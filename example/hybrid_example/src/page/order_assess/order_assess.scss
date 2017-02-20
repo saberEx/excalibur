@@ -1,0 +1,47 @@
+@import "../../lib/base/css/globalStyle";
+.order_assess{
+	.buyGoods{
+		.goodsGroup li{
+			background: #FDF8E5;
+			.goods_info{
+				.good_tit,.good_type,.s_time{
+					color: #8B6C3E;
+				} 
+				.good_num{
+					display: none;
+				}
+			}
+		}
+	}
+	.evaList{
+		li{
+			// margin-top: pxToRem(10px);
+			background:#fff;
+			font-size: pxToRem(12px);
+			.evaUser,.eavDetail,.evaType{
+				padding: pxToRem(10px);
+				border-bottom: 1px solid #e1e1e1;
+			}
+			.evaUser,.evaType{
+				color: #666;
+			}
+			.eavDetail{
+				color: #333;
+			}
+			&.noImg{
+				padding: pxToRem(20px) 0;
+				text-align: center;
+				color: #666;
+				img{
+					margin: auto;
+					margin-bottom: pxToRem(8px);
+				}
+			}
+			.store{
+				div{
+					color: #E93E4B;
+				}
+			}
+		}
+	}
+}

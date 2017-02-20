@@ -1,0 +1,46 @@
+@import "../../base/css/globalStyle";
+/*顶部样式Bar*/
+.topBar{
+	.leftIcon,.rightIcon{
+		width: pxToRem(50px);
+	    height: pxToRem(44px);
+		img{
+			margin-top: pxToRem(13px);
+			width: pxToRem(20px);
+			height: pxToRem(20px);
+		}
+	}
+	.leftIcon{
+		display: inline-block;
+	}
+	.rightIcon{
+	    text-align: right;
+	}
+	.topTitle{
+		font-size: pxToRem(14px);
+		font-weight: 400;
+		line-height: pxToRem(44px);
+		position: absolute;
+		padding: 0;
+		text-align: center;
+		white-space: nowrap;
+		color: #000;
+		right: pxToRem(40px);
+		left: pxToRem(40px);
+		display: inline-block;
+		width: auto;
+		margin: 0;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.btn-link{
+		color: #999;
+		font-size: pxToRem(14px);
+		line-height: pxToRem(44px);
+		top: 0;
+		padding: 0;
+		border: 0;
+		background: transparent;
+	}
+}

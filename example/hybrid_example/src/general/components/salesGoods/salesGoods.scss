@@ -1,0 +1,52 @@
+/*
+* @Author: 卢旺
+* @Date:   2016-09-21 15:23:24
+* @Last Modified by:   卢旺
+* @Last Modified time: 2016-09-22 09:58:43
+*/
+@import "../../../lib/base/css/globalStyle";
+.salesGoods{
+	.goods_list{
+		padding:pxToRem(10px);
+		margin-top: pxToRem(10px);
+		background: #fff;
+		ul{
+			width: 100%;
+			li{
+				float: left;
+				width: 48%;
+				margin-right: 4%;
+				font-size: pxToRem(14px);
+				img{
+					width: 100%;
+					height: pxToRem(80px);
+				}
+				.goods_img{
+					height: pxToRem(80px); 
+				}
+				&:nth-child(2n){
+					margin-right: 0;
+				}
+				p{
+					overflow: hidden;
+					margin:pxToRem(2px) 0;
+					color:#444;
+				}
+				.price{
+					font-size: pxToRem(16px);
+					color: #EE9052;
+					display: inline-block;
+				}
+				.btn_shop_cart{
+					display: inline-block;
+					width: pxToRem(14px);
+					height: pxToRem(14px);
+					background: url(../../../general/common/image/car_shop.png) no-repeat;
+					background-size: pxToRem(14px) pxToRem(14px);
+					margin-top: pxToRem(2px);
+				}
+			}
+		}
+
+	}
+}

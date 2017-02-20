@@ -1,0 +1,33 @@
+@import '../../../lib/base/css/globalStyle';
+/*
+* @Author: 代汉桥
+* @Date:   2016-07-28 09:19:59
+* @Last Modified by:   代汉桥
+* @Last Modified time: 2016-08-11 17:28:59
+* 多选列表
+*/
+.indexFooter{
+    width: 100%;
+    margin-top: 30px;
+    .footerIntro {
+        position: relative;
+        width: 80%; 
+        font-size: pxToRem(12px);
+        color: #818181;
+        margin-left: 10%;
+        text-align: center;
+        .footerLabel {
+            width: 33.33333%;
+            position: relative;
+        }
+        em {
+            position: absolute;
+            right: -1px;
+            font-style: normal;
+        }
+        img {
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+    }
+}

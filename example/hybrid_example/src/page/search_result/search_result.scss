@@ -1,0 +1,9 @@
+@import "../../lib/base/css/globalStyle";
+html,body,.base-container,.search_result{
+	height: 100%;
+	box-sizing: border-box;
+}
+.search_result{
+	@extend .display-flex;
+	@extend .flex-dv;
+}

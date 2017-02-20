@@ -1,0 +1,50 @@
+@import "../../lib/base/css/globalStyle";
+.change_address{
+	@extend .display-flex;
+	@extend .flex-dv;
+	height: 100%;
+	box-sizing: border-box;
+	.fixedSearch{
+		width: 100%;
+		border-bottom: 1px solid #eee;
+		background:#fff;
+		padding: pxToRem(7px) pxToRem(10px);
+		box-sizing: border-box;
+		&.anim{
+			right: 0;
+			transition: all .3s;
+			-webkit-transition: all .3s;
+		}
+		&.n_anim{
+			right: -100%;
+			transition: all .5s;
+			-webkit-transition: all .5s;
+		}
+		input[type='search']{
+			width: 100%;
+			height: pxToRem(24px);
+			border: 1px solid #e1e1e1;
+			border-radius: pxToRem(25px);
+			font-size: pxToRem(11px);
+			background: rgba(0,0,0,.1);
+			padding-right: pxToRem(45px);
+		}
+		.searchBtn{
+			position: absolute;
+		    text-align: center;
+		    top:pxToRem(20px);
+		    right: pxToRem(20px);
+		    width: pxToRem(16px);
+		}
+	}
+	.addressList{
+		position: relative;
+		padding: pxToRem(10px);
+		padding-right:pxToRem(15px);
+		line-height: 20px;
+		background:#fff;
+		font-size: pxToRem(11px);
+		// height:pxToRem(50px);
+		border-bottom: 1px solid #eee;
+	}
+}

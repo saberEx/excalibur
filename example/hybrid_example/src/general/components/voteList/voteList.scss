@@ -1,0 +1,97 @@
+@import '../../../lib/base/css/globalStyle';
+/*
+* @Author: 代汉桥
+* @Date:   2016-10-18 14:33:05
+* @Last Modified by:   代汉桥
+* @Last Modified time: 2016-10-19 11:45:38
+*/
+
+.rankList{
+	ul {
+            padding: pxToRem(10px) pxToRem(15px) pxToRem(10px) pxToRem(25px);
+            li{
+                background: #f3f3f3;
+                position: relative;
+                height: pxToRem(50px);
+                margin: pxToRem(30px) 0;
+                .logo-img {
+                    position: absolute;
+                    top: pxToRem(-6px);
+                    left: pxToRem(-10px);
+                    width: pxToRem(60px);
+                    height: pxToRem(60px);
+                     img {
+                        width: pxToRem(60px);
+                        height: pxToRem(60px);
+                        border-radius: 50%;
+                        border: 2px solid #fff;
+                    }
+                    .vote-num {
+                        position: absolute;
+                        top: pxToRem(-6px);
+                        left: pxToRem(-5px);
+                        width: pxToRem(20px);
+                        height: pxToRem(20px);
+                        display: block;
+                        text-align: center;
+                        font-size: pxToRem(14px);
+                        background: #fd9525;
+                        border-radius: 50%;
+                        border: 1px solid #fff;
+                        padding: pxToRem(2px);
+                        color: #fff;
+                        box-sizing: content-box;
+                    }
+                }
+                .info {
+                    margin-left: pxToRem(65px);
+                    position: relative;
+                    p {
+                        font-size: pxToRem(12px);
+                        padding: pxToRem(3px) 0;
+                        color: #f94554;
+                        font-weight: 500;
+                        width: 60%;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                    }
+                }
+                .btn_vote {
+                    position: absolute;
+                    right: pxToRem(10px);
+                    top: pxToRem(10px);
+                    display: block;
+                    padding: pxToRem(6px) pxToRem(25px) pxToRem(6px) pxToRem(15px);
+                    background: #fec52d;
+                    color: #fff;
+                    border-radius: pxToRem(5px);
+                    border-bottom: 3px solid #fdb029;
+                    font-size: pxToRem(12px);
+                    &:after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: pxToRem(9px);
+                        right: pxToRem(8px);
+                        width: pxToRem(12px);
+                        height: pxToRem(12px);
+                        background: url("../../common/image/vote/zan.png") no-repeat;
+                        background-size: pxToRem(12px) pxToRem(12px);
+                    }
+                }
+            }
+        }
+        .my_add {
+            padding: pxToRem(10px);
+            width: 50%;
+            border-radius: pxToRem(5px);
+            margin: pxToRem(20px) auto;
+            text-align: center;
+            color: #fff;
+            display: block;
+            font-size: pxToRem(14px);
+            background: #fec52d;
+            border-bottom: 3px solid #fdab28;
+        }
+}

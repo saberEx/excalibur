@@ -1,0 +1,29 @@
+@import '../../../lib/base/css/globalStyle';
+/*
+* @Author: 代汉桥
+* @Date:   2016-10-18 14:33:05
+* @Last Modified by:   代汉桥
+* @Last Modified time: 2016-10-19 11:45:38
+*/
+
+.argument{
+    padding: pxToRem(5px) 0;
+    font-size: pxToRem(10px);
+    position: relative;
+    overflow: hidden; 
+    .aName{
+        min-width: pxToRem(45px);
+        float: left;
+        color: #888;
+    }
+    .aParameter{
+        margin-left: pxToRem(50px);
+        color: #333;
+        .psfs{
+            width: 100%;
+            span{
+                margin-right: pxToRem(10px);
+            }
+        }
+    }
+}

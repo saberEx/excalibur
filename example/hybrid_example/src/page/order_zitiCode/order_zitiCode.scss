@@ -1,0 +1,24 @@
+@import "../../lib/base/css/globalStyle";
+.order_zitiCode{
+  text-align: center;
+  padding-top: pxToRem(20px);
+  .title{
+    margin-bottom: pxToRem(20px);
+  }
+  .code-con{
+      img{
+        padding: pxToRem(20px);
+        border: solid 1px #ccc;
+        width: pxToRem(190px);
+        height: pxToRem(190px);
+      }
+  }
+  .info{
+    margin-top: pxToRem(10px);
+  }
+  .code-number{
+    padding: pxToRem(10px);
+    color: $color-danger;
+    font-size: pxToRem(14px);
+  }
+}

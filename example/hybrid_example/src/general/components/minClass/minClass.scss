@@ -1,0 +1,33 @@
+@import "../../../lib/base/css/globalStyle";
+/*分类导航*/
+.classList{
+	width: 100%;
+	padding: pxToRem(10px) pxToRem(10px) 0 pxToRem(10px); //.3125rem .3125rem 0 .3125rem;
+	background: $whiteColor; //#fff;
+	box-sizing: border-box;
+	overflow: hidden;
+	li{
+		width: calc(25% - 10px);
+		width: -webkit-calc(25% - 10px);
+		margin: 0 pxToRem(10px) pxToRem(10px) 0; // 0 .3125rem .3125rem 0;
+		text-align: center;
+		float: left;
+		div{
+			display: block;
+			padding: pxToRem(5px) 0; //.15625rem 0;
+			border:1px solid $gray-lighter; // #999;
+			border-radius: pxToRem(20px); //.625rem;
+			color: $gray-light; //#999;
+			font-size: pxToRem(10px);
+		}
+		&:nth-child(4n){
+			margin-right: 0;
+		}
+		&.active div{
+			background: $azureBlue; //#5389D8;
+			border-color: $azureBlue; //#5389D8;
+			color: $whiteColor; //#fff;
+
+		}
+	}
+}

@@ -1,0 +1,46 @@
+/*
+* @Author: 卢旺
+* @Date:   2016-09-21 15:23:24
+* @Last Modified by:   卢旺
+* @Last Modified time: 2016-09-21 15:36:38
+*/
+@import "../../../lib/base/css/globalStyle";
+html,body{
+	height: 100%;
+	background: #F2F2F2;
+	font-family: "微软雅黑";
+}
+.goGroup{
+	padding: pxToRem(10px);
+	background: url("../../common/image/group/group_bg.png") no-repeat;
+	background-size: cover;
+	text-align: center;
+	.groupIcon{ 
+		img{
+			width: pxToRem(60px);
+			height: pxToRem(60px);
+		}
+	}
+	.group_des{
+		margin-top: pxToRem(10px); 
+		font-size: pxToRem(14px);
+		color: #000;
+		font-weight: bold;
+		&.scuess{
+			color: #32CD74;
+		}
+	}
+	.group_tips,.group_time{
+		margin-top: pxToRem(6px);
+		font-size: pxToRem(11px);
+		color: #999;
+		em{
+			margin-left: pxToRem(5px);
+			font-style: normal;
+			color: #308EFB;
+		}
+	}
+	.group_time{
+		color: #FC1E47;
+	}
+}

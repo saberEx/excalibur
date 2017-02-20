@@ -1,0 +1,44 @@
+/*
+* @Author: 卢旺
+* @Date:   2016-09-21 15:23:24
+* @Last Modified by:   代汉桥
+* @Last Modified time: 2016-12-09 15:00:34
+*/
+@import "../../../lib/base/css/globalStyle";
+.menberList{
+	background: #fff;
+	overflow: hidden;
+	li{
+		&:last-of-type:after{
+			height:0;
+		}
+		padding: pxToRem(20px) pxToRem(10px) pxToRem(20px) pxToRem(55px);
+		position: relative;
+		overflow: hidden;
+		.userImg{
+			width: pxToRem(40px);
+			height: pxToRem(40px);
+			position: absolute;
+			top: 50%;
+			left: pxToRem(10px);
+			transform: translateY(-50%);
+			-webkit-transform: translateY(-50%);
+		}
+		span{
+			font-size: pxToRem(11px);
+			.userColonel{
+				margin-left: pxToRem(5px);
+				width: pxToRem(30px);
+				vertical-align: sub;
+			}
+		}
+		.base-fr{
+			color: #999;
+			em{
+				font-style: normal;
+				color: #666;
+				margin-left: pxToRem(10px);
+			}
+		}
+	}
+}

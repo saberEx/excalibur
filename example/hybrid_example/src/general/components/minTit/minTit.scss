@@ -1,0 +1,23 @@
+@import "../../../lib/base/css/globalStyle";
+/*公共title菜单*/
+.commonTitleNav{
+	padding: pxToRem(10px) 0; //.3125rem 0;
+	position: relative;
+	background: $whiteColor; //#fff;
+	h2{
+		padding-left: pxToRem(10px); //.3125rem;
+		position: relative;
+		font-size: pxToRem(11px); //.5rem;
+		// &::before{
+		// 	content: "";
+		// 	width: 5px;
+		// 	height: 100%;
+		// 	background: $azureBlue; //#6184CD;
+		// 	position: absolute;
+		// 	left: 0;
+		// 	top:50%;
+		// 	-webkit-transform: translateY(-50%);
+		// 	transform: translateY(-50%);
+		// }
+	}
+}

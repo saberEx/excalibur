@@ -1,0 +1,41 @@
+@import "../../lib/base/css/globalStyle";
+html,body,.base-container{
+	height: 100%;
+}
+.groupDetail{
+	.gMenber{
+		background: #fff;
+		.lineWarp{
+			height: pxToRem(30px);
+			position: relative;
+			&:after{
+				content: "";
+				height: 1px;
+				width: 100%;
+				display: block;
+				background: #ededed;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%,-50%);
+				-webkit-transform: translate(-50%,-50%);
+			}
+			.partake{
+				padding: 3px 8px;
+				background: #fff;
+				font-size: pxToRem(11px);
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%,-50%);
+				-webkit-transform: translate(-50%,-50%);
+				z-index: 99;
+				em{
+					font-style: normal;
+					color: #FC1E47;
+				}
+			}
+		}
+	}
+
+}

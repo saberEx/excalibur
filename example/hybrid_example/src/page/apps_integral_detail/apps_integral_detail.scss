@@ -1,0 +1,88 @@
+@import "../../lib/base/css/globalStyle";
+.base-container > div{
+	height: auto;
+}
+.apps_integral_detail{
+	padding-bottom: pxToRem(55px);
+	overflow: hidden;
+	.labelInput{
+		.pdBottom6{
+			padding: pxToRem(10px) pxToRem(15px);
+		}
+		&:first-of-type{
+			label{
+				max-width: 100%;
+			}
+		}
+		/* &:nth-child(2){
+			span{
+				color: #FB252C;
+			}
+		} */
+	} 
+	.intGoods{
+		background:#fff;
+		border-bottom: 1px solid #e1e1e1;
+		img{
+			width: 100%;
+		}
+		h2{
+			padding: pxToRem(8px) pxToRem(15px);
+			font-size: pxToRem(11px);
+			font-weight: 500;
+		}
+		p{
+			padding: pxToRem(5px) pxToRem(15px);
+			font-size: pxToRem(10px);
+			color: #888;
+			em{
+				color: #F06D42;
+				font-weight: bold;
+			}
+		}
+		.labelInput .pdBottom6 label{
+			color: #888;
+		}
+	}
+	.detial_cont{
+		background: #fff;
+		.labelInput{
+			.base-after-line:after{
+				left: 0;
+			}
+		}
+		.goodsDetail{
+			padding: pxToRem(10px);
+			img{
+				max-width: 100%;
+				height: auto;
+			}
+		}
+	}
+	.fixedChange{
+		// padding: pxToRem(10px);
+		width: 100%;
+		height: pxToRem(44px);
+		background: #fff;
+
+		box-sizing: border-box;
+		color:#999;
+		overflow: hidden;
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		.base-btn{
+			padding: 0;
+			width: 100%;
+			height: pxToRem(44px);
+			line-height: pxToRem(44px);
+			background: #F06D42;
+			color:#fff;
+			border:none;
+			border-radius: 0;
+			&.disabled{
+				background: #999;
+			}
+		}
+	}
+}
